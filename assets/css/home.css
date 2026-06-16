@@ -2886,3 +2886,27 @@
         animation-play-state: paused;
     }
 }
+
+/* =========================
+   Home About Text Switcher
+========================= */
+
+.home-about__content {
+    transition:
+        opacity 0.22s ease,
+        transform 0.22s ease;
+}
+
+.home-about.is-changing .home-about__content {
+    opacity: 0.28;
+    transform: translateY(6px);
+}
+
+.home-about__step {
+    cursor: pointer;
+}
+
+.home-about__step:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.28);
+    outline-offset: 4px;
+}

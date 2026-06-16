@@ -259,72 +259,78 @@
             <div class="roofline-watermark home-about__watermark" aria-hidden="true"></div>
 
             <div class="container grid-2">
-                <div class="section-heading">
-                    <p class="section-kicker">Aggregator platform</p>
-                    <h2 id="home-about-title">A simpler way to find roofing help.</h2>
-                    <p>
-                        We help homeowners connect with local roofing professionals for repairs, replacements,
-                        inspections, storm damage, and gutter-related work.
-                    </p>
-                    <p>
-                        <strong>Roofen is not a roofing company.</strong> It is an independent quote-comparison
-                        and contractor-matching platform designed to help you review available roofing options.
-                    </p>
+            <div class="section-heading home-about__content">
+                <p class="section-kicker" data-about-kicker>Aggregator platform</p>
+            
+                <h2 id="home-about-title" data-about-title>
+                    A simpler way to find roofing help.
+                </h2>
+            
+                <p data-about-text-main>
+                    We help homeowners connect with local roofing professionals for repairs, replacements,
+                    inspections, storm damage, and gutter-related work.
+                </p>
+            
+                <p data-about-text-note>
+                    <strong>Roofen is not a roofing company.</strong> It is an independent quote-comparison
+                    and contractor-matching platform designed to help you review available roofing options.
+                </p>
+            
+                <div class="home-about__actions">
+                    <a class="btn btn-primary" href="contact.html#contact-form">
+                        Compare Roofers
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+            
+                    <a class="btn btn-secondary" href="about.html">
+                        About Roofen
+                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
 
-                    <div class="home-about__actions">
-                        <a class="btn btn-primary" href="contact.html#contact-form">
-                            Compare Roofers
-                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-
-                        <a class="btn btn-secondary" href="about.html">
-                            About Roofen
-                            <i data-lucide="shield-check" aria-hidden="true"></i>
-                        </a>
+            <div class="home-about__flow" aria-label="How Roofen works">
+                <article class="home-about__step is-active" data-about-step="request" role="button" tabindex="0"
+                    aria-pressed="true">
+                    <span>
+                        <i data-lucide="file-pen-line" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                        <h3>Your request</h3>
+                        <p>Tell us what roofing issue you want help comparing.</p>
                     </div>
-                </div>
-
-                <div class="home-about__flow" aria-label="How Roofen works">
-                    <article class="home-about__step is-active">
-                        <span>
-                            <i data-lucide="file-pen-line" aria-hidden="true"></i>
-                        </span>
-                        <div>
-                            <h3>Your request</h3>
-                            <p>Tell us what roofing issue you want help comparing.</p>
-                        </div>
-                    </article>
-
-                    <article class="home-about__step">
-                        <span>
-                            <i data-lucide="map-pin" aria-hidden="true"></i>
-                        </span>
-                        <div>
-                            <h3>Local roofers</h3>
-                            <p>Your request is organized around service type and area.</p>
-                        </div>
-                    </article>
-
-                    <article class="home-about__step">
-                        <span>
-                            <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
-                        </span>
-                        <div>
-                            <h3>Quote comparison</h3>
-                            <p>Review available options from independent local professionals.</p>
-                        </div>
-                    </article>
-
-                    <article class="home-about__step">
-                        <span>
-                            <i data-lucide="handshake" aria-hidden="true"></i>
-                        </span>
-                        <div>
-                            <h3>Pick your contractor</h3>
-                            <p>You choose the contractor that fits your project.</p>
-                        </div>
-                    </article>
-                </div>
+                </article>
+            
+                <article class="home-about__step" data-about-step="local" role="button" tabindex="0" aria-pressed="false">
+                    <span>
+                        <i data-lucide="map-pin" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                        <h3>Local roofers</h3>
+                        <p>Your request is organized around service type and area.</p>
+                    </div>
+                </article>
+            
+                <article class="home-about__step" data-about-step="quotes" role="button" tabindex="0" aria-pressed="false">
+                    <span>
+                        <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                        <h3>Quote comparison</h3>
+                        <p>Review available options from independent local professionals.</p>
+                    </div>
+                </article>
+            
+                <article class="home-about__step" data-about-step="contractor" role="button" tabindex="0" aria-pressed="false">
+                    <span>
+                        <i data-lucide="handshake" aria-hidden="true"></i>
+                    </span>
+                    <div>
+                        <h3>Pick your contractor</h3>
+                        <p>You choose the contractor that fits your project.</p>
+                    </div>
+                </article>
+            </div>
             </div>
         </section>
 

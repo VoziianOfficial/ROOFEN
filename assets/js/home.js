@@ -5,6 +5,7 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         initHomeServiceSearch();
+        initHomeAboutSwitcher();
     });
 
     function initHomeServiceSearch() {
@@ -156,3 +157,101 @@
             .filter(Boolean);
     }
 })();
+
+
+function initHomeAboutSwitcher() {
+    const section = document.querySelector(".home-about");
+
+    if (!section) {
+        return;
+    }
+
+    const kicker = section.querySelector("[data-about-kicker]");
+    const title = section.querySelector("[data-about-title]");
+    const mainText = section.querySelector("[data-about-text-main]");
+    const noteText = section.querySelector("[data-about-text-note]");
+    const steps = Array.from(section.querySelectorAll("[data-about-step]"));
+
+    if (!kicker || !title || !mainText || !noteText || !steps.length) {
+        return;
+    }
+
+    const content = {
+        request: {
+            kicker: "Aggregator platform",
+            title: "A simpler way to start your roofing request.",
+            main:
+                "Start by sharing the roofing issue you want help with — repair, replacement, inspection, storm damage, emergency work, or gutter-related support.",
+            note:
+                "<strong>Roofen keeps the first step simple.</strong> You describe the project, and the platform helps organize your request before connecting you with independent local providers."
+        },
+
+        local: {
+            kicker: "Local provider matching",
+            title: "Your request is matched around area and type.",
+            main:
+                "Roofing needs can vary by location, roof material, urgency, and project size. Roofen helps route your request toward relevant local roofing professionals.",
+            note:
+                "<strong>Roofen does not perform roofing work.</strong> Contractors and service providers are independent, and homeowners should verify licensing and insurance before hiring."
+        },
+
+        quotes: {
+            kicker: "Quote comparison",
+            title: "Compare roofing options without messy searching.",
+            main:
+                "Instead of contacting random companies one by one, you can review available options from independent local professionals in a more organized way.",
+            note:
+                "<strong>The goal is clarity.</strong> Roofen helps homeowners compare possible roofing solutions, pricing conversations, timelines, and provider fit."
+        },
+
+        contractor: {
+            kicker: "Homeowner choice",
+            title: "You stay in control of who you hire.",
+            main:
+                "After reviewing available roofing options, you choose the contractor that feels right for your roof, your timeline, and your budget.",
+            note:
+                "<strong>You make the final decision.</strong> Roofen helps with connection and comparison, but the hiring choice always belongs to the homeowner."
+        }
+    };
+
+    function updateAboutContent(key) {
+        const selectedContent = content[key];
+
+        if (!selectedContent) {
+            return;
+        }
+
+        section.classList.add("is-changing");
+
+        window.setTimeout(function () {
+            kicker.textContent = selectedContent.kicker;
+            title.textContent = selectedContent.title;
+            mainText.textContent = selectedContent.main;
+            noteText.innerHTML = selectedContent.note;
+
+            section.classList.remove("is-changing");
+        }, 130);
+
+        steps.forEach(function (step) {
+            const isActive = step.dataset.aboutStep === key;
+
+            step.classList.toggle("is-active", isActive);
+            step.setAttribute("aria-pressed", String(isActive));
+        });
+    }
+
+    steps.forEach(function (step) {
+        step.addEventListener("click", function () {
+            updateAboutContent(step.dataset.aboutStep);
+        });
+
+        step.addEventListener("keydown", function (event) {
+            if (event.key !== "Enter" && event.key !== " ") {
+                return;
+            }
+
+            event.preventDefault();
+            updateAboutContent(step.dataset.aboutStep);
+        });
+    });
+}
