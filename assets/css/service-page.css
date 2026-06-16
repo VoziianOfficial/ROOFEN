@@ -1971,3 +1971,331 @@
         bottom: -12px !important;
     }
 }
+
+
+/* =========================
+   Service Benefits — Background Image + Shine + Compact 3D Cards
+========================= */
+
+.service-benefits {
+    position: relative !important;
+    isolation: isolate !important;
+    overflow: hidden !important;
+    padding-top: clamp(58px, 6vw, 92px) !important;
+    padding-bottom: clamp(58px, 6vw, 92px) !important;
+    color: #ffffff !important;
+    background:
+        linear-gradient(90deg, rgba(7, 10, 15, 0.92) 0%, rgba(7, 10, 15, 0.78) 48%, rgba(7, 10, 15, 0.88) 100%),
+        radial-gradient(circle at 16% 22%, rgba(37, 99, 235, 0.34), transparent 34%),
+        radial-gradient(circle at 88% 78%, rgba(197, 106, 46, 0.34), transparent 34%),
+        url("../images/service-pages/emergency-roof-repair-types.jpg") center / cover no-repeat !important;
+}
+
+/* общий dark overlay */
+.service-benefits::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: -2 !important;
+    background:
+        linear-gradient(135deg, rgba(7, 10, 15, 0.88), rgba(16, 23, 34, 0.82)),
+        radial-gradient(circle at 72% 18%, rgba(37, 99, 235, 0.22), transparent 34%),
+        radial-gradient(circle at 22% 88%, rgba(197, 106, 46, 0.2), transparent 36%) !important;
+    pointer-events: none !important;
+}
+
+/* блеск на всю секцию */
+.service-benefits::after {
+    content: "" !important;
+    position: absolute !important;
+    top: -80% !important;
+    left: -55% !important;
+    z-index: -1 !important;
+    width: 34% !important;
+    height: 260% !important;
+    background: linear-gradient(115deg,
+            transparent,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.08),
+            transparent) !important;
+    transform: rotate(16deg) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        left 0.9s ease,
+        opacity 0.25s ease !important;
+}
+
+.service-benefits:hover::after {
+    left: 120% !important;
+    opacity: 1 !important;
+}
+
+/* декоративную старую roofline делаем аккуратнее */
+.service-benefits__roofline {
+    right: -150px !important;
+    bottom: -120px !important;
+    width: 520px !important;
+    height: 260px !important;
+    opacity: 0.16 !important;
+    border-top: 10px solid #C56A2E !important;
+    border-left: 10px solid #C56A2E !important;
+    filter: drop-shadow(0 0 30px rgba(197, 106, 46, 0.28)) !important;
+}
+
+/* layout */
+.service-benefits .container.grid-2 {
+    position: relative !important;
+    z-index: 2 !important;
+    width: min(100% - 36px, 1220px) !important;
+    max-width: 1220px !important;
+    display: grid !important;
+    grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1.18fr) !important;
+    gap: clamp(34px, 5vw, 72px) !important;
+    align-items: center !important;
+}
+
+/* left text */
+.service-benefits__content {
+    max-width: 560px !important;
+}
+
+.service-benefits__content .section-kicker,
+.service-benefits__content .section-kicker--light {
+    color: #C56A2E !important;
+}
+
+.service-benefits__content h2 {
+    max-width: 560px !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: clamp(2rem, 3.7vw, 4rem) !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.08em !important;
+}
+
+.service-benefits__content p:not(.section-kicker) {
+    max-width: 520px !important;
+    margin-top: 18px !important;
+    color: rgba(216, 222, 232, 0.82) !important;
+    font-size: 0.95rem !important;
+    line-height: 1.58 !important;
+}
+
+/* cards grid */
+.service-benefits__grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    perspective: 1200px !important;
+}
+
+/* compact 3D card */
+.service-benefits__grid article {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 18px !important;
+    padding: 22px 82px 22px 22px !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 24px !important;
+    background:
+        radial-gradient(circle at 92% 18%, rgba(197, 106, 46, 0.18), transparent 34%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045)) !important;
+    box-shadow:
+        0 18px 42px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.13) !important;
+    backdrop-filter: blur(16px) !important;
+    transform: translateZ(0) rotateX(0) rotateY(0) !important;
+    transition:
+        transform 0.32s ease,
+        border-color 0.32s ease,
+        background 0.32s ease,
+        box-shadow 0.32s ease !important;
+}
+
+/* разные акценты */
+.service-benefits__grid article:nth-child(even) {
+    background:
+        radial-gradient(circle at 92% 18%, rgba(37, 99, 235, 0.22), transparent 34%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045)) !important;
+}
+
+/* блеск на карточках */
+.service-benefits__grid article::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -90% !important;
+    left: -86% !important;
+    z-index: 1 !important;
+    width: 44% !important;
+    height: 260% !important;
+    background: linear-gradient(115deg,
+            transparent,
+            rgba(255, 255, 255, 0.22),
+            transparent) !important;
+    transform: rotate(14deg) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        left 0.72s ease,
+        opacity 0.22s ease !important;
+}
+
+/* нижний accent */
+.service-benefits__grid article::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 22px !important;
+    right: 22px !important;
+    bottom: 0 !important;
+    z-index: 2 !important;
+    height: 4px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: linear-gradient(90deg, #C56A2E, var(--blue-bright), transparent) !important;
+    opacity: 0.65 !important;
+    transform: scaleX(0.35) !important;
+    transform-origin: left !important;
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease !important;
+}
+
+/* icon справа */
+.service-benefits__grid .icon-large,
+.service-benefits__grid i.icon-large,
+.service-benefits__grid svg.icon-large {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    z-index: 4 !important;
+    width: 50px !important;
+    height: 50px !important;
+    margin: 0 !important;
+    color: #C56A2E !important;
+    stroke-width: 1.18 !important;
+    filter:
+        drop-shadow(0 12px 18px rgba(197, 106, 46, 0.28)) drop-shadow(0 0 18px rgba(197, 106, 46, 0.22)) !important;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease,
+        filter 0.3s ease !important;
+}
+
+.service-benefits__grid article:nth-child(even) .icon-large,
+.service-benefits__grid article:nth-child(even) svg.icon-large {
+    color: var(--blue-bright) !important;
+    filter:
+        drop-shadow(0 12px 18px rgba(59, 130, 246, 0.28)) drop-shadow(0 0 18px rgba(59, 130, 246, 0.22)) !important;
+}
+
+/* title */
+.service-benefits__grid h3 {
+    position: relative !important;
+    z-index: 3 !important;
+    max-width: 260px !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-size: clamp(1rem, 1.25vw, 1.22rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.045em !important;
+}
+
+/* hover 3D */
+.service-benefits__grid article:hover {
+    border-color: rgba(197, 106, 46, 0.38) !important;
+    background:
+        radial-gradient(circle at 92% 18%, rgba(197, 106, 46, 0.28), transparent 34%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07)) !important;
+    box-shadow:
+        0 30px 76px rgba(0, 0, 0, 0.34),
+        0 16px 34px rgba(197, 106, 46, 0.13),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+    transform: translateY(-8px) rotateX(5deg) rotateY(-3deg) scale(1.018) !important;
+}
+
+.service-benefits__grid article:hover::before {
+    left: 132% !important;
+    opacity: 1 !important;
+}
+
+.service-benefits__grid article:hover::after {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+.service-benefits__grid article:hover .icon-large,
+.service-benefits__grid article:hover svg.icon-large {
+    color: var(--blue-bright) !important;
+    transform: translateY(-5px) rotate(-6deg) scale(1.08) !important;
+    filter:
+        drop-shadow(0 16px 24px rgba(59, 130, 246, 0.32)) drop-shadow(0 0 26px rgba(59, 130, 246, 0.34)) !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+    .service-benefits .container.grid-2 {
+        grid-template-columns: 1fr !important;
+        max-width: 760px !important;
+    }
+
+    .service-benefits__content {
+        max-width: 720px !important;
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .service-benefits__content h2,
+    .service-benefits__content p:not(.section-kicker) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .service-benefits {
+        padding-top: 46px !important;
+        padding-bottom: 46px !important;
+    }
+
+    .service-benefits .container.grid-2 {
+        width: min(100% - 28px, 760px) !important;
+        gap: 26px !important;
+    }
+
+    .service-benefits__content h2 {
+        font-size: clamp(1.75rem, 9vw, 2.55rem) !important;
+        line-height: 1 !important;
+    }
+
+    .service-benefits__grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .service-benefits__grid article {
+        min-height: 12px !important;
+        padding: 18px 72px 18px 18px !important;
+        border-radius: 20px !important;
+    }
+
+    .service-benefits__grid .icon-large,
+    .service-benefits__grid i.icon-large,
+    .service-benefits__grid svg.icon-large {
+        top: 18px !important;
+        right: 18px !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    .service-benefits__grid h3 {
+        font-size: 0.98rem !important;
+        line-height: 1.1 !important;
+    }
+
+    .service-benefits__grid article:hover {
+        transform: translateY(-4px) scale(1.006) !important;
+    }
+}
