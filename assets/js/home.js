@@ -5,7 +5,6 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         initHomeServiceSearch();
-        initProblemChips();
     });
 
     function initHomeServiceSearch() {
@@ -139,26 +138,6 @@
         message.textContent = "No services match this search.";
 
         container.appendChild(message);
-    }
-
-    function initProblemChips() {
-        const chipsContainer = document.querySelector("[data-problem-chips]");
-
-        if (!chipsContainer) {
-            return;
-        }
-
-        const chips = Array.from(chipsContainer.querySelectorAll(".home-problem-chip"));
-
-        chips.forEach(function (chip) {
-            chip.addEventListener("click", function () {
-                chips.forEach(function (item) {
-                    item.classList.remove("is-active");
-                });
-
-                chip.classList.add("is-active");
-            });
-        });
     }
 
     function normalizeText(value) {
