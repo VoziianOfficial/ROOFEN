@@ -1575,3 +1575,536 @@
     }
 }
 
+/* =========================
+   Roof Network Strip — Roofen Style
+   Clean icons, big premium section
+========================= */
+
+.roof-network-strip {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow: hidden;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 68% 22%, rgba(37, 99, 235, 0.22), transparent 34%),
+        radial-gradient(circle at 78% 78%, rgba(197, 106, 46, 0.15), transparent 30%),
+        linear-gradient(180deg, var(--black) 0%, var(--graphite) 48%, var(--black) 100%);
+}
+
+.roof-network-strip::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 58px 58px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* =========================
+   Top row
+========================= */
+
+.roof-network-strip__top {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    min-height: 360px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.roof-network-strip__image {
+    position: relative;
+    min-height: 360px;
+    overflow: hidden;
+}
+
+.roof-network-strip__image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(7, 10, 15, 0.04), rgba(7, 10, 15, 0.4)),
+        linear-gradient(180deg, rgba(7, 10, 15, 0.05), rgba(7, 10, 15, 0.58));
+    pointer-events: none;
+}
+
+.roof-network-strip__image img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    filter: contrast(1.08) saturate(1.04);
+    transform: scale(1.02);
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.roof-network-strip:hover .roof-network-strip__image img {
+    transform: scale(1.055);
+    filter: contrast(1.1) saturate(1.08);
+}
+
+.roof-network-strip__materials {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 58px clamp(30px, 5.2vw, 92px) 52px;
+    background:
+        linear-gradient(90deg, rgba(7, 10, 15, 0.1), rgba(7, 10, 15, 0.72));
+}
+
+.roof-network-strip__materials::before {
+    content: "";
+    position: absolute;
+    top: 42px;
+    right: clamp(24px, 5vw, 82px);
+    width: 152px;
+    height: 152px;
+    border: 1px solid rgba(197, 106, 46, 0.24);
+    border-radius: 38px;
+    background: rgba(197, 106, 46, 0.055);
+    transform: rotate(14deg);
+    pointer-events: none;
+}
+
+.roof-network-strip__materials h2 {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+    margin: 0 0 48px;
+    color: var(--white);
+    font-size: clamp(2rem, 3.2vw, 3.35rem);
+    line-height: 1.02;
+    font-weight: 850;
+    letter-spacing: -0.055em;
+    text-transform: uppercase;
+    text-shadow:
+        0 20px 42px rgba(0, 0, 0, 0.38),
+        0 0 30px rgba(37, 99, 235, 0.16);
+}
+
+.roof-network-strip__materials h2 span {
+    color: var(--blue-bright);
+}
+
+/* top icons: clean, no cards */
+.roof-network-strip__types {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(90px, 1fr));
+    gap: clamp(18px, 3vw, 42px);
+    max-width: 840px;
+    align-items: start;
+}
+
+.roof-network-strip__types article {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 12px;
+    min-height: 82px;
+    text-align: center;
+    color: rgba(216, 222, 232, 0.82);
+    cursor: default;
+}
+
+.roof-network-strip__types article::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--blue), var(--copper));
+    transition: width 0.28s ease;
+}
+
+.roof-network-strip__types article:hover::after {
+    width: 34px;
+}
+
+.roof-network-strip__types i,
+.roof-network-strip__types svg {
+    width: 38px;
+    height: 38px;
+    color: rgba(216, 222, 232, 0.88);
+    stroke-width: 1.35;
+    transition:
+        color 0.28s ease,
+        transform 0.28s ease,
+        filter 0.28s ease;
+}
+
+.roof-network-strip__types article:hover i,
+.roof-network-strip__types article:hover svg {
+    color: var(--blue-bright);
+    transform: translateY(-5px);
+    filter: drop-shadow(0 12px 16px rgba(37, 99, 235, 0.28));
+}
+
+.roof-network-strip__types span {
+    font-size: 0.82rem;
+    line-height: 1.22;
+    font-weight: 680;
+}
+
+/* =========================
+   Bottom row
+========================= */
+
+.roof-network-strip__bottom {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 25% 47% 28%;
+    min-height: 370px;
+    background:
+        radial-gradient(circle at 68% 70%, rgba(197, 106, 46, 0.14), transparent 28%),
+        linear-gradient(180deg, rgba(16, 23, 34, 0.96), rgba(7, 10, 15, 0.98));
+}
+
+.roof-network-strip__heading {
+    display: flex;
+    align-items: flex-start;
+    align-items:center;
+    justify-content: center;
+    padding: 78px 24px 52px;
+}
+
+.roof-network-strip__heading h3 {
+    max-width: 300px;
+    margin: 0;
+    color: var(--white);
+    font-size: clamp(1.55rem, 2.25vw, 2.45rem);
+    line-height: 1.05;
+    font-weight: 850;
+    letter-spacing: -0.045em;
+    text-transform: uppercase;
+    text-shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
+}
+
+/* bottom icons: clean, no background */
+.roof-network-strip__features {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(20px, 2.3vw, 36px);
+    align-items: end;
+    padding: 78px 18px 66px;
+}
+
+.roof-network-strip__features article {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: start;
+    gap: 14px;
+    min-height: 135px;
+    text-align: center;
+    color: rgba(216, 222, 232, 0.82);
+    cursor: default;
+}
+
+.roof-network-strip__features article:nth-child(even) {
+    margin-top: 42px;
+}
+
+.roof-network-strip__features article::before {
+    content: "";
+    position: absolute;
+    top: 54px;
+    width: 1px;
+    height: 42px;
+    background: linear-gradient(180deg, rgba(37, 99, 235, 0.4), transparent);
+    opacity: 0;
+    transition:
+        opacity 0.28s ease,
+        height 0.28s ease;
+}
+
+.roof-network-strip__features article:hover::before {
+    opacity: 1;
+    height: 54px;
+}
+
+.roof-network-strip__features article::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--copper), var(--blue));
+    transition: width 0.28s ease;
+}
+
+.roof-network-strip__features article:hover::after {
+    width: 42px;
+}
+
+.roof-network-strip__features i,
+.roof-network-strip__features svg {
+    width: 42px;
+    height: 42px;
+    color: rgba(216, 222, 232, 0.9);
+    stroke-width: 1.35;
+    transition:
+        color 0.28s ease,
+        transform 0.28s ease,
+        filter 0.28s ease;
+}
+
+.roof-network-strip__features article:hover i,
+.roof-network-strip__features article:hover svg {
+    color: var(--copper);
+    transform: translateY(-5px);
+    filter: drop-shadow(0 12px 16px rgba(197, 106, 46, 0.28));
+}
+
+.roof-network-strip__features span {
+    font-size: 0.86rem;
+    line-height: 1.32;
+    font-weight: 680;
+}
+
+/* right card stays as real card */
+.roof-network-strip__card {
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+    justify-self: start;
+    width: min(390px, calc(100% - 34px));
+    min-height: 230px;
+    padding: 34px 34px 30px;
+    border: 1px solid rgba(77, 104, 138, 0.58);
+    background:
+        radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.18), transparent 36%),
+        linear-gradient(145deg, rgba(16, 23, 34, 0.98), rgba(7, 10, 15, 0.98));
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        0 26px 52px rgba(0, 0, 0, 0.28);
+    transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+.roof-network-strip__card::before {
+    content: "";
+    position: absolute;
+    right: -58px;
+    bottom: -62px;
+    width: 160px;
+    height: 160px;
+    border-radius: 42px;
+    background: rgba(197, 106, 46, 0.1);
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+.roof-network-strip__card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(197, 106, 46, 0.45);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 32px 62px rgba(0, 0, 0, 0.34);
+}
+
+.roof-network-strip__card h4 {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 14px;
+    color: var(--white);
+    font-size: 1.18rem;
+    line-height: 1.18;
+    font-weight: 850;
+}
+
+.roof-network-strip__card p {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 0 24px;
+    color: rgba(216, 222, 232, 0.74);
+    font-size: 0.88rem;
+    line-height: 1.58;
+}
+
+.roof-network-strip__card a {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 11px 18px;
+    border: 1px solid rgba(216, 222, 232, 0.18);
+    border-radius: 8px;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.055);
+    font-size: 0.78rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.roof-network-strip__card a:hover {
+    border-color: rgba(197, 106, 46, 0.72);
+    background: rgba(197, 106, 46, 0.2);
+    transform: translateY(-2px);
+}
+
+.roof-network-strip__line {
+    position: absolute;
+    right: 27%;
+    bottom: 78px;
+    width: 230px;
+    height: 96px;
+    border-top: 4px solid rgba(197, 106, 46, 0.34);
+    border-left: 4px solid rgba(197, 106, 46, 0.34);
+    transform: skewX(-30deg);
+    pointer-events: none;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 1180px) {
+    .roof-network-strip__top {
+        grid-template-columns: 1fr;
+    }
+
+    .roof-network-strip__image,
+    .roof-network-strip__image img {
+        min-height: 330px;
+    }
+
+    .roof-network-strip__bottom {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .roof-network-strip__heading {
+        justify-content: flex-start;
+        padding: 52px 28px 12px;
+    }
+
+    .roof-network-strip__heading h3 {
+        max-width: 720px;
+    }
+
+    .roof-network-strip__features {
+        padding: 34px 28px 46px;
+    }
+
+    .roof-network-strip__features article:nth-child(even) {
+        margin-top: 0;
+    }
+
+    .roof-network-strip__card {
+        justify-self: stretch;
+        width: auto;
+        margin: 0 28px 54px;
+    }
+
+    .roof-network-strip__line {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .roof-network-strip__materials {
+        padding: 40px 20px;
+    }
+
+    .roof-network-strip__materials h2 {
+        margin-bottom: 34px;
+        font-size: 2rem;
+    }
+
+    .roof-network-strip__types {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 26px 18px;
+    }
+
+    .roof-network-strip__features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px 18px;
+    }
+}
+
+@media (max-width: 560px) {
+
+    .roof-network-strip__image,
+    .roof-network-strip__image img {
+        min-height: 260px;
+    }
+
+    .roof-network-strip__materials {
+        padding: 34px 18px;
+    }
+
+    .roof-network-strip__materials h2 {
+        font-size: 1.55rem;
+    }
+
+    .roof-network-strip__types {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .roof-network-strip__types article {
+        min-height: 86px;
+    }
+
+    .roof-network-strip__features {
+        grid-template-columns: 1fr;
+        padding: 26px 18px 34px;
+    }
+
+    .roof-network-strip__features article {
+        min-height: 86px;
+        grid-template-columns: 42px minmax(0, 1fr);
+        justify-items: start;
+        align-items: center;
+        text-align: left;
+    }
+
+    .roof-network-strip__features article::before,
+    .roof-network-strip__features article::after {
+        display: none;
+    }
+
+    .roof-network-strip__card {
+        min-height: auto;
+        margin: 0 18px 38px;
+        padding: 26px 22px;
+    }
+}
+
+/* Make trust heading wider */
+
+.roof-network-strip__bottom {
+    grid-template-columns: 31% 43% 26%;
+}
+
+.roof-network-strip__heading {
+    justify-content: flex-start;
+    padding-left: clamp(28px, 5vw, 86px);
+}
+
+.roof-network-strip__heading h3 {
+    max-width: 460px;
+}
