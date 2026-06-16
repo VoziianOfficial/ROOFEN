@@ -10,7 +10,6 @@
     padding: 112px 0 88px;
     overflow: hidden;
     color: var(--white);
-    background: var(--graphite);
 }
 
 .service-hero::after {
@@ -1998,7 +1997,7 @@
         linear-gradient(90deg, rgba(7, 10, 15, 0.92) 0%, rgba(7, 10, 15, 0.78) 48%, rgba(7, 10, 15, 0.88) 100%),
         radial-gradient(circle at 16% 22%, rgba(37, 99, 235, 0.34), transparent 34%),
         radial-gradient(circle at 88% 78%, rgba(197, 106, 46, 0.34), transparent 34%),
-        url("../images/service-pages/emergency-roof-repair-types.jpg") center / cover no-repeat !important;
+        url("../images/service-pages/roof-replacement-types.jpg") center / cover no-repeat !important;
 }
 
 /* общий dark overlay */
@@ -2740,7 +2739,7 @@
         linear-gradient(135deg,
             rgba(7, 10, 15, 0.93),
             rgba(16, 23, 34, 0.9)),
-        url("../images/service-pages/emergency-roof-repair-types.jpg") center / cover no-repeat !important;
+        url("../images/service-pages/gutter-installation-repair-types.jpg") center / cover no-repeat !important;
 }
 
 /* убираем старый блеск/светлую полосу справа */
