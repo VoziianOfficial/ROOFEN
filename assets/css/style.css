@@ -1562,18 +1562,6 @@ p {
     font-size: 0.95rem;
 }
 
-.footer-note {
-    display: inline-flex;
-    margin-top: 16px;
-    padding: 8px 12px;
-    border: 1px solid rgba(197, 106, 46, 0.35);
-    border-radius: var(--radius-pill);
-    color: var(--white);
-    background: rgba(197, 106, 46, 0.12);
-    font-size: 0.83rem;
-    font-weight: 760;
-}
-
 .footer-title {
     margin-bottom: 15px;
     color: var(--white);
