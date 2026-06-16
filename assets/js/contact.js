@@ -6,6 +6,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         injectContactConsentText();
         initContactForm();
+        initRoofenContactAccordion();
     });
 
     function injectContactConsentText() {
@@ -167,6 +168,44 @@
 
         fields.forEach(function (field) {
             field.classList.remove("is-invalid", "is-valid");
+        });
+    }
+
+
+    function initRoofenContactAccordion() {
+        const accordion = document.querySelector("[data-roofen-contact-accordion]");
+
+        if (!accordion) {
+            return;
+        }
+
+        const items = Array.from(accordion.querySelectorAll(".roofen-contact-accordion__item"));
+
+        items.forEach(function (item) {
+            const button = item.querySelector(".roofen-contact-accordion__button");
+
+            if (!button) {
+                return;
+            }
+
+            button.addEventListener("click", function () {
+                const isOpen = item.classList.contains("is-open");
+
+                items.forEach(function (currentItem) {
+                    const currentButton = currentItem.querySelector(".roofen-contact-accordion__button");
+
+                    currentItem.classList.remove("is-open");
+
+                    if (currentButton) {
+                        currentButton.setAttribute("aria-expanded", "false");
+                    }
+                });
+
+                if (!isOpen) {
+                    item.classList.add("is-open");
+                    button.setAttribute("aria-expanded", "true");
+                }
+            });
         });
     }
 })();

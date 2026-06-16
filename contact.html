@@ -467,83 +467,139 @@
     </div>
 </section>
 
-        <section class="contact-faq section section--milk" id="faq" aria-labelledby="contact-faq-title">
-            <div class="container">
-                <div class="contact-faq__top">
-                    <div class="section-heading">
-                        <p class="section-kicker">Contact questions</p>
-                        <h2 id="contact-faq-title">Before you submit a request.</h2>
-                        <p>
-                            Quick notes about the Roofen request flow and how local roofing contractor matching works.
-                        </p>
-                    </div>
-
-                    <i class="contact-faq__icon" data-lucide="circle-help" aria-hidden="true"></i>
+    <section class="roofen-contact-accordion section" id="faq" aria-labelledby="roofen-contact-accordion-title">
+        <div class="container roofen-contact-accordion__grid">
+            <div class="roofen-contact-accordion__intro">
+                <p class="section-kicker">Contact questions</p>
+    
+                <h2 id="roofen-contact-accordion-title">
+                    Before you send your roofing request.
+                </h2>
+    
+                <p>
+                    Get clear answers before submitting your Roofen form. We keep the request flow simple:
+                    you describe the roof issue, local providers may respond, and you compare your options.
+                </p>
+    
+                <div class="roofen-contact-accordion__stats">
+                    <span>
+                        <strong>Free</strong>
+                        request
+                    </span>
+                    <span>
+                        <strong>Local</strong>
+                        matching
+                    </span>
+                    <span>
+                        <strong>No</strong>
+                        obligation
+                    </span>
                 </div>
-
-                <div class="faq-grid" data-accordion>
-                    <article class="faq-item" data-accordion-item>
-                        <button class="faq-button" type="button" id="contact-faq-button-1" aria-expanded="true"
-                            aria-controls="contact-faq-panel-1" data-accordion-button>
-                            Is this request free?
-                            <span class="faq-button__icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-panel" id="contact-faq-panel-1" role="region"
-                            aria-labelledby="contact-faq-button-1">
+    
+                <div class="roofen-contact-accordion__roofmark" aria-hidden="true">
+                    <i data-lucide="house-plus"></i>
+                </div>
+            </div>
+    
+            <div class="roofen-contact-accordion__panel" data-roofen-contact-accordion>
+                <article class="roofen-contact-accordion__item is-open">
+                    <button class="roofen-contact-accordion__button" type="button" aria-expanded="true">
+                        <span class="roofen-contact-accordion__icon">
+                            <i data-lucide="circle-dollar-sign" aria-hidden="true"></i>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__text">
+                            <small>Free request</small>
+                            <strong>Is this request free?</strong>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__plus" aria-hidden="true"></span>
+                    </button>
+    
+                    <div class="roofen-contact-accordion__body">
+                        <div>
                             <p>
                                 Yes. Submitting a roofing quote request through Roofen is free and does not create
                                 an obligation to hire a contractor.
                             </p>
                         </div>
-                    </article>
-
-                    <article class="faq-item" data-accordion-item>
-                        <button class="faq-button" type="button" id="contact-faq-button-2" aria-expanded="false"
-                            aria-controls="contact-faq-panel-2" data-accordion-button>
-                            Does Roofen perform roofing work?
-                            <span class="faq-button__icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-panel" id="contact-faq-panel-2" role="region"
-                            aria-labelledby="contact-faq-button-2" hidden>
+                    </div>
+                </article>
+    
+                <article class="roofen-contact-accordion__item">
+                    <button class="roofen-contact-accordion__button" type="button" aria-expanded="false">
+                        <span class="roofen-contact-accordion__icon">
+                            <i data-lucide="badge-check" aria-hidden="true"></i>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__text">
+                            <small>Platform role</small>
+                            <strong>Does Roofen perform roofing work?</strong>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__plus" aria-hidden="true"></span>
+                    </button>
+    
+                    <div class="roofen-contact-accordion__body">
+                        <div>
                             <p>
                                 No. Roofen is an independent contractor-matching platform. Roofing work is performed
-                                by independent local providers, not by Roofen.
+                                by independent local roofing providers, not by Roofen.
                             </p>
                         </div>
-                    </article>
-
-                    <article class="faq-item" data-accordion-item>
-                        <button class="faq-button" type="button" id="contact-faq-button-3" aria-expanded="false"
-                            aria-controls="contact-faq-panel-3" data-accordion-button>
-                            What should I include in the message?
-                            <span class="faq-button__icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-panel" id="contact-faq-panel-3" role="region"
-                            aria-labelledby="contact-faq-button-3" hidden>
+                    </div>
+                </article>
+    
+                <article class="roofen-contact-accordion__item">
+                    <button class="roofen-contact-accordion__button" type="button" aria-expanded="false">
+                        <span class="roofen-contact-accordion__icon">
+                            <i data-lucide="file-pen-line" aria-hidden="true"></i>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__text">
+                            <small>Project details</small>
+                            <strong>What should I include in the message?</strong>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__plus" aria-hidden="true"></span>
+                    </button>
+    
+                    <div class="roofen-contact-accordion__body">
+                        <div>
                             <p>
                                 Describe the visible issue, when it started, whether water is entering the home,
-                                and whether storm damage, age, or gutter problems may be involved.
+                                and whether storm damage, roof age, or gutter problems may be involved.
                             </p>
                         </div>
-                    </article>
-
-                    <article class="faq-item" data-accordion-item>
-                        <button class="faq-button" type="button" id="contact-faq-button-4" aria-expanded="false"
-                            aria-controls="contact-faq-panel-4" data-accordion-button>
-                            Can I submit if I am not sure which service I need?
-                            <span class="faq-button__icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-panel" id="contact-faq-panel-4" role="region"
-                            aria-labelledby="contact-faq-button-4" hidden>
+                    </div>
+                </article>
+    
+                <article class="roofen-contact-accordion__item">
+                    <button class="roofen-contact-accordion__button" type="button" aria-expanded="false">
+                        <span class="roofen-contact-accordion__icon">
+                            <i data-lucide="circle-help" aria-hidden="true"></i>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__text">
+                            <small>Not sure yet</small>
+                            <strong>Can I submit if I do not know which service I need?</strong>
+                        </span>
+    
+                        <span class="roofen-contact-accordion__plus" aria-hidden="true"></span>
+                    </button>
+    
+                    <div class="roofen-contact-accordion__body">
+                        <div>
                             <p>
-                                Yes. Choose “Not sure yet” in the service field and explain what you are seeing.
+                                Yes. Choose the closest service option and explain what you are seeing.
                                 Your request can still be organized around the project details you provide.
                             </p>
                         </div>
-                    </article>
-                </div>
+                    </div>
+                </article>
             </div>
-        </section>
+        </div>
+    </section>
 
         <section class="contact-cta section section--white" id="quote" aria-labelledby="contact-cta-title">
             <div class="container">

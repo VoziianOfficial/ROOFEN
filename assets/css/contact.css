@@ -2010,3 +2010,507 @@
         line-height: 1.35 !important;
     }
 }
+
+/* =========================
+   Roofen Contact Accordion — Full Premium Replacement
+   Полностью новая секция без старых faq-классов
+========================= */
+
+.roofen-contact-accordion {
+    position: relative !important;
+    overflow: hidden !important;
+    padding-top: clamp(62px, 7vw, 105px) !important;
+    padding-bottom: clamp(62px, 7vw, 105px) !important;
+    background:
+        radial-gradient(circle at 10% 12%, rgba(37, 99, 235, 0.09), transparent 32%),
+        radial-gradient(circle at 88% 82%, rgba(197, 106, 46, 0.13), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, var(--milk) 100%) !important;
+    color: var(--text-dark) !important;
+}
+
+.roofen-contact-accordion__grid {
+    width: min(100% - 36px, 1340px) !important;
+    max-width: 1340px !important;
+    display: grid !important;
+    grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr) !important;
+    gap: clamp(24px, 5vw, 70px) !important;
+    align-items: stretch !important;
+}
+
+/* LEFT INTRO */
+.roofen-contact-accordion__intro {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 520px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    padding: clamp(30px, 4vw, 48px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 36px !important;
+    color: var(--white) !important;
+    background:
+        radial-gradient(circle at 16% 16%, rgba(37, 99, 235, 0.32), transparent 34%),
+        radial-gradient(circle at 92% 84%, rgba(197, 106, 46, 0.34), transparent 36%),
+        linear-gradient(145deg, #101722 0%, #070A0F 64%, #04060a 100%) !important;
+    box-shadow:
+        0 34px 92px rgba(15, 23, 42, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+}
+
+/* shine */
+.roofen-contact-accordion__intro::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -90% !important;
+    left: -82% !important;
+    width: 42% !important;
+    height: 260% !important;
+    background: linear-gradient(115deg,
+            transparent,
+            rgba(255, 255, 255, 0.17),
+            transparent) !important;
+    transform: rotate(14deg) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        left 0.85s ease,
+        opacity 0.24s ease !important;
+}
+
+.roofen-contact-accordion:hover .roofen-contact-accordion__intro::before {
+    left: 132% !important;
+    opacity: 1 !important;
+}
+
+/* roof line */
+.roofen-contact-accordion__intro::after {
+    content: "" !important;
+    position: absolute !important;
+    right: -92px !important;
+    bottom: 44px !important;
+    width: 280px !important;
+    height: 140px !important;
+    border-top: 5px solid rgba(197, 106, 46, 0.36) !important;
+    border-left: 5px solid rgba(197, 106, 46, 0.36) !important;
+    transform: rotate(45deg) !important;
+    pointer-events: none !important;
+}
+
+.roofen-contact-accordion__intro>* {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.roofen-contact-accordion__intro .section-kicker {
+    color: #C56A2E !important;
+}
+
+.roofen-contact-accordion__intro h2 {
+    max-width: 560px !important;
+    margin: 0 !important;
+    color: var(--white) !important;
+    font-size: clamp(2.15rem, 3.9vw, 4.45rem) !important;
+    line-height: 0.94 !important;
+    letter-spacing: -0.085em !important;
+}
+
+.roofen-contact-accordion__intro>p:not(.section-kicker) {
+    max-width: 500px !important;
+    margin: 20px 0 0 !important;
+    color: rgba(216, 222, 232, 0.8) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+}
+
+.roofen-contact-accordion__stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    margin-top: 34px !important;
+}
+
+.roofen-contact-accordion__stats span {
+    min-height: 7px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    padding: 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 20px !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    color: rgba(216, 222, 232, 0.72) !important;
+    font-size: 0.76rem !important;
+    line-height: 1.2 !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+.roofen-contact-accordion__stats strong {
+    display: block !important;
+    color: var(--white) !important;
+    font-size: 1.06rem !important;
+    line-height: 1 !important;
+    letter-spacing: -0.04em !important;
+}
+
+.roofen-contact-accordion__roofmark {
+    position: absolute !important;
+    right: 34px !important;
+    top: 34px !important;
+    z-index: 2 !important;
+    width: 82px !important;
+    height: 82px !important;
+    color: rgba(197, 106, 46, 0.88) !important;
+    opacity: 0.95 !important;
+    filter:
+        drop-shadow(0 16px 24px rgba(197, 106, 46, 0.22)) drop-shadow(0 0 24px rgba(197, 106, 46, 0.2)) !important;
+    transition:
+        transform 0.32s ease,
+        color 0.32s ease,
+        filter 0.32s ease !important;
+}
+
+.roofen-contact-accordion__roofmark svg {
+    width: 82px !important;
+    height: 82px !important;
+    stroke-width: 1.1 !important;
+}
+
+.roofen-contact-accordion:hover .roofen-contact-accordion__roofmark {
+    color: var(--blue-bright) !important;
+    transform: translateY(-6px) rotate(-5deg) scale(1.05) !important;
+    filter:
+        drop-shadow(0 18px 28px rgba(59, 130, 246, 0.22)) drop-shadow(0 0 26px rgba(59, 130, 246, 0.22)) !important;
+}
+
+/* RIGHT PANEL */
+.roofen-contact-accordion__panel {
+    position: relative !important;
+    overflow: hidden !important;
+    display: grid !important;
+    align-content: center !important;
+    gap: 12px !important;
+    min-height: 520px !important;
+    padding: 18px !important;
+    border: 1px solid rgba(15, 23, 42, 0.1) !important;
+    border-radius: 36px !important;
+    background:
+        radial-gradient(circle at 92% 10%, rgba(37, 99, 235, 0.12), transparent 34%),
+        radial-gradient(circle at 10% 88%, rgba(197, 106, 46, 0.12), transparent 34%),
+        rgba(255, 255, 255, 0.94) !important;
+    box-shadow:
+        0 28px 74px rgba(15, 23, 42, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+/* ITEM */
+.roofen-contact-accordion__item {
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(15, 23, 42, 0.09) !important;
+    border-radius: 24px !important;
+    background:
+        linear-gradient(145deg, #ffffff, #f5f7fa) !important;
+    box-shadow:
+        0 14px 34px rgba(15, 23, 42, 0.055),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+    transition:
+        border-color 0.28s ease,
+        background 0.28s ease,
+        box-shadow 0.28s ease !important;
+}
+
+/* bottom accent */
+.roofen-contact-accordion__item::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 18px !important;
+    right: 18px !important;
+    bottom: 0 !important;
+    height: 4px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: linear-gradient(90deg, #C56A2E, var(--blue-bright), transparent) !important;
+    opacity: 0 !important;
+    transform: scaleX(0.25) !important;
+    transform-origin: left !important;
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease !important;
+}
+
+.roofen-contact-accordion__item.is-open {
+    border-color: rgba(197, 106, 46, 0.36) !important;
+    background:
+        radial-gradient(circle at 92% 16%, rgba(197, 106, 46, 0.13), transparent 34%),
+        linear-gradient(145deg, #ffffff, #f8fafc) !important;
+    box-shadow:
+        0 22px 54px rgba(15, 23, 42, 0.09),
+        0 12px 24px rgba(197, 106, 46, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
+}
+
+.roofen-contact-accordion__item.is-open::after {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+/* BUTTON */
+.roofen-contact-accordion__button {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    min-height: 82px !important;
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) 42px !important;
+    gap: 16px !important;
+    align-items: center !important;
+    padding: 18px 18px !important;
+    border: 0 !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    text-align: left !important;
+}
+
+.roofen-contact-accordion__icon {
+    width: 54px !important;
+    height: 54px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 18px !important;
+    color: #C56A2E !important;
+    background: rgba(197, 106, 46, 0.11) !important;
+    box-shadow: 0 12px 24px rgba(197, 106, 46, 0.12) !important;
+    transition:
+        color 0.28s ease,
+        background 0.28s ease,
+        transform 0.28s ease,
+        box-shadow 0.28s ease !important;
+}
+
+.roofen-contact-accordion__icon svg {
+    width: 27px !important;
+    height: 27px !important;
+    stroke-width: 1.55 !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__icon,
+.roofen-contact-accordion__button:hover .roofen-contact-accordion__icon {
+    color: var(--white) !important;
+    background: linear-gradient(145deg, #C56A2E, var(--blue-bright)) !important;
+    transform: translateY(-3px) rotate(-4deg) !important;
+    box-shadow:
+        0 16px 30px rgba(197, 106, 46, 0.18),
+        0 0 20px rgba(59, 130, 246, 0.18) !important;
+}
+
+.roofen-contact-accordion__text small {
+    display: block !important;
+    margin-bottom: 6px !important;
+    color: #C56A2E !important;
+    font-size: 0.68rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.09em !important;
+    text-transform: uppercase !important;
+}
+
+.roofen-contact-accordion__text strong {
+    display: block !important;
+    max-width: 620px !important;
+    color: var(--text-dark) !important;
+    font-size: clamp(1.06rem, 1.45vw, 1.34rem) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.045em !important;
+}
+
+/* PLUS */
+.roofen-contact-accordion__plus {
+    position: relative !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 999px !important;
+    background: var(--graphite) !important;
+    box-shadow:
+        0 12px 24px rgba(15, 23, 42, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    transition:
+        transform 0.28s ease,
+        background 0.28s ease !important;
+}
+
+.roofen-contact-accordion__plus::before,
+.roofen-contact-accordion__plus::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 14px !important;
+    height: 2px !important;
+    border-radius: 999px !important;
+    background: var(--white) !important;
+    transform: translate(-50%, -50%) !important;
+    transition:
+        transform 0.28s ease,
+        opacity 0.28s ease !important;
+}
+
+.roofen-contact-accordion__plus::after {
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__plus {
+    background: #C56A2E !important;
+    transform: rotate(180deg) !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__plus::after {
+    opacity: 0 !important;
+}
+
+/* BODY — smooth, no дерганье */
+.roofen-contact-accordion__body {
+    display: grid !important;
+    grid-template-rows: 0fr !important;
+    opacity: 0 !important;
+    transition:
+        grid-template-rows 0.34s ease,
+        opacity 0.24s ease !important;
+}
+
+.roofen-contact-accordion__body>div {
+    overflow: hidden !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__body {
+    grid-template-rows: 1fr !important;
+    opacity: 1 !important;
+}
+
+.roofen-contact-accordion__body p {
+    max-width: 680px !important;
+    margin: 0 !important;
+    padding: 0 18px 22px 88px !important;
+    color: var(--text-gray) !important;
+    font-size: 0.92rem !important;
+    line-height: 1.58 !important;
+}
+
+/* TABLET */
+@media (max-width: 980px) {
+    .roofen-contact-accordion__grid {
+        grid-template-columns: 1fr !important;
+        max-width: 780px !important;
+    }
+
+    .roofen-contact-accordion__intro,
+    .roofen-contact-accordion__panel {
+        min-height: auto !important;
+    }
+
+    .roofen-contact-accordion__intro {
+        text-align: center !important;
+    }
+
+    .roofen-contact-accordion__intro h2,
+    .roofen-contact-accordion__intro>p:not(.section-kicker) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .roofen-contact-accordion__stats {
+        max-width: 520px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .roofen-contact-accordion__roofmark {
+        opacity: 0.25 !important;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 640px) {
+    .roofen-contact-accordion {
+        padding-top: 44px !important;
+        padding-bottom: 44px !important;
+    }
+
+    .roofen-contact-accordion__grid {
+        width: min(100% - 28px, 780px) !important;
+        gap: 14px !important;
+    }
+
+    .roofen-contact-accordion__intro,
+    .roofen-contact-accordion__panel {
+        border-radius: 24px !important;
+    }
+
+    .roofen-contact-accordion__intro {
+        padding: 26px 18px !important;
+    }
+
+    .roofen-contact-accordion__intro h2 {
+        font-size: clamp(1.75rem, 9vw, 2.55rem) !important;
+        line-height: 1 !important;
+    }
+
+    .roofen-contact-accordion__stats {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .roofen-contact-accordion__stats span {
+        min-height: 4px !important;
+    }
+
+    .roofen-contact-accordion__roofmark {
+        display: none !important;
+    }
+
+    .roofen-contact-accordion__panel {
+        padding: 10px !important;
+    }
+
+    .roofen-contact-accordion__item {
+        border-radius: 18px !important;
+    }
+
+    .roofen-contact-accordion__button {
+        min-height: 72px !important;
+        grid-template-columns: 42px minmax(0, 1fr) 34px !important;
+        gap: 11px !important;
+        padding: 14px !important;
+    }
+
+    .roofen-contact-accordion__icon {
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 14px !important;
+    }
+
+    .roofen-contact-accordion__icon svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .roofen-contact-accordion__text small {
+        margin-bottom: 4px !important;
+        font-size: 0.62rem !important;
+    }
+
+    .roofen-contact-accordion__text strong {
+        font-size: 0.96rem !important;
+        line-height: 1.08 !important;
+    }
+
+    .roofen-contact-accordion__plus {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .roofen-contact-accordion__body p {
+        padding: 0 14px 18px 67px !important;
+        font-size: 0.8rem !important;
+        line-height: 1.45 !important;
+    }
+}
