@@ -274,52 +274,74 @@
             </div>
         </section>
 
-        <section class="service-signs section section--white" id="signs" aria-labelledby="signs-title">
-            <div class="roofline-watermark service-signs__watermark" aria-hidden="true"></div>
+<section class="service-signs section section--white" id="signs" aria-labelledby="signs-title">
+    <div class="roofline-watermark service-signs__watermark" aria-hidden="true"></div>
 
-            <div class="container grid-2">
-                <div class="service-signs__content">
-                    <p class="section-kicker">Common inspection reasons</p>
-                    <h2 id="signs-title">When a roof inspection may be the right starting point.</h2>
-                    <p>
-                        Inspection may fit when you see signs of roof trouble but are not sure whether the next step
-                        is repair, emergency help, storm damage review, or replacement.
-                    </p>
+    <div class="container">
+        <div class="service-signs__board">
+            <div class="service-signs__content">
+                <p class="section-kicker">Common urgent signs</p>
 
-                    <a class="btn btn-primary" href="contact.html#contact-form">
-                        Start Inspection Request
-                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                    </a>
-                </div>
+                <h2 id="signs-title" data-service-signs-title>
+                    When an emergency roof request may fit.
+                </h2>
 
-                <div class="service-signs__list">
-                    <article>
-                        <i data-lucide="droplets" aria-hidden="true"></i>
-                        <span>Water stains but source is unclear</span>
-                    </article>
+                <p data-service-signs-text>
+                    Emergency roof repair may fit when water is actively entering the home, damage is sudden,
+                    or the roof problem cannot safely wait for a standard repair timeline.
+                </p>
 
-                    <article>
-                        <i data-lucide="cloud-lightning" aria-hidden="true"></i>
-                        <span>Storm passed and damage is suspected</span>
-                    </article>
-
-                    <article>
-                        <i data-lucide="calendar-clock" aria-hidden="true"></i>
-                        <span>Roof is older and needs review</span>
-                    </article>
-
-                    <article>
-                        <i data-lucide="home" aria-hidden="true"></i>
-                        <span>Preparing to buy or sell a home</span>
-                    </article>
-
-                    <article>
-                        <i data-lucide="circle-help" aria-hidden="true"></i>
-                        <span>Not sure which service to choose</span>
-                    </article>
-                </div>
+                <a class="btn btn-primary" href="contact.html#contact-form" data-service-signs-link>
+                    Start Emergency Request
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
             </div>
-        </section>
+
+            <div class="service-signs__list" data-service-signs>
+                <button class="service-sign-card is-active" type="button"
+                    data-title="Water is actively entering the home."
+                    data-text="This may fit an emergency roof repair request when water is coming through the roof, ceiling, attic, or interior spaces and the problem needs quick attention."
+                    data-button="Start Emergency Request">
+                    <i data-lucide="droplets" aria-hidden="true"></i>
+                    <span>Active water intrusion</span>
+                    <strong>Emergency Roof Repair</strong>
+                </button>
+
+                <button class="service-sign-card" type="button" data-title="The leak appears during heavy rain."
+                    data-text="A rain-triggered leak can point to urgent flashing, shingle, roof edge, or roof surface issues. Share when the leak appears and where you see water."
+                    data-button="Compare Repair Options">
+                    <i data-lucide="cloud-rain" aria-hidden="true"></i>
+                    <span>Leak during heavy rain</span>
+                    <strong>Roof Repair / Emergency</strong>
+                </button>
+
+                <button class="service-sign-card" type="button" data-title="A branch or debris hit the roof."
+                    data-text="Impact damage can create sudden openings, broken shingles, punctures, or exposed areas. If the damage happened after weather, storm damage service may also fit."
+                    data-button="Review Storm Damage">
+                    <i data-lucide="tree-pine" aria-hidden="true"></i>
+                    <span>Branch or debris impact</span>
+                    <strong>Urgent Roof Review</strong>
+                </button>
+
+                <button class="service-sign-card" type="button" data-title="Interior damage is spreading."
+                    data-text="Growing stains, dripping, wet insulation, or spreading ceiling damage can mean the roof issue needs faster attention before more interior damage develops."
+                    data-button="Start Emergency Request">
+                    <i data-lucide="shield-alert" aria-hidden="true"></i>
+                    <span>Interior damage spreading</span>
+                    <strong>Emergency Request</strong>
+                </button>
+
+                <button class="service-sign-card" type="button" data-title="The problem cannot safely wait."
+                    data-text="If the issue feels urgent, active, or unsafe, describe the situation clearly in the form. If there is immediate danger, contact local emergency services first."
+                    data-button="Start Urgent Request">
+                    <i data-lucide="siren" aria-hidden="true"></i>
+                    <span>Cannot wait</span>
+                    <strong>Urgent Roofing Help</strong>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
 
         <section class="service-benefits section section--dark" id="benefits" aria-labelledby="benefits-title">
             <div class="service-benefits__roofline" aria-hidden="true"></div>

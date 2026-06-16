@@ -6,6 +6,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         initServiceMiniFlow();
         initServiceProblemGuide();
+        initServiceSignsSwitcher();
     });
 
     function initServiceMiniFlow() {
@@ -43,4 +44,54 @@
             });
         });
     }
+
+    function initServiceSignsSwitcher() {
+        const signs = document.querySelector("[data-service-signs]");
+        const title = document.querySelector("[data-service-signs-title]");
+        const text = document.querySelector("[data-service-signs-text]");
+        const link = document.querySelector("[data-service-signs-link]");
+        const content = document.querySelector(".service-signs__content");
+
+        if (!signs || !title || !text || !link || !content) {
+            return;
+        }
+
+        const cards = Array.from(signs.querySelectorAll(".service-sign-card"));
+
+        cards.forEach(function (card) {
+            card.addEventListener("click", function () {
+                const newTitle = card.dataset.title;
+                const newText = card.dataset.text;
+                const newButton = card.dataset.button;
+
+                if (!newTitle || !newText || !newButton) {
+                    return;
+                }
+
+                cards.forEach(function (item) {
+                    item.classList.remove("is-active");
+                });
+
+                card.classList.add("is-active");
+                content.classList.add("is-changing");
+
+                setTimeout(function () {
+                    title.textContent = newTitle;
+                    text.textContent = newText;
+
+                    link.innerHTML = `
+                    ${newButton}
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                `;
+
+                    if (window.lucide) {
+                        window.lucide.createIcons();
+                    }
+
+                    content.classList.remove("is-changing");
+                }, 160);
+            });
+        });
+    }
+    
 })();
