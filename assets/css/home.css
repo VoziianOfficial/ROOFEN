@@ -26,7 +26,6 @@
     padding: 118px 0 92px;
     overflow: hidden;
     color: var(--white);
-    background: var(--graphite);
 }
 
 .home-hero::after {
@@ -781,101 +780,6 @@
 }
 
 /* ================================
-   Categories
-================================ */
-
-.home-categories__photo {
-    min-height: 520px;
-}
-
-.home-categories__photo img {
-    min-height: 520px;
-}
-
-.home-categories__label {
-    left: 24px;
-    bottom: 26px;
-}
-
-.home-categories__content p {
-    max-width: 650px;
-    margin-top: 18px;
-    color: var(--text-gray);
-}
-
-.home-categories__cards {
-    display: grid;
-    gap: 12px;
-    margin-top: 28px;
-}
-
-.home-category-card {
-    position: relative;
-    display: grid;
-    grid-template-columns: 36px minmax(0, 1fr);
-    gap: 12px;
-    align-items: center;
-    min-height: 58px;
-    padding: 13px 16px;
-    border: 1px solid var(--border-light);
-    border-radius: 18px;
-    color: var(--text-dark);
-    background: var(--white);
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.05);
-    font-weight: 780;
-    overflow: hidden;
-    transition:
-        transform var(--transition-base),
-        border-color var(--transition-base),
-        color var(--transition-base),
-        box-shadow var(--transition-base);
-}
-
-.home-category-card::after {
-    content: "";
-    position: absolute;
-    right: 16px;
-    bottom: 11px;
-    left: 64px;
-    height: 2px;
-    border-radius: var(--radius-pill);
-    background: linear-gradient(90deg, var(--copper), transparent);
-    opacity: 0;
-    transform: scaleX(0.5);
-    transform-origin: left;
-    transition:
-        opacity var(--transition-base),
-        transform var(--transition-base);
-}
-
-.home-category-card:hover {
-    color: var(--blue-dark);
-    border-color: rgba(37, 99, 235, 0.25);
-    box-shadow: var(--shadow-soft);
-    transform: translateX(6px);
-}
-
-.home-category-card:hover::after {
-    opacity: 1;
-    transform: scaleX(1);
-}
-
-.home-category-card svg {
-    width: 26px;
-    height: 26px;
-    color: var(--blue);
-    stroke-width: 1.65;
-    transition:
-        color var(--transition-base),
-        transform var(--transition-base);
-}
-
-.home-category-card:hover svg {
-    color: var(--copper);
-    transform: translateY(-3px) rotate(-3deg);
-}
-
-/* ================================
    Network / Why Choose
 ================================ */
 
@@ -1206,11 +1110,6 @@
         align-items: start;
     }
 
-    .home-categories__photo,
-    .home-categories__photo img {
-        min-height: 360px;
-    }
-
     .home-network__mini-grid {
         grid-template-columns: 1fr;
     }
@@ -1312,11 +1211,6 @@
     .home-service-card--compact h3,
     .home-service-card--compact p {
         max-width: 100%;
-    }
-
-    .home-categories__photo,
-    .home-categories__photo img {
-        min-height: 300px;
     }
 
     .home-process__step {
@@ -1527,3 +1421,157 @@
         width: 100%;
     }
 }
+/* =========================
+   Roof Issue Strip — Bigger Juicy Version
+========================= */
+
+.roof-issue-box {
+    min-height: 315px;
+    border-top: 1px solid rgba(92, 130, 177, 0.2);
+    border-bottom: 1px solid rgba(197, 106, 46, 0.22);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04),
+        0 22px 55px rgba(0, 0, 0, 0.24);
+}
+
+.roof-issue-box__content {
+    min-height: 315px;
+    padding: 42px 28px 42px clamp(20px, 5vw, 86px);
+    background:
+        radial-gradient(circle at 12% 16%, rgba(37, 99, 235, 0.22), transparent 32%),
+        radial-gradient(circle at 88% 88%, rgba(197, 106, 46, 0.16), transparent 34%),
+        linear-gradient(90deg, rgba(7, 17, 29, 1) 0%, rgba(7, 17, 29, 0.98) 67%, rgba(7, 17, 29, 0.78) 100%);
+}
+
+.roof-issue-box__content::before {
+    content: "";
+    position: absolute;
+    top: 28px;
+    left: clamp(18px, 4vw, 70px);
+    width: 92px;
+    height: 92px;
+    border: 1px solid rgba(197, 106, 46, 0.28);
+    border-radius: 26px;
+    background: rgba(197, 106, 46, 0.07);
+    transform: rotate(12deg);
+    pointer-events: none;
+}
+
+.roof-issue-box__content::after {
+    content: "";
+    position: absolute;
+    right: -64px;
+    bottom: 26px;
+    width: 220px;
+    height: 112px;
+    border-top: 3px solid rgba(37, 99, 235, 0.2);
+    border-left: 3px solid rgba(37, 99, 235, 0.2);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.roof-issue-box__title,
+.roof-issue-box__tags,
+.roof-issue-box__button {
+    position: relative;
+    z-index: 2;
+}
+
+.roof-issue-box__title {
+    margin-bottom: 22px;
+    font-size: clamp(1.65rem, 2.65vw, 2.35rem);
+    line-height: 1.08;
+    text-shadow:
+        0 18px 34px rgba(0, 0, 0, 0.38),
+        0 0 24px rgba(37, 99, 235, 0.15);
+}
+
+.roof-issue-box__tags {
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.roof-issue-tag {
+    min-width: 144px;
+    min-height: 38px;
+    padding: 9px 15px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    background:
+        linear-gradient(180deg, rgba(19, 43, 71, 0.98), rgba(9, 24, 42, 0.98));
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.09),
+        0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+.roof-issue-tag:hover {
+    border-color: rgba(197, 106, 46, 0.72);
+    background:
+        linear-gradient(180deg, rgba(27, 59, 96, 1), rgba(12, 34, 58, 1));
+}
+
+.roof-issue-box__button {
+    min-height: 44px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 0.86rem;
+    box-shadow:
+        0 14px 26px rgba(219, 109, 37, 0.32),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.roof-issue-box__media {
+    min-height: 315px;
+}
+
+.roof-issue-box__media::before {
+    background:
+        linear-gradient(90deg, rgba(7, 17, 29, 0.96) 0%, rgba(7, 17, 29, 0.58) 22%, rgba(7, 17, 29, 0.05) 58%, rgba(7, 17, 29, 0.22) 100%);
+}
+
+.roof-issue-box__media img {
+    transform: scale(1.04);
+    filter: contrast(1.06) saturate(1.08);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+
+    .roof-issue-box,
+    .roof-issue-box__content {
+        min-height: auto;
+    }
+
+    .roof-issue-box__content {
+        padding: 34px 18px 32px;
+    }
+
+    .roof-issue-box__media {
+        min-height: 270px;
+    }
+
+    .roof-issue-box__title {
+        font-size: 1.75rem;
+    }
+
+    .roof-issue-tag {
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 520px) {
+    .roof-issue-box__media {
+        min-height: 230px;
+    }
+
+    .roof-issue-box__title {
+        font-size: 1.48rem;
+    }
+
+    .roof-issue-tag {
+        min-width: 0;
+        min-height: 36px;
+        font-size: 0.74rem;
+    }
+}
+
