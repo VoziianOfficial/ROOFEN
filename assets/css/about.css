@@ -1578,3 +1578,53 @@
         white-space: nowrap !important;
     }
 }
+
+/* =========================
+   About Help — Compact Cards
+========================= */
+
+.about-help-card {
+    position: relative !important;
+    min-height: 15px !important;
+    padding: 22px 78px 22px 22px !important;
+}
+
+.about-help-card .icon-large {
+    position: absolute !important;
+    top: 20px !important;
+    right: 20px !important;
+    margin: 0 !important;
+    width: 46px !important;
+    height: 46px !important;
+}
+
+.about-help-card h3 {
+    max-width: 100% !important;
+    margin-bottom: 10px !important;
+    padding-right: 8px !important;
+}
+
+.about-help-card p {
+    margin-bottom: 18px !important;
+    font-size: 0.92rem !important;
+    line-height: 1.48 !important;
+}
+
+.about-help-card .arrow-link {
+    margin-top: auto !important;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .about-help-card {
+        min-height: 19px !important;
+        padding: 20px 70px 20px 20px !important;
+    }
+
+    .about-help-card .icon-large {
+        top: 18px !important;
+        right: 18px !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+}
