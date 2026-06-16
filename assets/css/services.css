@@ -901,3 +901,779 @@
         width: 100%;
     }
 }
+
+/* =========================
+   Services Grid — Compact Horizontal Premium
+   HTML не трогаем
+========================= */
+
+.services-grid {
+    position: relative !important;
+    overflow: hidden !important;
+    padding-top: clamp(70px, 7vw, 110px) !important;
+    padding-bottom: clamp(70px, 7vw, 110px) !important;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.08), transparent 32%),
+        radial-gradient(circle at 88% 80%, rgba(197, 106, 46, 0.1), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, var(--milk) 100%) !important;
+}
+
+/* делаем секцию шире */
+.services-grid .container-wide {
+    width: min(100% - 36px, 1560px) !important;
+    max-width: 1560px !important;
+}
+
+/* верх секции */
+.services-grid__top {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: end !important;
+    gap: clamp(24px, 4vw, 58px) !important;
+    margin-bottom: clamp(32px, 4vw, 50px) !important;
+}
+
+.services-grid__top .section-heading {
+    max-width: 980px !important;
+}
+
+.services-grid__top h2 {
+    max-width: 920px !important;
+    font-size: clamp(2.15rem, 4.2vw, 4.65rem) !important;
+    line-height: 0.94 !important;
+    letter-spacing: -0.08em !important;
+}
+
+.services-grid__top .section-heading>p:not(.section-kicker) {
+    max-width: 680px !important;
+    font-size: 0.98rem !important;
+    line-height: 1.6 !important;
+}
+
+/* кнопка сочнее */
+.services-grid__top .btn {
+    min-height: 54px !important;
+    white-space: nowrap !important;
+    transform: skewX(-8deg) !important;
+    box-shadow:
+        0 18px 38px rgba(37, 99, 235, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.services-grid__top .btn span,
+.services-grid__top .btn i,
+.services-grid__top .btn svg {
+    transform: skewX(8deg) !important;
+}
+
+/* главный layout — горизонтально */
+.services-grid__layout {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    align-items: stretch !important;
+}
+
+/* все карточки делаем равными, без огромных wide/accent */
+.services-card,
+.services-card--wide,
+.services-card--accent {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 245px !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding: 24px 18px 22px !important;
+    border: 1px solid rgba(15, 23, 42, 0.1) !important;
+    border-radius: 24px !important;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.72)) !important;
+    box-shadow:
+        0 18px 44px rgba(15, 23, 42, 0.07),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transition:
+        transform 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease,
+        background 0.28s ease !important;
+}
+
+/* убираем старые span wide/accent эффекты */
+.services-card--wide,
+.services-card--accent {
+    grid-column: auto !important;
+}
+
+/* аккуратный скошенный угол */
+.services-card::before {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 42px !important;
+    height: 42px !important;
+    background: linear-gradient(135deg, rgba(197, 106, 46, 0.22), rgba(37, 99, 235, 0.08)) !important;
+    clip-path: polygon(100% 0, 0 0, 100% 100%) !important;
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+}
+
+/* нижний accent line */
+.services-card::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 18px !important;
+    right: 18px !important;
+    bottom: 0 !important;
+    height: 3px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: linear-gradient(90deg, #C56A2E, var(--blue-bright), transparent) !important;
+    opacity: 0 !important;
+    transform: scaleX(0.25) !important;
+    transform-origin: left !important;
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease !important;
+}
+
+.services-card:hover {
+    border-color: rgba(197, 106, 46, 0.28) !important;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(245, 247, 250, 0.92)) !important;
+    box-shadow:
+        0 28px 70px rgba(15, 23, 42, 0.12),
+        0 0 0 1px rgba(197, 106, 46, 0.06) !important;
+    transform: translateY(-7px) !important;
+}
+
+.services-card:hover::after {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+/* content wrapper */
+.services-card__content {
+    display: contents !important;
+}
+
+/* label */
+.services-card__label {
+    position: relative !important;
+    z-index: 2 !important;
+    width: fit-content !important;
+    margin-bottom: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    color: #C56A2E !important;
+    background: transparent !important;
+    font-size: 0.68rem !important;
+    font-weight: 850 !important;
+    letter-spacing: 0.11em !important;
+    text-transform: uppercase !important;
+}
+
+/* большие иконки БЕЗ ФОНА */
+.services-card .icon-large,
+.services-card i.icon-large,
+.services-card svg.icon-large {
+    position: absolute !important;
+    top: 20px !important;
+    right: 18px !important;
+    z-index: 2 !important;
+    width: 74px !important;
+    height: 74px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: #C56A2E !important;
+    stroke-width: 1.25 !important;
+    opacity: 0.95 !important;
+    filter: drop-shadow(0 10px 16px rgba(197, 106, 46, 0.18)) !important;
+    transition:
+        color 0.28s ease,
+        transform 0.28s ease,
+        opacity 0.28s ease,
+        filter 0.28s ease !important;
+}
+
+/* когда lucide заменяет i на svg */
+.services-card>svg,
+.services-card__content+svg {
+    position: absolute !important;
+    top: 20px !important;
+    right: 18px !important;
+    width: 74px !important;
+    height: 74px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    color: #C56A2E !important;
+    stroke-width: 1.25 !important;
+}
+
+.services-card:hover .icon-large,
+.services-card:hover i.icon-large,
+.services-card:hover svg.icon-large,
+.services-card:hover>svg,
+.services-card:hover .services-card__content+svg {
+    color: var(--blue) !important;
+    transform: translateY(-5px) rotate(-4deg) scale(1.04) !important;
+    opacity: 1 !important;
+    filter: drop-shadow(0 14px 18px rgba(37, 99, 235, 0.22)) !important;
+}
+
+/* текст */
+.services-card h3 {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 170px !important;
+    margin: 92px 0 10px !important;
+    color: var(--text-dark) !important;
+    font-size: clamp(1.05rem, 1.35vw, 1.28rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.045em !important;
+}
+
+.services-card p {
+    position: relative !important;
+    z-index: 2 !important;
+    max-width: 210px !important;
+    margin: 0 0 18px !important;
+    color: var(--text-gray) !important;
+    font-size: 0.82rem !important;
+    line-height: 1.42 !important;
+}
+
+/* link внизу */
+.services-card .arrow-link {
+    position: relative !important;
+    z-index: 2 !important;
+    margin-top: auto !important;
+    color: var(--text-dark) !important;
+    font-size: 0.78rem !important;
+    font-weight: 820 !important;
+    line-height: 1.2 !important;
+}
+
+.services-card .arrow-link svg {
+    width: 16px !important;
+    height: 16px !important;
+    color: #C56A2E !important;
+}
+
+/* tablet */
+@media (max-width: 1180px) {
+    .services-grid__layout {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .services-card,
+    .services-card--wide,
+    .services-card--accent {
+        min-height: 225px !important;
+        padding: 22px 20px !important;
+    }
+
+    .services-card h3 {
+        max-width: 240px !important;
+    }
+
+    .services-card p {
+        max-width: 320px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .services-grid {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .services-grid .container-wide {
+        width: min(100% - 28px, 1560px) !important;
+    }
+
+    .services-grid__top {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+    .services-grid__top h2,
+    .services-grid__top .section-heading>p {
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    .services-grid__layout {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .services-card,
+    .services-card--wide,
+    .services-card--accent {
+        min-height: 170px !important;
+        padding: 22px 88px 22px 18px !important;
+        border-radius: 20px !important;
+    }
+
+    .services-card .icon-large,
+    .services-card i.icon-large,
+    .services-card svg.icon-large,
+    .services-card>svg,
+    .services-card__content+svg {
+        top: 20px !important;
+        right: 18px !important;
+        width: 58px !important;
+        height: 58px !important;
+    }
+
+    .services-card h3 {
+        max-width: 100% !important;
+        margin: 0 0 8px !important;
+        font-size: 1.08rem !important;
+    }
+
+    .services-card p {
+        max-width: 100% !important;
+        margin-bottom: 14px !important;
+        font-size: 0.82rem !important;
+    }
+
+    .services-card__label {
+        margin-bottom: 10px !important;
+    }
+}
+
+/* =========================
+   Services Grid — Photo Cards 3 in Row
+   HTML не трогаем
+========================= */
+
+.services-grid {
+    position: relative !important;
+    overflow: hidden !important;
+    padding-top: clamp(72px, 7vw, 112px) !important;
+    padding-bottom: clamp(72px, 7vw, 112px) !important;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(37, 99, 235, 0.08), transparent 32%),
+        radial-gradient(circle at 86% 78%, rgba(197, 106, 46, 0.11), transparent 34%),
+        linear-gradient(180deg, #ffffff 0%, var(--milk) 100%) !important;
+}
+
+.services-grid .container-wide {
+    width: min(100% - 36px, 1500px) !important;
+    max-width: 1500px !important;
+}
+
+/* верх оставляем аккуратным */
+.services-grid__top {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: end !important;
+    gap: clamp(24px, 4vw, 58px) !important;
+    margin-bottom: clamp(34px, 4vw, 54px) !important;
+}
+
+.services-grid__top .section-heading {
+    max-width: 980px !important;
+}
+
+.services-grid__top h2 {
+    max-width: 940px !important;
+    font-size: clamp(2.2rem, 4.1vw, 4.7rem) !important;
+    line-height: 0.94 !important;
+    letter-spacing: -0.08em !important;
+}
+
+/* 3 карточки в ряд */
+.services-grid__layout {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+    perspective: 1200px !important;
+}
+
+/* общая карточка */
+.services-card,
+.services-card--wide,
+.services-card--accent {
+    position: relative !important;
+    overflow: hidden !important;
+    min-height: 330px !important;
+    height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    padding: 26px !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 30px !important;
+    background-color: var(--graphite) !important;
+    background-size: cover !important;
+    background-position: center !important;
+    box-shadow:
+        0 26px 64px rgba(15, 23, 42, 0.16),
+        0 12px 24px rgba(15, 23, 42, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+    transform: translateZ(0) rotateX(0) rotateY(0) !important;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease,
+        filter 0.35s ease !important;
+}
+
+/* wide/accent больше не растягиваем */
+.services-card--wide,
+.services-card--accent {
+    grid-column: auto !important;
+}
+
+/* фото на каждую карточку */
+#roof-replacement-card {
+    background-image:
+        linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.42) 52%, rgba(7, 10, 15, 0.86) 100%),
+        url("../images/services/service-roof-replacement.jpg") !important;
+}
+
+#emergency-roof-repair-card {
+    background-image:
+        linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.44) 52%, rgba(7, 10, 15, 0.88) 100%),
+        url("../images/services/service-emergency-roof-repair.jpg") !important;
+}
+
+#roof-repair-card {
+    background-image:
+        linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.42) 52%, rgba(7, 10, 15, 0.86) 100%),
+        url("../images/services/service-roof-repair.jpg") !important;
+}
+
+#storm-damage-roof-repair-card {
+    background-image:
+        linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.44) 52%, rgba(7, 10, 15, 0.88) 100%),
+        url("../images/services/service-storm-damage.jpg") !important;
+}
+
+#roof-inspection-card {
+    background-image:
+        linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.42) 52%, rgba(7, 10, 15, 0.86) 100%),
+        url("../images/services/service-roof-inspection.jpg") !important;
+}
+
+#gutter-installation-repair-card {
+    background-image:
+        linear-gradient(180deg, rgba(7, 10, 15, 0.08) 0%, rgba(7, 10, 15, 0.44) 52%, rgba(7, 10, 15, 0.88) 100%),
+        url("../images/services/service-gutters.jpg") !important;
+}
+
+/* блеск */
+.services-card::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -90% !important;
+    left: -80% !important;
+    z-index: 3 !important;
+    width: 48% !important;
+    height: 260% !important;
+    background: linear-gradient(115deg,
+            transparent,
+            rgba(255, 255, 255, 0.34),
+            transparent) !important;
+    transform: rotate(14deg) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        left 0.75s ease,
+        opacity 0.25s ease !important;
+}
+
+/* нижний сочный glow */
+.services-card::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 0 !important;
+    z-index: 3 !important;
+    height: 4px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: linear-gradient(90deg, #C56A2E, var(--blue-bright), transparent) !important;
+    opacity: 0 !important;
+    transform: scaleX(0.24) !important;
+    transform-origin: left !important;
+    transition:
+        opacity 0.32s ease,
+        transform 0.32s ease !important;
+}
+
+/* 3D hover */
+.services-card:hover {
+    border-color: rgba(197, 106, 46, 0.38) !important;
+    box-shadow:
+        0 38px 90px rgba(15, 23, 42, 0.24),
+        0 18px 40px rgba(197, 106, 46, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+    transform: translateY(-10px) rotateX(3deg) rotateY(-2deg) scale(1.015) !important;
+    filter: saturate(1.08) contrast(1.04) !important;
+}
+
+.services-card:hover::before {
+    left: 132% !important;
+    opacity: 1 !important;
+}
+
+.services-card:hover::after {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+/* убираем весь лишний текст */
+.services-card__label,
+.services-card p {
+    display: none !important;
+}
+
+/* ссылка остаётся кликабельной поверх всей карточки, но визуально скрыта */
+.services-card .arrow-link {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 8 !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    opacity: 0 !important;
+}
+
+.services-card .arrow-link svg {
+    display: none !important;
+}
+
+/* content wrapper */
+.services-card__content {
+    display: contents !important;
+}
+
+/* заголовок-плашка */
+.services-card h3 {
+    position: relative !important;
+    z-index: 6 !important;
+    width: fit-content !important;
+    max-width: min(100%, 360px) !important;
+    margin: auto 0 0 !important;
+    padding: 13px 16px 14px !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+    border-radius: 18px !important;
+    color: var(--white) !important;
+    background:
+        linear-gradient(135deg, rgba(7, 10, 15, 0.76), rgba(7, 10, 15, 0.46)) !important;
+    box-shadow:
+        0 18px 34px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.16) !important;
+    backdrop-filter: blur(12px) !important;
+    font-size: clamp(1.22rem, 2vw, 1.7rem) !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.055em !important;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease !important;
+}
+
+.services-card:hover h3 {
+    border-color: rgba(197, 106, 46, 0.5) !important;
+    background:
+        linear-gradient(135deg, rgba(197, 106, 46, 0.86), rgba(7, 10, 15, 0.62)) !important;
+    transform: translateY(-4px) skewX(-4deg) !important;
+}
+
+/* иконки оставляем большими без фона */
+.services-card .icon-large,
+.services-card i.icon-large,
+.services-card svg.icon-large,
+.services-card>svg,
+.services-card__content+svg {
+    position: absolute !important;
+    top: 24px !important;
+    right: 24px !important;
+    z-index: 6 !important;
+    width: 78px !important;
+    height: 78px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: #C56A2E !important;
+    stroke-width: 1.18 !important;
+    opacity: 0.98 !important;
+    filter:
+        drop-shadow(0 12px 18px rgba(0, 0, 0, 0.34)) drop-shadow(0 0 18px rgba(197, 106, 46, 0.34)) !important;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease,
+        filter 0.3s ease !important;
+}
+
+.services-card:hover .icon-large,
+.services-card:hover i.icon-large,
+.services-card:hover svg.icon-large,
+.services-card:hover>svg,
+.services-card:hover .services-card__content+svg {
+    color: var(--blue-bright) !important;
+    transform: translateY(-6px) rotate(-5deg) scale(1.08) !important;
+    filter:
+        drop-shadow(0 14px 22px rgba(0, 0, 0, 0.38)) drop-shadow(0 0 22px rgba(59, 130, 246, 0.38)) !important;
+}
+
+/* tablet */
+@media (max-width: 1180px) {
+    .services-grid__layout {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+    }
+
+    .services-card,
+    .services-card--wide,
+    .services-card--accent {
+        min-height: 300px !important;
+    }
+}
+
+/* mobile — компактные по высоте */
+@media (max-width: 640px) {
+    .services-grid {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+
+    .services-grid__top {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+    .services-grid__layout {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .services-card,
+    .services-card--wide,
+    .services-card--accent {
+        min-height: 168px !important;
+        padding: 18px !important;
+        border-radius: 22px !important;
+    }
+
+    .services-card h3 {
+        max-width: calc(100% - 76px) !important;
+        padding: 10px 12px !important;
+        border-radius: 15px !important;
+        font-size: 1.08rem !important;
+        line-height: 1.06 !important;
+    }
+
+    .services-card .icon-large,
+    .services-card i.icon-large,
+    .services-card svg.icon-large,
+    .services-card>svg,
+    .services-card__content+svg {
+        top: 18px !important;
+        right: 18px !important;
+        width: 56px !important;
+        height: 56px !important;
+    }
+
+    .services-card:hover {
+        transform: translateY(-4px) scale(1.01) !important;
+    }
+}
+
+/* =========================
+   FINAL FIX — Services 3 Cards Per Row
+   Accent/Wide больше НЕ растягиваются
+========================= */
+
+.services-grid__layout {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    grid-auto-flow: row !important;
+    grid-auto-rows: 330px !important;
+    gap: 18px !important;
+    align-items: stretch !important;
+}
+
+/* главное: сбрасываем старые span 2 */
+.services-card,
+.services-card--wide,
+.services-card--accent {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    grid-area: auto !important;
+
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 330px !important;
+    height: 330px !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+}
+
+/* на всякий случай отдельно перебиваем accent */
+.services-card--accent {
+    grid-row: auto !important;
+    grid-column: auto !important;
+    align-self: stretch !important;
+}
+
+/* и wide тоже */
+.services-card--wide {
+    grid-column: auto !important;
+    grid-row: auto !important;
+    grid-template-columns: none !important;
+}
+
+/* tablet — тоже 3 в ряд */
+@media (max-width: 1180px) and (min-width: 741px) {
+    .services-grid__layout {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        grid-auto-rows: 280px !important;
+        gap: 14px !important;
+    }
+
+    .services-card,
+    .services-card--wide,
+    .services-card--accent {
+        min-height: 280px !important;
+        height: 280px !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
+
+/* mobile — компактно по одной */
+@media (max-width: 740px) {
+    .services-grid__layout {
+        grid-template-columns: 1fr !important;
+        grid-auto-rows: auto !important;
+        gap: 10px !important;
+    }
+
+    .services-card,
+    .services-card--wide,
+    .services-card--accent {
+        min-height: 168px !important;
+        height: 168px !important;
+        grid-column: auto !important;
+        grid-row: auto !important;
+    }
+}
