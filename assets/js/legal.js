@@ -5,63 +5,47 @@
 
     document.addEventListener("DOMContentLoaded", function () {
         initLegalToc();
-        initLegalSectionHighlight();
     });
 
     function initLegalToc() {
-        const toc = document.querySelector(".legal-toc");
+        const tocLinks = Array.from(document.querySelectorAll(".legal-toc a[href^='#']"));
+        const sections = Array.from(document.querySelectorAll(".legal-document section[id]"));
 
-        if (!toc) {
+        if (!tocLinks.length || !sections.length) {
             return;
         }
-
-        const tocLinks = Array.from(toc.querySelectorAll("a[href^='#']"));
 
         tocLinks.forEach(function (link) {
             link.addEventListener("click", function () {
-                tocLinks.forEach(function (item) {
-                    item.classList.remove("is-active");
-                });
-
-                link.classList.add("is-active");
+                setActiveLink(tocLinks, link);
             });
         });
-    }
-
-    function initLegalSectionHighlight() {
-        const documentBlock = document.querySelector(".legal-document");
-        const tocLinks = Array.from(document.querySelectorAll(".legal-toc a[href^='#']"));
-
-        if (!documentBlock || !tocLinks.length) {
-            return;
-        }
-
-        const sections = Array.from(documentBlock.querySelectorAll("section[id]"));
-
-        if (!sections.length) {
-            return;
-        }
 
         const observer = new IntersectionObserver(
             function (entries) {
+                let visibleEntry = null;
+
                 entries.forEach(function (entry) {
-                    if (!entry.isIntersecting) {
-                        return;
+                    if (entry.isIntersecting) {
+                        visibleEntry = entry;
                     }
+                });
 
-                    const id = entry.target.getAttribute("id");
+                if (!visibleEntry) {
+                    return;
+                }
 
-                    if (!id) {
-                        return;
-                    }
+                const id = visibleEntry.target.getAttribute("id");
 
-                    setActiveTocLink(tocLinks, id);
+                tocLinks.forEach(function (link) {
+                    const href = link.getAttribute("href");
+                    link.classList.toggle("is-active", href === `#${id}`);
                 });
             },
             {
                 root: null,
-                threshold: 0.28,
-                rootMargin: "-18% 0px -62% 0px"
+                threshold: 0.2,
+                rootMargin: "-24% 0px -58% 0px"
             }
         );
 
@@ -70,37 +54,11 @@
         });
     }
 
-    function setActiveTocLink(links, id) {
+    function setActiveLink(links, activeLink) {
         links.forEach(function (link) {
-            const href = link.getAttribute("href");
-
-            if (href === `#${id}`) {
-                link.classList.add("is-active");
-                scrollTocLinkIntoView(link);
-                return;
-            }
-
             link.classList.remove("is-active");
         });
-    }
 
-    function scrollTocLinkIntoView(link) {
-        const tocNav = link.closest(".legal-toc nav");
-
-        if (!tocNav) {
-            return;
-        }
-
-        const isScrollable = tocNav.scrollWidth > tocNav.clientWidth;
-
-        if (!isScrollable) {
-            return;
-        }
-
-        link.scrollIntoView({
-            behavior: "smooth",
-            block: "nearest",
-            inline: "center"
-        });
+        activeLink.classList.add("is-active");
     }
 })();
