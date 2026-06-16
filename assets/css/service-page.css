@@ -1846,7 +1846,12 @@
         max-width: 720px !important;
     }
 
+    .service-types__content {
+        order: 1 !important;
+    }
+
     .service-types__photo {
+        order: 2 !important;
         justify-self: center !important;
         width: min(100%, 420px) !important;
         height: 360px !important;
@@ -1882,7 +1887,12 @@
         gap: 34px !important;
     }
 
+    .service-types__content {
+        order: 1 !important;
+    }
+
     .service-types__photo {
+        order: 2 !important;
         width: min(100%, 320px) !important;
         height: 300px !important;
         min-height: 300px !important;
@@ -2905,8 +2915,7 @@
     }
 
     .service-signs__list {
-        padding: 16px !important;
-        gap: 9px !important;
+        display: none !important;
     }
 
     .service-sign-card {
