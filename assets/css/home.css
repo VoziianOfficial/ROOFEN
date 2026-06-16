@@ -3795,3 +3795,843 @@
         box-shadow: none !important;
     }
 }
+
+/* =========================
+   Roof Network Strip — Light Premium Redesign
+========================= */
+
+.roof-network-strip {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 14% 18%, rgba(37, 99, 235, 0.12), transparent 32%),
+        radial-gradient(circle at 82% 74%, rgba(197, 106, 46, 0.12), transparent 34%),
+        linear-gradient(180deg, var(--white), var(--milk));
+}
+
+.roof-network-strip::before {
+    content: "";
+    position: absolute;
+    right: -110px;
+    top: 80px;
+    width: 390px;
+    height: 190px;
+    border-top: 4px solid rgba(37, 99, 235, 0.1);
+    border-left: 4px solid rgba(37, 99, 235, 0.1);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.roof-network-strip::after {
+    content: "";
+    position: absolute;
+    left: -120px;
+    bottom: 150px;
+    width: 360px;
+    height: 180px;
+    border-top: 4px solid rgba(197, 106, 46, 0.12);
+    border-left: 4px solid rgba(197, 106, 46, 0.12);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.roof-network-strip__inner {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: minmax(0, 0.92fr) minmax(360px, 0.72fr);
+    gap: clamp(28px, 5vw, 74px);
+    align-items: center;
+    width: min(100% - 36px, 1440px);
+    margin: 0 auto;
+    padding: clamp(70px, 8vw, 118px) 0 clamp(42px, 5vw, 72px);
+}
+
+.roof-network-strip__content {
+    position: relative;
+}
+
+.roof-network-strip__kicker {
+    display: inline-flex;
+    width: fit-content;
+    margin: 0 0 18px;
+    padding: 8px 12px;
+    border-radius: var(--radius-pill);
+    color: var(--copper-dark);
+    background: rgba(242, 209, 188, 0.48);
+    font-size: 0.76rem;
+    font-weight: 850;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.roof-network-strip__content h2 {
+    max-width: 760px;
+    margin: 0;
+    color: var(--text-dark);
+    font-size: clamp(2.2rem, 5vw, 5.2rem);
+    line-height: 0.96;
+    font-weight: 900;
+    letter-spacing: -0.08em;
+}
+
+.roof-network-strip__content h2 span {
+    display: block;
+    color: var(--blue);
+}
+
+.roof-network-strip__text {
+    max-width: 620px;
+    margin: 24px 0 0;
+    color: var(--text-gray);
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+/* clean material icons */
+.roof-network-strip__types {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(90px, 1fr));
+    gap: clamp(18px, 2.8vw, 38px);
+    max-width: 840px;
+    margin-top: 42px;
+}
+
+.roof-network-strip__types article {
+    position: relative;
+    display: grid;
+    justify-items: start;
+    align-content: start;
+    gap: 13px;
+    min-height: 96px;
+    cursor: default;
+}
+
+.roof-network-strip__types article::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    width: 0;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--blue), var(--copper));
+    transition: width 0.28s ease;
+}
+
+.roof-network-strip__types article:hover::before {
+    width: 54px;
+}
+
+.roof-network-strip__types i,
+.roof-network-strip__types svg {
+    width: 42px;
+    height: 42px;
+    color: var(--blue);
+    stroke-width: 1.35;
+    filter: drop-shadow(0 12px 16px rgba(37, 99, 235, 0.16));
+    transition:
+        color 0.28s ease,
+        transform 0.28s ease,
+        filter 0.28s ease;
+}
+
+.roof-network-strip__types article:hover i,
+.roof-network-strip__types article:hover svg {
+    color: var(--copper);
+    transform: translateY(-6px) rotate(-4deg);
+    filter: drop-shadow(0 16px 20px rgba(197, 106, 46, 0.3));
+}
+
+.roof-network-strip__types span {
+    max-width: 120px;
+    color: var(--text-dark);
+    font-size: 0.86rem;
+    line-height: 1.25;
+    font-weight: 760;
+}
+
+/* photo */
+.roof-network-strip__image {
+    position: relative;
+    min-height: 520px;
+    overflow: hidden;
+    border-radius: 34px 0 34px 34px;
+    background: var(--graphite);
+    box-shadow:
+        0 34px 80px rgba(15, 23, 42, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+.roof-network-strip__image::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        linear-gradient(180deg, rgba(7, 10, 15, 0.02), rgba(7, 10, 15, 0.44)),
+        radial-gradient(circle at 80% 10%, rgba(197, 106, 46, 0.18), transparent 34%);
+    pointer-events: none;
+}
+
+.roof-network-strip__image::after {
+    content: "";
+    position: absolute;
+    right: -72px;
+    bottom: 54px;
+    z-index: 3;
+    width: 230px;
+    height: 112px;
+    border-top: 4px solid rgba(197, 106, 46, 0.44);
+    border-left: 4px solid rgba(197, 106, 46, 0.44);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.roof-network-strip__image img {
+    width: 100%;
+    height: 100%;
+    min-height: 520px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    filter: contrast(1.06) saturate(1.06);
+    transform: scale(1.02);
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.roof-network-strip__image:hover img {
+    transform: scale(1.075);
+    filter: contrast(1.1) saturate(1.12);
+}
+
+.roof-network-strip__photo-note {
+    position: absolute;
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+    z-index: 4;
+    padding: 22px 24px;
+    border-left: 3px solid var(--copper);
+    color: var(--white);
+    background:
+        linear-gradient(145deg, rgba(7, 10, 15, 0.78), rgba(16, 23, 34, 0.48));
+    backdrop-filter: blur(10px);
+}
+
+.roof-network-strip__photo-note span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--copper);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.roof-network-strip__photo-note strong {
+    display: block;
+    max-width: 330px;
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 1.24rem;
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+}
+
+/* bottom trust strip */
+.roof-network-strip__trust {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(0, 1.45fr) auto;
+    gap: clamp(22px, 4vw, 56px);
+    align-items: center;
+    width: 100%;
+    min-height: 178px;
+    padding: 34px clamp(20px, 5vw, 86px);
+    color: var(--white);
+    background:
+        radial-gradient(circle at 75% 35%, rgba(37, 99, 235, 0.18), transparent 28%),
+        radial-gradient(circle at 20% 88%, rgba(197, 106, 46, 0.16), transparent 30%),
+        linear-gradient(135deg, var(--black), var(--graphite));
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.roof-network-strip__trust::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: clamp(20px, 5vw, 86px);
+    right: clamp(20px, 5vw, 86px);
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, transparent, var(--blue), var(--copper), transparent);
+}
+
+.roof-network-strip__heading h3 {
+    max-width: 420px;
+    margin: 0;
+    color: var(--white);
+    font-size: clamp(1.5rem, 2.4vw, 2.6rem);
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -0.065em;
+}
+
+.roof-network-strip__heading h3 span {
+    display: block;
+    color: rgba(216, 222, 232, 0.66);
+}
+
+.roof-network-strip__features {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(18px, 2.4vw, 38px);
+}
+
+.roof-network-strip__features article {
+    position: relative;
+    display: grid;
+    gap: 12px;
+    align-content: start;
+    color: rgba(216, 222, 232, 0.78);
+    cursor: default;
+}
+
+.roof-network-strip__features article::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--copper), var(--blue));
+    transition: width 0.28s ease;
+}
+
+.roof-network-strip__features article:hover::after {
+    width: 48px;
+}
+
+.roof-network-strip__features i,
+.roof-network-strip__features svg {
+    width: 34px;
+    height: 34px;
+    color: rgba(216, 222, 232, 0.9);
+    stroke-width: 1.35;
+    transition:
+        color 0.28s ease,
+        transform 0.28s ease,
+        filter 0.28s ease;
+}
+
+.roof-network-strip__features article:hover i,
+.roof-network-strip__features article:hover svg {
+    color: var(--copper);
+    transform: translateY(-5px) rotate(-4deg);
+    filter: drop-shadow(0 14px 18px rgba(197, 106, 46, 0.32));
+}
+
+.roof-network-strip__features span {
+    max-width: 160px;
+    font-size: 0.82rem;
+    line-height: 1.3;
+    font-weight: 720;
+}
+
+.roof-network-strip__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 48px;
+    padding: 13px 18px;
+    border-radius: 12px;
+    color: var(--white);
+    background: linear-gradient(180deg, #f19442 0%, #db6d25 100%);
+    box-shadow:
+        0 16px 30px rgba(219, 109, 37, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    font-size: 0.86rem;
+    font-weight: 850;
+    text-decoration: none;
+    white-space: nowrap;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        filter 0.25s ease;
+}
+
+.roof-network-strip__link:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.04);
+    box-shadow:
+        0 22px 44px rgba(219, 109, 37, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24);
+}
+
+.roof-network-strip__link svg {
+    width: 17px;
+    height: 17px;
+}
+
+/* hide old elements if old HTML remains somewhere */
+.roof-network-strip__top,
+.roof-network-strip__bottom,
+.roof-network-strip__card,
+.roof-network-strip__line {
+    all: unset;
+}
+
+/* Responsive */
+@media (max-width: 1180px) {
+    .roof-network-strip__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .roof-network-strip__image {
+        min-height: 430px;
+        border-radius: 30px;
+    }
+
+    .roof-network-strip__image img {
+        min-height: 430px;
+    }
+
+    .roof-network-strip__trust {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .roof-network-strip__features {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .roof-network-strip__features span {
+        max-width: 100%;
+    }
+
+    .roof-network-strip__link {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 760px) {
+    .roof-network-strip__inner {
+        width: min(100% - 28px, 1440px);
+        padding: 56px 0 38px;
+    }
+
+    .roof-network-strip__content h2 {
+        font-size: clamp(2rem, 12vw, 3.4rem);
+    }
+
+    .roof-network-strip__types {
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin-top: 30px;
+    }
+
+    .roof-network-strip__types article {
+        grid-template-columns: 38px minmax(0, 1fr);
+        align-items: center;
+        justify-items: start;
+        min-height: 66px;
+        padding: 13px 0;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
+
+    .roof-network-strip__types article::before {
+        display: none;
+    }
+
+    .roof-network-strip__types svg {
+        width: 32px;
+        height: 32px;
+    }
+
+    .roof-network-strip__types span {
+        max-width: 100%;
+    }
+
+    .roof-network-strip__image {
+        min-height: 330px;
+        border-radius: 24px;
+    }
+
+    .roof-network-strip__image img {
+        min-height: 330px;
+    }
+
+    .roof-network-strip__photo-note {
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        padding: 18px;
+    }
+
+    .roof-network-strip__trust {
+        padding: 34px 18px;
+    }
+
+    .roof-network-strip__features {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .roof-network-strip__features article {
+        grid-template-columns: 36px minmax(0, 1fr);
+        align-items: center;
+        gap: 14px;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .roof-network-strip__features article:last-child {
+        border-bottom: 0;
+    }
+
+    .roof-network-strip__features article::after {
+        display: none;
+    }
+
+    .roof-network-strip__features svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .roof-network-strip__link {
+        width: 100%;
+    }
+}
+
+/* =========================
+   Roof Network Trust — Compact Juicy Version
+========================= */
+
+.roof-network-strip__trust {
+    position: relative !important;
+    z-index: 3 !important;
+    display: grid !important;
+    grid-template-columns: minmax(230px, 0.58fr) minmax(0, 1.35fr) auto !important;
+    gap: clamp(18px, 3vw, 42px) !important;
+    align-items: center !important;
+    min-height: 132px !important;
+    padding: 22px clamp(20px, 5vw, 78px) !important;
+    color: var(--white) !important;
+    background:
+        radial-gradient(circle at 16% 50%, rgba(37, 99, 235, 0.28), transparent 30%),
+        radial-gradient(circle at 82% 48%, rgba(197, 106, 46, 0.22), transparent 32%),
+        linear-gradient(135deg, #070a0f 0%, #101722 52%, #070a0f 100%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.09) !important;
+    border-bottom: 1px solid rgba(197, 106, 46, 0.18) !important;
+    overflow: hidden !important;
+}
+
+.roof-network-strip__trust::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: clamp(20px, 5vw, 78px);
+    right: clamp(20px, 5vw, 78px);
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(59, 130, 246, 0.9),
+            rgba(197, 106, 46, 0.9),
+            transparent);
+}
+
+.roof-network-strip__trust::after {
+    content: "";
+    position: absolute;
+    right: -72px;
+    bottom: -74px;
+    width: 210px;
+    height: 210px;
+    border-radius: 56px;
+    background: rgba(197, 106, 46, 0.11);
+    transform: rotate(18deg);
+    pointer-events: none;
+}
+
+/* heading */
+.roof-network-strip__trust .roof-network-strip__heading {
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    padding: 0 !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__heading h3 {
+    max-width: 360px !important;
+    margin: 0 !important;
+    color: var(--white) !important;
+    font-size: clamp(1.28rem, 2vw, 2.05rem) !important;
+    line-height: 0.98 !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.06em !important;
+    text-transform: uppercase !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__heading h3 span {
+    display: block;
+    color: rgba(216, 222, 232, 0.62);
+}
+
+/* compact icon line */
+.roof-network-strip__trust .roof-network-strip__features {
+    position: relative !important;
+    z-index: 2 !important;
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: clamp(16px, 2.4vw, 34px) !important;
+    align-items: center !important;
+    padding: 0 !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__features article {
+    position: relative !important;
+    display: grid !important;
+    grid-template-columns: 34px minmax(0, 1fr) !important;
+    gap: 12px !important;
+    align-items: center !important;
+    min-height: 68px !important;
+    padding: 0 !important;
+    color: rgba(216, 222, 232, 0.78) !important;
+    text-align: left !important;
+    cursor: default !important;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__features article::before {
+    content: "";
+    position: absolute;
+    left: 46px;
+    right: 0;
+    bottom: -9px;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), var(--copper));
+    opacity: 0;
+    transform: scaleX(0.28);
+    transform-origin: left;
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.roof-network-strip__trust .roof-network-strip__features article::after {
+    display: none !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__features article:hover {
+    color: var(--white) !important;
+    transform: translateY(-4px) !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__features article:hover::before {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+/* icons: no background */
+.roof-network-strip__trust .roof-network-strip__features i,
+.roof-network-strip__trust .roof-network-strip__features svg {
+    width: 31px !important;
+    height: 31px !important;
+    color: rgba(216, 222, 232, 0.9) !important;
+    stroke-width: 1.35 !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease,
+        filter 0.25s ease !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__features article:hover i,
+.roof-network-strip__trust .roof-network-strip__features article:hover svg {
+    color: var(--copper) !important;
+    transform: translateY(-4px) rotate(-4deg) scale(1.08) !important;
+    filter: drop-shadow(0 12px 16px rgba(197, 106, 46, 0.32)) !important;
+}
+
+.roof-network-strip__trust .roof-network-strip__features span {
+    max-width: 170px !important;
+    color: inherit !important;
+    font-size: 0.78rem !important;
+    line-height: 1.24 !important;
+    font-weight: 720 !important;
+}
+
+/* smaller CTA */
+.roof-network-strip__link {
+    position: relative !important;
+    z-index: 2 !important;
+    min-height: 42px !important;
+    padding: 11px 16px !important;
+    border-radius: 10px !important;
+    font-size: 0.78rem !important;
+    white-space: nowrap !important;
+    box-shadow:
+        0 12px 24px rgba(219, 109, 37, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.roof-network-strip__link:hover {
+    transform: translateY(-3px) !important;
+    box-shadow:
+        0 18px 34px rgba(219, 109, 37, 0.38),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+}
+
+.roof-network-strip__link svg {
+    width: 16px !important;
+    height: 16px !important;
+}
+
+/* Tablet */
+@media (max-width: 1180px) {
+    .roof-network-strip__trust {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+        padding: 30px 28px !important;
+        gap: 24px !important;
+    }
+
+    .roof-network-strip__trust .roof-network-strip__heading h3 {
+        max-width: 720px !important;
+    }
+
+    .roof-network-strip__trust .roof-network-strip__features {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 22px 28px !important;
+    }
+
+    .roof-network-strip__link {
+        width: fit-content !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .roof-network-strip__trust {
+        padding: 30px 18px !important;
+        gap: 22px !important;
+    }
+
+    .roof-network-strip__trust::before {
+        left: 18px;
+        right: 18px;
+    }
+
+    .roof-network-strip__trust .roof-network-strip__heading h3 {
+        font-size: clamp(1.45rem, 9vw, 2.1rem) !important;
+    }
+
+    .roof-network-strip__trust .roof-network-strip__features {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+    }
+
+    .roof-network-strip__trust .roof-network-strip__features article {
+        min-height: 62px !important;
+        padding: 12px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .roof-network-strip__trust .roof-network-strip__features article:last-child {
+        border-bottom: 0;
+    }
+
+    .roof-network-strip__trust .roof-network-strip__features article::before {
+        display: none;
+    }
+
+    .roof-network-strip__trust .roof-network-strip__features span {
+        max-width: 100% !important;
+        font-size: 0.84rem !important;
+    }
+
+    .roof-network-strip__link {
+        width: 100% !important;
+    }
+}
+
+/* =========================
+   Fix Roof Network Image Hover
+   No deformation, radius always stays
+========================= */
+
+.roof-network-strip__image {
+    position: relative !important;
+    overflow: hidden !important;
+    isolation: isolate !important;
+    contain: paint !important;
+    border-radius: 34px 0 34px 34px !important;
+    transform: none !important;
+}
+
+.roof-network-strip__image:hover {
+    border-radius: 34px 0 34px 34px !important;
+    transform: none !important;
+}
+
+/* чтобы overlay тоже не вылезал за скругления */
+.roof-network-strip__image::before,
+.roof-network-strip__image::after {
+    pointer-events: none !important;
+}
+
+/* картинка больше не растягивает блок и не ломает форму */
+.roof-network-strip__image img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: inherit !important;
+    transform: scale(1.02) !important;
+    transform-origin: center center !important;
+    will-change: transform !important;
+    transition:
+        transform 0.65s ease,
+        filter 0.65s ease !important;
+}
+
+/* перебиваем старый hover от всей секции */
+.roof-network-strip:hover .roof-network-strip__image img,
+.roof-network-strip__image:hover img {
+    transform: scale(1.045) !important;
+    filter: contrast(1.08) saturate(1.08) !important;
+}
+
+/* tablet */
+@media (max-width: 1180px) {
+
+    .roof-network-strip__image,
+    .roof-network-strip__image:hover {
+        border-radius: 30px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 760px) {
+
+    .roof-network-strip__image,
+    .roof-network-strip__image:hover {
+        border-radius: 24px !important;
+    }
+}
