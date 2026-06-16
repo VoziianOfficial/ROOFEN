@@ -7,6 +7,7 @@
         initServiceMiniFlow();
         initServiceProblemGuide();
         initServiceSignsSwitcher();
+        initServiceFaqAccordion();
     });
 
     function initServiceMiniFlow() {
@@ -90,6 +91,59 @@
 
                     content.classList.remove("is-changing");
                 }, 160);
+            });
+        });
+    }
+
+    function initServiceFaqAccordion() {
+        const accordions = document.querySelectorAll("[data-accordion]");
+
+        accordions.forEach(function (accordion) {
+            const items = Array.from(accordion.querySelectorAll("[data-accordion-item]"));
+
+            items.forEach(function (item, index) {
+                const button = item.querySelector("[data-accordion-button]");
+                if (!button) return;
+
+                const panelId = button.getAttribute("aria-controls");
+                const panel = panelId ? document.getElementById(panelId) : item.querySelector(".faq-panel");
+                if (!panel) return;
+
+                const shouldBeOpen = button.getAttribute("aria-expanded") === "true" || index === 0;
+
+                item.classList.toggle("is-open", shouldBeOpen);
+                button.setAttribute("aria-expanded", shouldBeOpen ? "true" : "false");
+                panel.hidden = !shouldBeOpen;
+
+                button.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    event.stopImmediatePropagation();
+
+                    const isOpen = item.classList.contains("is-open");
+
+                    items.forEach(function (currentItem) {
+                        const currentButton = currentItem.querySelector("[data-accordion-button]");
+                        if (!currentButton) return;
+
+                        const currentPanelId = currentButton.getAttribute("aria-controls");
+                        const currentPanel = currentPanelId
+                            ? document.getElementById(currentPanelId)
+                            : currentItem.querySelector(".faq-panel");
+
+                        currentItem.classList.remove("is-open");
+                        currentButton.setAttribute("aria-expanded", "false");
+
+                        if (currentPanel) {
+                            currentPanel.hidden = true;
+                        }
+                    });
+
+                    if (!isOpen) {
+                        item.classList.add("is-open");
+                        button.setAttribute("aria-expanded", "true");
+                        panel.hidden = false;
+                    }
+                }, true);
             });
         });
     }

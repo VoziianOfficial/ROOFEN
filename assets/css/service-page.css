@@ -3275,3 +3275,188 @@
         transform: none !important;
     }
 }
+
+/* =========================
+   Service FAQ — Fix side empty space
+   Masonry-like columns + correct hidden panels
+========================= */
+
+.service-faq {
+    position: relative !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+}
+
+/* вместо grid делаем column layout, чтобы соседний вопрос не растягивался */
+.service-faq .faq-grid {
+    display: block !important;
+    column-count: 2 !important;
+    column-gap: 16px !important;
+    gap: 0 !important;
+    align-items: initial !important;
+}
+
+/* каждый item живет сам по себе и не растягивает соседний */
+.service-faq .faq-item {
+    display: inline-block !important;
+    width: 100% !important;
+    margin: 0 0 14px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    vertical-align: top !important;
+    align-self: start !important;
+
+    border: 1px solid rgba(15, 23, 42, 0.1) !important;
+    border-radius: 22px !important;
+    background: #ffffff !important;
+    box-shadow: 0 16px 38px rgba(15, 23, 42, 0.055) !important;
+    overflow: hidden !important;
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease,
+        background 0.25s ease !important;
+}
+
+.service-faq .faq-item:hover,
+.service-faq .faq-item.is-open {
+    border-color: rgba(197, 106, 46, 0.28) !important;
+    box-shadow:
+        0 22px 54px rgba(15, 23, 42, 0.09),
+        0 10px 24px rgba(197, 106, 46, 0.07) !important;
+    transform: translateY(-2px) !important;
+}
+
+/* кнопка */
+.service-faq .faq-button {
+    width: 100% !important;
+    min-height: 68px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 36px !important;
+    gap: 14px !important;
+    align-items: center !important;
+    padding: 18px 20px !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: var(--text-dark) !important;
+    font-size: 0.98rem !important;
+    font-weight: 850 !important;
+    line-height: 1.18 !important;
+    letter-spacing: -0.03em !important;
+    text-align: left !important;
+    cursor: pointer !important;
+}
+
+/* плюс / минус */
+.service-faq .faq-button__icon {
+    position: relative !important;
+    width: 34px !important;
+    height: 34px !important;
+    border-radius: 999px !important;
+    background: rgba(234, 242, 255, 0.95) !important;
+    border: 1px solid rgba(37, 99, 235, 0.16) !important;
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease !important;
+}
+
+.service-faq .faq-button__icon::before,
+.service-faq .faq-button__icon::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    width: 13px !important;
+    height: 2px !important;
+    border-radius: 999px !important;
+    background: var(--blue) !important;
+    transform: translate(-50%, -50%) !important;
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease !important;
+}
+
+.service-faq .faq-button__icon::after {
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+
+.service-faq .faq-item.is-open .faq-button__icon {
+    background: #C56A2E !important;
+    border-color: #C56A2E !important;
+    transform: rotate(180deg) !important;
+}
+
+.service-faq .faq-item.is-open .faq-button__icon::before,
+.service-faq .faq-item.is-open .faq-button__icon::after {
+    background: #ffffff !important;
+}
+
+.service-faq .faq-item.is-open .faq-button__icon::after {
+    transform: translate(-50%, -50%) rotate(0deg) !important;
+}
+
+/* скрытый panel реально убираем из layout */
+.service-faq .faq-panel[hidden] {
+    display: none !important;
+}
+
+/* открытый panel */
+.service-faq .faq-panel {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+}
+
+.service-faq .faq-panel p {
+    margin: 0 !important;
+    padding: 0 20px 20px !important;
+    color: var(--text-gray) !important;
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+}
+
+/* mobile */
+@media (max-width: 760px) {
+    .service-faq .faq-grid {
+        column-count: 1 !important;
+    }
+
+    .service-faq .faq-item {
+        margin-bottom: 10px !important;
+        border-radius: 18px !important;
+    }
+
+    .service-faq .faq-button {
+        min-height: 62px !important;
+        padding: 16px !important;
+        font-size: 0.9rem !important;
+    }
+
+    .service-faq .faq-panel p {
+        padding: 0 16px 18px !important;
+        font-size: 0.84rem !important;
+    }
+}
+
+/* FAQ — больше расстояние между столбиками */
+
+.service-faq .faq-grid {
+    column-gap: clamp(28px, 4vw, 56px) !important;
+}
+
+/* чтобы блоки внутри колонок тоже не липли */
+.service-faq .faq-item {
+    margin-bottom: 18px !important;
+}
+
+@media (max-width: 760px) {
+    .service-faq .faq-grid {
+        column-gap: 0 !important;
+    }
+
+    .service-faq .faq-item {
+        margin-bottom: 12px !important;
+    }
+}
