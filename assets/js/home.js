@@ -6,6 +6,7 @@
     document.addEventListener("DOMContentLoaded", function () {
         initHomeServiceSearch();
         initHomeAboutSwitcher();
+        initHomeFaqAccordion();
     });
 
     function initHomeServiceSearch() {
@@ -254,4 +255,82 @@ function initHomeAboutSwitcher() {
             updateAboutContent(step.dataset.aboutStep);
         });
     });
+}
+
+function initHomeFaqAccordion() {
+    const accordion = document.querySelector(".home-faq [data-accordion]");
+
+    if (!accordion) {
+        return;
+    }
+
+    const items = Array.from(accordion.querySelectorAll("[data-accordion-item]"));
+
+    if (!items.length) {
+        return;
+    }
+
+    function getParts(item) {
+        return {
+            button: item.querySelector("[data-accordion-button]"),
+            panel: item.querySelector(".faq-panel")
+        };
+    }
+
+    function closeItem(item) {
+        const parts = getParts(item);
+
+        if (!parts.button || !parts.panel) {
+            return;
+        }
+
+        item.classList.remove("is-open");
+        parts.button.setAttribute("aria-expanded", "false");
+        parts.panel.hidden = true;
+    }
+
+    function openItem(item) {
+        const parts = getParts(item);
+
+        if (!parts.button || !parts.panel) {
+            return;
+        }
+
+        item.classList.add("is-open");
+        parts.button.setAttribute("aria-expanded", "true");
+        parts.panel.hidden = false;
+    }
+
+    items.forEach(function (item, index) {
+        if (index === 0) {
+            openItem(item);
+        } else {
+            closeItem(item);
+        }
+    });
+
+    accordion.addEventListener(
+        "click",
+        function (event) {
+            const button = event.target.closest("[data-accordion-button]");
+
+            if (!button || !accordion.contains(button)) {
+                return;
+            }
+
+            event.preventDefault();
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+
+            const currentItem = button.closest("[data-accordion-item]");
+            const isOpen = button.getAttribute("aria-expanded") === "true";
+
+            items.forEach(closeItem);
+
+            if (!isOpen && currentItem) {
+                openItem(currentItem);
+            }
+        },
+        true
+    );
 }

@@ -4986,3 +4986,40 @@
 .home-process-flow__grid {
     gap: clamp(22px, 3.4vw, 52px) !important;
 }
+
+/* =========================
+   FAQ Accordion Fix
+   No side item stretching / no empty grid space
+========================= */
+
+.home-faq .faq-grid {
+    display: block !important;
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.home-faq .faq-item {
+    display: inline-block !important;
+    width: 100%;
+    margin: 0 0 16px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    vertical-align: top;
+}
+
+/* чтобы закрытые панели точно не занимали место */
+.home-faq .faq-panel[hidden] {
+    display: none !important;
+}
+
+/* на мобилке обычная одна колонка */
+@media (max-width: 760px) {
+    .home-faq .faq-grid {
+        column-count: 1;
+        column-gap: 0;
+    }
+
+    .home-faq .faq-item {
+        margin-bottom: 14px !important;
+    }
+}
