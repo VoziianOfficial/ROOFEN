@@ -36,14 +36,7 @@
     background-repeat: no-repeat !important;
 }
 
-.roof-issue-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(90deg, rgba(7, 17, 29, 0.08) 0%, rgba(7, 17, 29, 0.72) 40%, rgba(7, 17, 29, 0.18) 74%, rgba(7, 17, 29, 0.02) 100%);
-    pointer-events: none;
-}
+
 
 .roof-issue-box {
     position: relative;
@@ -2909,4 +2902,490 @@
 .home-about__step:focus-visible {
     outline: 3px solid rgba(37, 99, 235, 0.28);
     outline-offset: 4px;
+}
+
+
+/* =========================
+   Roof Issue Section — Big Background Version
+========================= */
+
+.roof-issue-section {
+    position: relative !important;
+    width: 100vw !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    color: var(--white) !important;
+    background-color: var(--black) !important;
+    background-image:
+        linear-gradient(90deg,
+            rgba(7, 10, 15, 1) 0%,
+            rgba(7, 10, 15, 0.98) 28%,
+            rgba(7, 10, 15, 0.86) 45%,
+            rgba(7, 10, 15, 0.46) 66%,
+            rgba(7, 10, 15, 0.12) 100%),
+        url("../images/home/roof-issue-section.jpg") !important;
+    background-size: cover !important;
+    background-position: center right !important;
+    background-repeat: no-repeat !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 1px solid rgba(197, 106, 46, 0.24) !important;
+}
+
+
+.roof-issue-section::after {
+    content: "";
+    position: absolute;
+    right: -90px;
+    top: 72px;
+    width: 420px;
+    height: 210px;
+    border-top: 4px solid rgba(197, 106, 46, 0.28);
+    border-left: 4px solid rgba(197, 106, 46, 0.28);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.roof-issue-box {
+    position: relative !important;
+    z-index: 2 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.55fr) !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    min-height: 470px !important;
+    overflow: visible !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
+
+.roof-issue-box__content {
+    position: relative !important;
+    z-index: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    max-width: 760px !important;
+    min-height: 470px !important;
+    padding: 72px 32px 64px clamp(20px, 6vw, 104px) !important;
+    background:
+        linear-gradient(90deg,
+            rgba(7, 10, 15, 0.96) 0%,
+            rgba(7, 10, 15, 0.9) 65%,
+            rgba(7, 10, 15, 0.2) 100%) !important;
+    backdrop-filter: none !important;
+}
+
+.roof-issue-box__content::before {
+    content: "";
+    position: absolute;
+    top: 54px;
+    left: clamp(18px, 5vw, 86px);
+    width: 124px;
+    height: 124px;
+    border: 1px solid rgba(197, 106, 46, 0.28);
+    border-radius: 34px;
+    background: rgba(197, 106, 46, 0.07);
+    transform: rotate(13deg);
+    pointer-events: none;
+}
+
+.roof-issue-box__content::after {
+    content: "";
+    position: absolute;
+    right: 20px;
+    bottom: 54px;
+    width: 220px;
+    height: 110px;
+    border-top: 3px solid rgba(37, 99, 235, 0.23);
+    border-left: 3px solid rgba(37, 99, 235, 0.23);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+.roof-issue-box__kicker,
+.roof-issue-box__title,
+.roof-issue-box__text,
+.roof-issue-box__tags,
+.roof-issue-box__button {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.roof-issue-box__kicker {
+    width: fit-content;
+    margin: 0 0 16px;
+    padding: 8px 12px;
+    border: 1px solid rgba(197, 106, 46, 0.32);
+    border-radius: var(--radius-pill);
+    color: var(--copper);
+    background: rgba(197, 106, 46, 0.09);
+    font-size: 0.76rem;
+    font-weight: 850;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+}
+
+.roof-issue-box__title {
+    max-width: 690px !important;
+    margin: 0 0 20px !important;
+    color: var(--white) !important;
+    font-size: clamp(2.2rem, 5vw, 4.65rem) !important;
+    line-height: 0.98 !important;
+    font-weight: 900 !important;
+    letter-spacing: -0.075em !important;
+    text-shadow:
+        0 26px 58px rgba(0, 0, 0, 0.48),
+        0 0 34px rgba(37, 99, 235, 0.18) !important;
+}
+
+.roof-issue-box__text {
+    max-width: 560px;
+    margin: 0 0 30px;
+    color: rgba(216, 222, 232, 0.82);
+    font-size: 1rem;
+    line-height: 1.62;
+}
+
+.roof-issue-box__tags {
+    display: grid !important;
+    grid-template-columns: repeat(3, max-content) !important;
+    gap: 12px !important;
+    margin: 0 0 30px !important;
+}
+
+.roof-issue-tag {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 154px !important;
+    min-height: 42px !important;
+    padding: 10px 16px !important;
+    border: 1px solid rgba(216, 222, 232, 0.16) !important;
+    border-radius: 10px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.095), rgba(255, 255, 255, 0.025)) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.07),
+        0 16px 30px rgba(0, 0, 0, 0.18) !important;
+    font-size: 0.84rem !important;
+    font-weight: 760 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+.roof-issue-tag:hover {
+    color: var(--white) !important;
+    border-color: rgba(197, 106, 46, 0.58) !important;
+    background:
+        radial-gradient(circle at 50% 0%, rgba(197, 106, 46, 0.18), transparent 46%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.13), rgba(255, 255, 255, 0.04)) !important;
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 22px 42px rgba(0, 0, 0, 0.28) !important;
+    transform: translateY(-4px) !important;
+}
+
+.roof-issue-box__button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: fit-content !important;
+    min-height: 48px !important;
+    padding: 14px 22px !important;
+    border-radius: 12px !important;
+    color: var(--white) !important;
+    background: linear-gradient(180deg, #f19442 0%, #db6d25 100%) !important;
+    box-shadow:
+        0 16px 30px rgba(219, 109, 37, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    font-size: 0.9rem !important;
+    font-weight: 850 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+    transition:
+        transform 0.25s ease,
+        filter 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+.roof-issue-box__button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.05);
+    box-shadow:
+        0 22px 42px rgba(219, 109, 37, 0.42),
+        inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+}
+
+.roof-issue-box__visual-note {
+    position: relative;
+    z-index: 2;
+    align-self: end;
+    justify-self: end;
+    width: min(360px, calc(100% - 32px));
+    margin: 0 clamp(18px, 4vw, 70px) 54px 0;
+    padding: 20px 22px;
+    border-left: 3px solid var(--copper);
+    color: var(--white);
+    background:
+        linear-gradient(145deg, rgba(7, 10, 15, 0.58), rgba(7, 10, 15, 0.18));
+    backdrop-filter: blur(8px);
+}
+
+.roof-issue-box__visual-note span {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--copper);
+    font-size: 0.72rem;
+    font-weight: 850;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.roof-issue-box__visual-note strong {
+    display: block;
+    max-width: 280px;
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    line-height: 1.16;
+    letter-spacing: -0.035em;
+}
+
+/* bottom icon line */
+.roof-issue-line {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: stretch;
+    width: 100%;
+    min-height: 116px;
+    padding: 0 clamp(18px, 5vw, 90px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background:
+        linear-gradient(90deg, rgba(7, 10, 15, 0.98), rgba(16, 23, 34, 0.94), rgba(7, 10, 15, 0.98));
+}
+
+.roof-issue-line::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: clamp(18px, 5vw, 90px);
+    right: clamp(18px, 5vw, 90px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(197, 106, 46, 0.7), rgba(37, 99, 235, 0.55), transparent);
+}
+
+.roof-issue-line__item {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+    gap: 12px;
+    min-height: 116px;
+    padding: 20px 14px;
+    color: rgba(216, 222, 232, 0.78);
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid rgba(255, 255, 255, 0.075);
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.roof-issue-line__item:first-child {
+    border-left: 1px solid rgba(255, 255, 255, 0.075);
+}
+
+.roof-issue-line__item::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--blue), var(--copper));
+    transition: width 0.25s ease;
+}
+
+.roof-issue-line__item:hover {
+    color: var(--white);
+    transform: translateY(-4px);
+}
+
+.roof-issue-line__item:hover::after {
+    width: 46px;
+}
+
+.roof-issue-line__item i,
+.roof-issue-line__item svg {
+    width: 34px;
+    height: 34px;
+    color: rgba(216, 222, 232, 0.9);
+    stroke-width: 1.45;
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease,
+        filter 0.25s ease;
+}
+
+.roof-issue-line__item:hover i,
+.roof-issue-line__item:hover svg {
+    color: var(--copper);
+    transform: translateY(-4px) rotate(-4deg);
+    filter: drop-shadow(0 12px 16px rgba(197, 106, 46, 0.28));
+}
+
+.roof-issue-line__item span {
+    font-size: 0.82rem;
+    line-height: 1.25;
+    font-weight: 760;
+}
+
+/* responsive */
+@media (max-width: 1100px) {
+    .roof-issue-box {
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
+    }
+
+    .roof-issue-box__content {
+        max-width: 100% !important;
+        min-height: 430px !important;
+        padding: 62px 28px 54px !important;
+    }
+
+    .roof-issue-box__visual-note {
+        justify-self: start;
+        margin: 0 28px 46px;
+    }
+
+    .roof-issue-line {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 0 28px;
+    }
+
+    .roof-issue-line::before {
+        left: 28px;
+        right: 28px;
+    }
+
+    .roof-issue-line__item:nth-child(3) {
+        border-right: 1px solid rgba(255, 255, 255, 0.075);
+    }
+}
+
+@media (max-width: 720px) {
+    .roof-issue-section {
+        background-image:
+            linear-gradient(180deg,
+                rgba(7, 10, 15, 0.94) 0%,
+                rgba(7, 10, 15, 0.88) 48%,
+                rgba(7, 10, 15, 0.5) 100%),
+            url("../images/home/roof-issue-section.jpg") !important;
+        background-position: center top !important;
+    }
+
+    .roof-issue-section::after {
+        display: none;
+    }
+
+    .roof-issue-box__content {
+        min-height: auto !important;
+        padding: 48px 18px 38px !important;
+        background: linear-gradient(180deg, rgba(7, 10, 15, 0.95), rgba(7, 10, 15, 0.72)) !important;
+    }
+
+    .roof-issue-box__content::before {
+        width: 88px;
+        height: 88px;
+        top: 32px;
+        left: 18px;
+        border-radius: 26px;
+    }
+
+    .roof-issue-box__content::after {
+        display: none;
+    }
+
+    .roof-issue-box__title {
+        font-size: clamp(1.9rem, 12vw, 3rem) !important;
+    }
+
+    .roof-issue-box__text {
+        font-size: 0.94rem;
+    }
+
+    .roof-issue-box__tags {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 9px !important;
+    }
+
+    .roof-issue-tag {
+        min-width: 0 !important;
+        width: 100% !important;
+        min-height: 40px !important;
+        padding: 10px 8px !important;
+        font-size: 0.76rem !important;
+    }
+
+    .roof-issue-box__button {
+        width: 100% !important;
+    }
+
+    .roof-issue-box__visual-note {
+        display: none;
+    }
+
+    .roof-issue-line {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 0 18px 30px;
+        background: rgba(7, 10, 15, 0.92);
+    }
+
+    .roof-issue-line::before {
+        left: 18px;
+        right: 18px;
+    }
+
+    .roof-issue-line__item,
+    .roof-issue-line__item:first-child {
+        grid-template-columns: 38px minmax(0, 1fr);
+        justify-items: start;
+        align-items: center;
+        text-align: left;
+        min-height: 68px;
+        padding: 14px 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .roof-issue-line__item:last-child {
+        border-bottom: 0;
+    }
+
+    .roof-issue-line__item::after {
+        display: none;
+    }
+
+    .roof-issue-line__item i,
+    .roof-issue-line__item svg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .roof-issue-line__item span {
+        font-size: 0.86rem;
+    }
 }
