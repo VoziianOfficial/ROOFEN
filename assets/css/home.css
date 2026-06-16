@@ -5740,6 +5740,7 @@
 
     transform: skewX(-14deg) !important;
     transform-origin: center !important;
+    filter: grayscale(1) contrast(1.08) brightness(0.88) !important;
     opacity: 0.95 !important;
     pointer-events: none !important;
 }
