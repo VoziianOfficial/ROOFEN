@@ -1628,3 +1628,77 @@
         height: 42px !important;
     }
 }
+
+/* =========================
+   About Identity — Show Photo Fix
+========================= */
+
+.about-identity-upgrade__statement {
+    background-image:
+        linear-gradient(90deg,
+            rgba(7, 10, 15, 0.88) 0%,
+            rgba(7, 10, 15, 0.62) 42%,
+            rgba(7, 10, 15, 0.22) 68%,
+            rgba(7, 10, 15, 0.06) 100%),
+        url("../images/about/about-identity-photo.jpg") !important;
+    background-size: cover !important;
+    background-position: center right !important;
+    background-repeat: no-repeat !important;
+}
+
+/* overlay делаем легче, чтобы фото было видно */
+.about-identity-upgrade__statement::before {
+    background:
+        radial-gradient(circle at 14% 18%, rgba(37, 99, 235, 0.12), transparent 32%),
+        radial-gradient(circle at 86% 82%, rgba(197, 106, 46, 0.1), transparent 34%) !important;
+}
+
+.about-identity-upgrade__statement::after {
+    background:
+        linear-gradient(90deg,
+            rgba(7, 10, 15, 0.08) 0%,
+            rgba(7, 10, 15, 0.02) 52%,
+            rgba(7, 10, 15, 0.08) 100%) !important;
+}
+
+/* =========================
+   About Identity Bottom — Hover Crop Fix
+========================= */
+
+.about-identity-upgrade__bottom {
+    overflow: visible !important;
+    padding-bottom: 6px !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.about-identity-upgrade__bottom span {
+    overflow: visible !important;
+    background: rgba(255, 255, 255, 0.72);
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.06);
+}
+
+/* скругления, чтобы визуально остался один общий блок */
+.about-identity-upgrade__bottom span:first-child {
+    border-radius: 24px 0 0 24px;
+}
+
+.about-identity-upgrade__bottom span:last-child {
+    border-radius: 0 24px 24px 0;
+}
+
+/* hover чуть мягче, чтобы не вылезал некрасиво */
+.about-identity-upgrade__bottom span:hover {
+    transform: translateY(-3px) !important;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .about-identity-upgrade__bottom span:first-child {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .about-identity-upgrade__bottom span:last-child {
+        border-radius: 0 0 20px 20px;
+    }
+}
