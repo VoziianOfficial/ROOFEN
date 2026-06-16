@@ -4,9 +4,14 @@
     "use strict";
 
     document.addEventListener("DOMContentLoaded", function () {
+        initServicesCleanIconMarquee();
         initServiceSelector();
         initProblemGuideRows();
     });
+
+    window.addEventListener("resize", debounce(function () {
+        rebuildServicesCleanIconMarquee();
+    }, 180));
 
     function initServiceSelector() {
         const selector = document.querySelector("[data-services-selector]");
@@ -15,31 +20,101 @@
             return;
         }
 
-        const chips = Array.from(selector.querySelectorAll(".chip"));
+        selector.addEventListener("click", function (event) {
+            const chip = event.target.closest(".chip");
 
-        chips.forEach(function (chip) {
-            chip.addEventListener("click", function () {
-                chips.forEach(function (item) {
-                    item.classList.remove("is-active");
-                });
+            if (!chip || !selector.contains(chip)) {
+                return;
+            }
 
-                chip.classList.add("is-active");
+            const targetId = chip.getAttribute("href");
 
-                const targetId = chip.getAttribute("href");
-
-                if (!targetId || !targetId.startsWith("#")) {
-                    return;
-                }
-
-                const targetCard = document.querySelector(targetId);
-
-                if (!targetCard) {
-                    return;
-                }
-
-                highlightServiceCard(targetCard);
+            selector.querySelectorAll(".chip").forEach(function (item) {
+                item.classList.remove("is-active");
             });
+
+            selector.querySelectorAll('.chip[href="' + targetId + '"]').forEach(function (item) {
+                item.classList.add("is-active");
+            });
+
+            if (!targetId || !targetId.startsWith("#")) {
+                return;
+            }
+
+            const targetCard = document.querySelector(targetId);
+
+            if (!targetCard) {
+                return;
+            }
+
+            highlightServiceCard(targetCard);
         });
+    }
+
+    function initServicesCleanIconMarquee() {
+        const selector = document.querySelector("[data-services-selector]");
+
+        if (!selector) {
+            return;
+        }
+
+        buildServicesCleanIconMarquee(selector);
+    }
+
+    function rebuildServicesCleanIconMarquee() {
+        const selector = document.querySelector("[data-services-selector]");
+
+        if (!selector) {
+            return;
+        }
+
+        buildServicesCleanIconMarquee(selector);
+    }
+
+    function buildServicesCleanIconMarquee(selector) {
+        selector.querySelectorAll("[data-marquee-clone='true']").forEach(function (clone) {
+            clone.remove();
+        });
+
+        selector.style.removeProperty("--services-marquee-distance");
+
+        const originalChips = Array.from(
+            selector.querySelectorAll(".chip:not([data-marquee-clone='true'])")
+        );
+
+        if (!originalChips.length) {
+            return;
+        }
+
+        function cloneSet() {
+            originalChips.forEach(function (chip) {
+                const clone = chip.cloneNode(true);
+
+                clone.dataset.marqueeClone = "true";
+                clone.setAttribute("aria-hidden", "true");
+                clone.setAttribute("tabindex", "-1");
+
+                selector.appendChild(clone);
+            });
+        }
+
+        cloneSet();
+
+        const firstOriginal = originalChips[0];
+        const firstClone = selector.querySelector("[data-marquee-clone='true']");
+
+        if (firstOriginal && firstClone) {
+            const distance = firstClone.offsetLeft - firstOriginal.offsetLeft;
+            selector.style.setProperty("--services-marquee-distance", distance + "px");
+        }
+
+        while (selector.scrollWidth < window.innerWidth * 3) {
+            cloneSet();
+        }
+
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
     }
 
     function highlightServiceCard(card) {
@@ -74,5 +149,17 @@
                 row.classList.add("is-active");
             });
         });
+    }
+
+    function debounce(callback, delay) {
+        let timeoutId;
+
+        return function () {
+            window.clearTimeout(timeoutId);
+
+            timeoutId = window.setTimeout(function () {
+                callback();
+            }, delay);
+        };
     }
 })();
