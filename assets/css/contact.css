@@ -10,7 +10,6 @@
     padding: 112px 0 84px;
     overflow: hidden;
     color: var(--white);
-    background: var(--graphite);
 }
 
 .contact-hero::after {
@@ -2512,5 +2511,182 @@
         padding: 0 14px 18px 67px !important;
         font-size: 0.8rem !important;
         line-height: 1.45 !important;
+    }
+}
+
+/* =========================
+   Simple Black Services Selector
+   Только черный фон + яркие иконки
+========================= */
+
+.services-selector {
+    position: relative !important;
+    overflow: hidden !important;
+    padding: 28px 0 !important;
+    background: #05070b !important;
+}
+
+.services-selector .container-wide {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+}
+
+.services-selector__inner {
+    overflow: hidden !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* заголовок скрываем */
+.services-selector__inner>div:first-child {
+    display: none !important;
+}
+
+/* затемнение по краям */
+.services-selector__inner::before,
+.services-selector__inner::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    z-index: 5 !important;
+    width: 120px !important;
+    height: 100% !important;
+    pointer-events: none !important;
+}
+
+.services-selector__inner::before {
+    left: 0 !important;
+    background: linear-gradient(90deg, #05070b, transparent) !important;
+}
+
+.services-selector__inner::after {
+    right: 0 !important;
+    background: linear-gradient(270deg, #05070b, transparent) !important;
+}
+
+/* бесконечная линия */
+.services-selector__chips {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    width: max-content !important;
+    gap: 46px !important;
+    padding: 12px 0 !important;
+    animation: contactServicesBlackMarquee 24s linear infinite !important;
+}
+
+.services-selector__inner:hover .services-selector__chips {
+    animation-play-state: paused !important;
+}
+
+/* сами элементы — без карточек */
+.services-selector__chips .chip {
+    flex: 0 0 auto !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+
+    min-width: auto !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.95rem !important;
+    font-weight: 850 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+
+    transform: none !important;
+    transition: color 0.25s ease, transform 0.25s ease !important;
+}
+
+.services-selector__chips .chip::before,
+.services-selector__chips .chip::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* яркие иконки */
+.services-selector__chips .chip svg {
+    width: 58px !important;
+    height: 58px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+
+    color: #ff8a28 !important;
+    stroke-width: 1.35 !important;
+
+    filter:
+        drop-shadow(0 0 12px rgba(255, 138, 40, 0.65)) drop-shadow(0 0 26px rgba(197, 106, 46, 0.45)) !important;
+
+    transform: none !important;
+    transition: color 0.25s ease, filter 0.25s ease, transform 0.25s ease !important;
+}
+
+/* чередуем синие */
+.services-selector__chips .chip:nth-child(even) svg {
+    color: #3B82F6 !important;
+    filter:
+        drop-shadow(0 0 12px rgba(59, 130, 246, 0.7)) drop-shadow(0 0 26px rgba(59, 130, 246, 0.45)) !important;
+}
+
+/* hover только чуть ярче */
+.services-selector__chips .chip:hover,
+.services-selector__chips .chip.is-active {
+    color: #ffffff !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: translateY(-3px) !important;
+}
+
+.services-selector__chips .chip:hover svg,
+.services-selector__chips .chip.is-active svg {
+    color: #ff9b3d !important;
+    transform: scale(1.08) !important;
+    filter:
+        drop-shadow(0 0 16px rgba(255, 155, 61, 0.85)) drop-shadow(0 0 34px rgba(197, 106, 46, 0.65)) !important;
+}
+
+@keyframes contactServicesBlackMarquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-1 * var(--contact-services-marquee-distance, 900px)));
+    }
+}
+
+@media (max-width: 640px) {
+    .services-selector {
+        padding: 22px 0 !important;
+    }
+
+    .services-selector__chips {
+        gap: 34px !important;
+        animation-duration: 17s !important;
+    }
+
+    .services-selector__chips .chip {
+        font-size: 0.82rem !important;
+        gap: 9px !important;
+    }
+
+    .services-selector__chips .chip svg {
+        width: 44px !important;
+        height: 44px !important;
     }
 }

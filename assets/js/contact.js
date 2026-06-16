@@ -7,6 +7,7 @@
         injectContactConsentText();
         initContactForm();
         initRoofenContactAccordion();
+        initContactServicesMarquee();
     });
 
     function injectContactConsentText() {
@@ -207,5 +208,103 @@
                 }
             });
         });
+    }
+
+    function initContactServicesMarquee() {
+        const selector = document.querySelector("[data-services-selector]");
+
+        if (!selector) {
+            return;
+        }
+
+        buildContactServicesMarquee(selector);
+
+        selector.addEventListener("click", function (event) {
+            const chip = event.target.closest(".chip");
+
+            if (!chip || !selector.contains(chip)) {
+                return;
+            }
+
+            const targetId = chip.getAttribute("href");
+            const targetElement = targetId && targetId.startsWith("#")
+                ? document.querySelector(targetId)
+                : null;
+
+            selector.querySelectorAll(".chip").forEach(function (item) {
+                item.classList.remove("is-active");
+            });
+
+            selector.querySelectorAll('.chip[href="' + targetId + '"]').forEach(function (item) {
+                item.classList.add("is-active");
+            });
+
+            if (!targetElement) {
+                event.preventDefault();
+                return;
+            }
+        });
+
+        window.addEventListener("resize", debounceContactServicesMarquee(function () {
+            buildContactServicesMarquee(selector);
+        }, 180));
+    }
+
+    function buildContactServicesMarquee(selector) {
+        const originalChips = Array.from(
+            selector.querySelectorAll(".chip:not([data-contact-marquee-clone='true'])")
+        );
+
+        if (!originalChips.length) {
+            return;
+        }
+
+        selector.querySelectorAll("[data-contact-marquee-clone='true']").forEach(function (clone) {
+            clone.remove();
+        });
+
+        selector.style.removeProperty("--contact-services-marquee-distance");
+
+        function cloneSet() {
+            originalChips.forEach(function (chip) {
+                const clone = chip.cloneNode(true);
+
+                clone.dataset.contactMarqueeClone = "true";
+                clone.setAttribute("aria-hidden", "true");
+                clone.setAttribute("tabindex", "-1");
+
+                selector.appendChild(clone);
+            });
+        }
+
+        cloneSet();
+
+        const firstOriginal = originalChips[0];
+        const firstClone = selector.querySelector("[data-contact-marquee-clone='true']");
+
+        if (firstOriginal && firstClone) {
+            const distance = firstClone.offsetLeft - firstOriginal.offsetLeft;
+            selector.style.setProperty("--contact-services-marquee-distance", distance + "px");
+        }
+
+        while (selector.scrollWidth < window.innerWidth * 3) {
+            cloneSet();
+        }
+
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
+
+    function debounceContactServicesMarquee(callback, delay) {
+        let timeoutId;
+
+        return function () {
+            clearTimeout(timeoutId);
+
+            timeoutId = setTimeout(function () {
+                callback();
+            }, delay);
+        };
     }
 })();
