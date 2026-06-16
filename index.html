@@ -331,13 +331,9 @@
         <section class="home-services section section--milk" id="services" aria-labelledby="home-services-title">
             <div class="container-wide">
                 <div class="home-services__top">
-                    <div class="section-heading">
-                        <p class="section-kicker">Roofing service categories</p>
-                        <h2 id="home-services-title">Compare roofing pros by the help you need.</h2>
-                        <p>
-                            Start with the roofing issue, then explore contractor options by service type, urgency,
-                            and project scope.
-                        </p>
+                    <div class="section-heading section-heading--center home-services__heading">
+                        <p class="section-kicker">Explore Roofing Services</p>
+                        <h2 id="home-services-title">Find the right roofing help, fast and clearly.</h2>
                     </div>
 
                     <a class="btn btn-secondary" href="services.html">
@@ -346,77 +342,80 @@
                     </a>
                 </div>
 
-                <div class="home-services__layout">
-                    <article class="home-service-card home-service-card--wide card icon-hover-card">
-                        <div class="home-service-card__content">
-                            <span class="home-service-card__label">Full system</span>
-                            <h3>Roof Replacement</h3>
-                            <p>
-                                Compare contractors for aging roofs, major damage, full tear-offs,
-                                and new roofing system replacement.
-                            </p>
-                            <a class="arrow-link" href="roof-replacement.html">
-                                View Roof Replacement
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <i class="icon-large" data-lucide="house" aria-hidden="true"></i>
-                    </article>
+                <div class="home-services__feature-grid">
+                    <a class="home-service-feature home-service-feature--light"
+                        style="--feature-image: url('assets/images/home/roof-replacement-feature.jpg');"
+                        href="roof-replacement.html">
+                        <span class="home-service-feature__eyebrow">Roof Replacement</span>
+                        <h3>Full roof system replacement for aging or severely damaged roofs.</h3>
+                        <p>Compare local contractors for tear-offs, upgrades, and complete system installs.</p>
+                        <span class="home-service-feature__link">
+                            Learn more
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
 
-                    <article class="home-service-card home-service-card--accent card icon-hover-card">
-                        <div class="home-service-card__content">
-                            <span class="home-service-card__label">Urgent</span>
-                            <h3>Emergency Roof Repair</h3>
-                            <p>
-                                For sudden leaks, fallen branches, storm openings, and roofing issues that cannot wait.
-                            </p>
-                            <a class="arrow-link" href="emergency-roof-repair.html">
-                                View Emergency Repair
-                                <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                        <i class="icon-large" data-lucide="siren" aria-hidden="true"></i>
-                    </article>
+                    <a class="home-service-feature home-service-feature--dark"
+                        style="--feature-image: url('assets/images/home/emergency-roof-repair-feature.jpg');"
+                        href="emergency-roof-repair.html">
+                        <span class="home-service-feature__eyebrow">Emergency Roof Repair</span>
+                        <h3>Urgent roofing help for leaks, storm openings, and sudden damage.</h3>
+                        <p>Move fast when the roof cannot wait and you need quick contractor options.</p>
+                        <span class="home-service-feature__link">
+                            Learn more
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </span>
+                    </a>
+                </div>
 
-                    <article class="home-service-card card icon-hover-card">
-                        <i class="icon-large" data-lucide="wrench" aria-hidden="true"></i>
+                <div class="home-services__card-grid">
+                    <a class="home-service-card home-service-card--compact" href="roof-repair.html">
+                        <span class="home-service-card__icon" aria-hidden="true">
+                            <i data-lucide="wrench"></i>
+                        </span>
                         <h3>Roof Repair</h3>
-                        <p>For leaks, missing shingles, damaged flashing, and everyday roof problems.</p>
-                        <a class="arrow-link" href="roof-repair.html">
-                            View Service
+                        <p>For leaks, missing shingles, flashing issues, and routine roof fixes.</p>
+                        <span class="home-service-card__link">
+                            Learn more
                             <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
+                        </span>
+                    </a>
 
-                    <article class="home-service-card card icon-hover-card">
-                        <i class="icon-large" data-lucide="cloud-lightning" aria-hidden="true"></i>
-                        <h3>Storm Damage</h3>
-                        <p>For wind, hail, heavy rain, debris impact, and post-storm roof concerns.</p>
-                        <a class="arrow-link" href="storm-damage-roof-repair.html">
-                            View Service
+                    <a class="home-service-card home-service-card--compact" href="storm-damage-roof-repair.html">
+                        <span class="home-service-card__icon" aria-hidden="true">
+                            <i data-lucide="cloud-lightning"></i>
+                        </span>
+                        <h3>Storm Damage Roof Repair</h3>
+                        <p>For hail, wind, rain, debris impact, and post-storm roof concerns.</p>
+                        <span class="home-service-card__link">
+                            Learn more
                             <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
+                        </span>
+                    </a>
 
-                    <article class="home-service-card card icon-hover-card">
-                        <i class="icon-large" data-lucide="scan-search" aria-hidden="true"></i>
+                    <a class="home-service-card home-service-card--compact" href="roof-inspection.html">
+                        <span class="home-service-card__icon" aria-hidden="true">
+                            <i data-lucide="scan-search"></i>
+                        </span>
                         <h3>Roof Inspection</h3>
-                        <p>For roof checks before repairs, selling, buying, storms, or replacement decisions.</p>
-                        <a class="arrow-link" href="roof-inspection.html">
-                            View Service
+                        <p>For roof checks before repairs, selling, buying, storms, or replacement.</p>
+                        <span class="home-service-card__link">
+                            Learn more
                             <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
+                        </span>
+                    </a>
 
-                    <article class="home-service-card card icon-hover-card">
-                        <i class="icon-large" data-lucide="droplets" aria-hidden="true"></i>
+                    <a class="home-service-card home-service-card--compact" href="gutter-installation-repair.html">
+                        <span class="home-service-card__icon" aria-hidden="true">
+                            <i data-lucide="droplets"></i>
+                        </span>
                         <h3>Gutter Installation & Repair</h3>
-                        <p>For drainage issues, gutter repair, installation, alignment, and roof-edge water control.</p>
-                        <a class="arrow-link" href="gutter-installation-repair.html">
-                            View Service
+                        <p>For drainage, gutter repair, installation, alignment, and water control.</p>
+                        <span class="home-service-card__link">
+                            Learn more
                             <i data-lucide="arrow-up-right" aria-hidden="true"></i>
-                        </a>
-                    </article>
+                        </span>
+                    </a>
                 </div>
             </div>
         </section>
