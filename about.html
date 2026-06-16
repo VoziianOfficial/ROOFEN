@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>About Roofen — Roofing Contractor Matching Network</title>
+    <meta name="description"
+        content="Learn how Roofen helps homeowners compare local roofing contractors for repair, replacement, inspections, storm damage, emergency roof repair, and gutter services." />
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/about.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header class="site-header" data-header>
+        <div class="header-shell">
+            <a class="site-brand" href="index.html" aria-label="Roofen home">
+                <span class="site-brand__mark" aria-hidden="true">
+                    <img src="assets/icons/logo.svg" alt="" />
+                </span>
+                <span class="site-brand__text" data-config-brand>Roof<span class="brand-accent">en</span></span>
+            </a>
+
+            <nav class="site-nav" aria-label="Main navigation">
+                <ul class="site-nav__list">
+                    <li>
+                        <a class="site-nav__link" href="index.html" data-nav-link>Home</a>
+                    </li>
+
+                    <li>
+                        <a class="site-nav__link" href="about.html" data-nav-link>About</a>
+                    </li>
+
+                    <li class="site-dropdown" data-dropdown>
+                        <a class="site-nav__link" href="services.html" data-dropdown-toggle data-nav-link
+                            aria-expanded="false" aria-haspopup="true">
+                            Services
+                            <i data-lucide="chevron-down" aria-hidden="true"></i>
+                        </a>
+
+                        <div class="site-dropdown__menu" data-dropdown-menu>
+                            <ul class="dropdown-service-list" data-service-list="dropdown"
+                                aria-label="Roofing services"></ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="site-nav__link" href="index.html#how-it-works" data-nav-link>How It Works</a>
+                    </li>
+
+                    <li>
+                        <a class="site-nav__link" href="contact.html" data-nav-link>Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a class="header-icon-btn" href="tel:+17375550198" data-config-href="phone" aria-label="Call Roofen">
+                    <i data-lucide="phone-call" aria-hidden="true"></i>
+                </a>
+
+                <a class="header-icon-btn" href="mailto:support@roofenquotes.com" data-config-href="email"
+                    data-email-header aria-label="Email Roofen">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                </a>
+
+                <a class="btn btn-primary btn-small" href="contact.html#contact-form">
+                    Get Free Quote
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+
+                <button class="burger-btn" type="button" data-mobile-menu-open aria-label="Open mobile menu"
+                    aria-controls="mobile-menu" aria-expanded="false">
+                    <i data-lucide="menu" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu" id="mobile-menu" data-mobile-menu aria-hidden="true">
+        <div class="mobile-menu__overlay" data-mobile-menu-overlay></div>
+
+        <div class="mobile-menu__panel" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+            <div class="mobile-menu__top">
+                <a class="site-brand" href="index.html" aria-label="Roofen home">
+                    <span class="site-brand__mark" aria-hidden="true">
+                        <img src="assets/icons/logo.svg" alt="" />
+                    </span>
+                    <span class="site-brand__text" data-config-brand>Roof<span class="brand-accent">en</span></span>
+                </a>
+
+                <button class="mobile-menu__close" type="button" data-mobile-menu-close aria-label="Close mobile menu">
+                    <i data-lucide="x" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="mobile-menu__body">
+                <nav class="mobile-menu__nav" aria-label="Mobile main navigation">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="services.html">Services</a>
+                    <a href="index.html#how-it-works">How It Works</a>
+                    <a href="contact.html">Contact</a>
+                </nav>
+
+                <div class="mobile-menu__group">
+                    <p class="mobile-menu__label">Roofing services</p>
+                    <ul class="mobile-menu__services" data-service-list="mobile"></ul>
+                </div>
+
+                <div class="mobile-menu__contact">
+                    <a href="tel:+17375550198" data-config-href="phone">
+                        <i data-lucide="phone-call" aria-hidden="true"></i>
+                        Call
+                    </a>
+
+                    <a href="mailto:support@roofenquotes.com" data-config-href="email">
+                        <i data-lucide="mail" aria-hidden="true"></i>
+                        Email
+                    </a>
+                </div>
+            </div>
+
+            <div class="mobile-menu__bottom">
+                <a class="btn btn-primary btn-full" href="contact.html#contact-form">
+                    Compare Roofers
+                    <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="section-rail" data-section-rail aria-label="About page sections">
+        <a href="#about-hero" data-section-rail-link data-label="Hero"></a>
+        <a href="#identity" data-section-rail-link data-label="Identity"></a>
+        <a href="#help" data-section-rail-link data-label="Services"></a>
+        <a href="#principles" data-section-rail-link data-label="Trust"></a>
+        <a href="#matching" data-section-rail-link data-label="Process"></a>
+        <a href="#quote" data-section-rail-link data-label="Quote"></a>
+    </nav>
+
+    <main id="main">
+        <section class="about-hero" id="about-hero" aria-labelledby="about-hero-title">
+            <div class="full-bleed-bg" aria-hidden="true">
+                <img src="assets/images/about/about-hero-roof.jpg" alt="" />
+                <span class="dark-overlay"></span>
+            </div>
+
+            <div class="about-hero__roofline" aria-hidden="true"></div>
+
+            <div class="container about-hero__grid">
+                <div class="about-hero__content">
+                    <p class="section-kicker section-kicker--light">About Roofen</p>
+
+                    <h1 id="about-hero-title">About Our Roofing Contractor Network</h1>
+
+                    <p>
+                        We help homeowners connect with local roofing professionals for repairs, replacements,
+                        inspections, storm damage, and gutter-related projects.
+                    </p>
+
+                    <div class="about-hero__actions">
+                        <a class="btn btn-primary" href="contact.html#contact-form">
+                            Compare Roofers
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+
+                        <a class="btn btn-secondary btn-secondary--dark" href="services.html">
+                            View Services
+                            <i data-lucide="list-checks" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="badge-row about-hero__badges">
+                        <span class="badge badge--dark">
+                            <i data-lucide="badge-check" aria-hidden="true"></i>
+                            Verified network
+                        </span>
+                        <span class="badge badge--dark">
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                            Local contractors
+                        </span>
+                        <span class="badge badge--dark">
+                            <i data-lucide="circle-dollar-sign" aria-hidden="true"></i>
+                            Free quote request
+                        </span>
+                    </div>
+                </div>
+
+                <aside class="about-hero__panel" aria-label="Roofen request flow preview">
+                    <article>
+                        <i data-lucide="file-pen-line" aria-hidden="true"></i>
+                        <span>Quote request</span>
+                    </article>
+
+                    <article>
+                        <i data-lucide="map-pin" aria-hidden="true"></i>
+                        <span>Local roofers</span>
+                    </article>
+
+                    <article>
+                        <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+                        <span>Compare options</span>
+                    </article>
+                </aside>
+            </div>
+        </section>
+
+        <section class="about-identity section section--white" id="identity" aria-labelledby="identity-title">
+            <div class="roofline-watermark about-identity__watermark" aria-hidden="true"></div>
+
+            <div class="container grid-2">
+                <div class="section-heading">
+                    <p class="section-kicker">Clear identity</p>
+                    <h2 id="identity-title">Not a roofing company. A smarter way to compare roofing help.</h2>
+                    <p>
+                        Our platform is built to make roofing decisions easier. Instead of searching through random
+                        listings,
+                        homeowners can submit one request and get connected with local roofing professionals who handle
+                        the
+                        type of project they need.
+                    </p>
+                    <p>
+                        Roofen does not repair, inspect, install, or replace roofs directly. Independent local providers
+                        may respond to your request, and you choose the option that fits your project.
+                    </p>
+                </div>
+
+                <div class="about-identity__cards">
+                    <article class="about-identity-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="file-pen-line" aria-hidden="true"></i>
+                        <h3>Submit one request</h3>
+                        <p>Start with the roof issue, service category, ZIP code, and urgency.</p>
+                    </article>
+
+                    <article class="about-identity-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="map-pin" aria-hidden="true"></i>
+                        <h3>Get matched with local pros</h3>
+                        <p>Your request is organized around project type and local availability.</p>
+                    </article>
+
+                    <article class="about-identity-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="sliders-horizontal" aria-hidden="true"></i>
+                        <h3>Compare before choosing</h3>
+                        <p>Review available options without pressure before selecting a contractor.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-marquee" aria-label="Roofing services marquee">
+            <div class="about-marquee__track" data-about-marquee>
+                <a href="roof-repair.html">Roof Repair</a>
+                <span>//</span>
+                <a href="roof-replacement.html">Roof Replacement</a>
+                <span>//</span>
+                <a href="emergency-roof-repair.html">Emergency Roof Repair</a>
+                <span>//</span>
+                <a href="storm-damage-roof-repair.html">Storm Damage Roof Repair</a>
+                <span>//</span>
+                <a href="roof-inspection.html">Roof Inspection</a>
+                <span>//</span>
+                <a href="gutter-installation-repair.html">Gutter Installation & Repair</a>
+                <span>//</span>
+
+                <a href="roof-repair.html" aria-hidden="true">Roof Repair</a>
+                <span aria-hidden="true">//</span>
+                <a href="roof-replacement.html" aria-hidden="true">Roof Replacement</a>
+                <span aria-hidden="true">//</span>
+                <a href="emergency-roof-repair.html" aria-hidden="true">Emergency Roof Repair</a>
+                <span aria-hidden="true">//</span>
+                <a href="storm-damage-roof-repair.html" aria-hidden="true">Storm Damage Roof Repair</a>
+                <span aria-hidden="true">//</span>
+                <a href="roof-inspection.html" aria-hidden="true">Roof Inspection</a>
+                <span aria-hidden="true">//</span>
+                <a href="gutter-installation-repair.html" aria-hidden="true">Gutter Installation & Repair</a>
+            </div>
+        </section>
+
+        <section class="about-help section section--milk" id="help" aria-labelledby="about-help-title">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <p class="section-kicker">What we help with</p>
+                    <h2 id="about-help-title">Roofing categories homeowners can compare.</h2>
+                    <p>
+                        Roofen keeps the request flow focused on roofing, gutters, storm damage, inspections,
+                        repair, and replacement — not random home service noise.
+                    </p>
+                </div>
+
+                <div class="about-help__grid">
+                    <article class="about-help-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="wrench" aria-hidden="true"></i>
+                        <h3>Roof Repair</h3>
+                        <p>For leaks, missing shingles, flashing issues, and everyday roof problems.</p>
+                        <a class="arrow-link" href="roof-repair.html">
+                            View service
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="about-help-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="house" aria-hidden="true"></i>
+                        <h3>Roof Replacement</h3>
+                        <p>For aging roofs, major damage, full tear-offs, and new roofing systems.</p>
+                        <a class="arrow-link" href="roof-replacement.html">
+                            View service
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="about-help-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="siren" aria-hidden="true"></i>
+                        <h3>Emergency Roof Repair</h3>
+                        <p>For urgent leaks, sudden damage, fallen branches, and roof openings.</p>
+                        <a class="arrow-link" href="emergency-roof-repair.html">
+                            View service
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="about-help-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="cloud-lightning" aria-hidden="true"></i>
+                        <h3>Storm Damage Roof Repair</h3>
+                        <p>For wind, hail, heavy rain, debris impact, and weather-related roof damage.</p>
+                        <a class="arrow-link" href="storm-damage-roof-repair.html">
+                            View service
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="about-help-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="scan-search" aria-hidden="true"></i>
+                        <h3>Roof Inspection</h3>
+                        <p>For roof checks before repairs, buying, selling, storms, or replacement decisions.</p>
+                        <a class="arrow-link" href="roof-inspection.html">
+                            View service
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+
+                    <article class="about-help-card card icon-hover-card">
+                        <i class="icon-large" data-lucide="droplets" aria-hidden="true"></i>
+                        <h3>Gutter Installation & Repair</h3>
+                        <p>For gutter installation, repair, drainage issues, leaks, and downspout alignment.</p>
+                        <a class="arrow-link" href="gutter-installation-repair.html">
+                            View service
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-principles section section--dark" id="principles"
+            aria-labelledby="about-principles-title">
+            <div class="about-principles__roofline" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="about-principles__top">
+                    <div class="section-heading section-heading--dark">
+                        <p class="section-kicker section-kicker--light">Trust principles</p>
+                        <h2 id="about-principles-title">Built around trust, clarity, and better roofing choices.</h2>
+                        <p>
+                            The platform is designed to keep homeowners informed while preserving clear separation
+                            between Roofen and independent local providers.
+                        </p>
+                    </div>
+
+                    <a class="btn btn-secondary btn-secondary--dark" href="contact.html#contact-form">
+                        Start Comparing
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+
+                <div class="about-principles__grid">
+                    <article class="about-principle-card card--dark icon-hover-card">
+                        <i class="icon-large" data-lucide="shield-check" aria-hidden="true"></i>
+                        <h3>Clear request flow</h3>
+                        <p>Start with your roof issue, service category, urgency, and ZIP code.</p>
+                    </article>
+
+                    <article class="about-principle-card card--dark icon-hover-card">
+                        <i class="icon-large" data-lucide="badge-check" aria-hidden="true"></i>
+                        <h3>Local contractor matching</h3>
+                        <p>Roofing professionals may respond based on area and project details.</p>
+                    </article>
+
+                    <article class="about-principle-card card--dark icon-hover-card">
+                        <i class="icon-large" data-lucide="handshake" aria-hidden="true"></i>
+                        <h3>No-pressure comparison</h3>
+                        <p>Compare available options before deciding which provider fits your project.</p>
+                    </article>
+
+                    <article class="about-principle-card card--dark icon-hover-card">
+                        <i class="icon-large" data-lucide="clipboard-check" aria-hidden="true"></i>
+                        <h3>Roofing-focused categories</h3>
+                        <p>Repair, replacement, inspections, storm damage, emergency requests, and gutters.</p>
+                    </article>
+
+                    <article class="about-principle-card card--dark icon-hover-card">
+                        <i class="icon-large" data-lucide="star" aria-hidden="true"></i>
+                        <h3>Homeowner-first experience</h3>
+                        <p>The process is built around clarity, service fit, and informed next steps.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-process section section--white" id="matching" aria-labelledby="about-process-title">
+            <div class="container">
+                <div class="section-heading section-heading--center">
+                    <p class="section-kicker">Matching process</p>
+                    <h2 id="about-process-title">How roofing contractor matching works.</h2>
+                    <p>
+                        A focused process helps turn a roof problem into a clearer comparison path.
+                    </p>
+                </div>
+
+                <div class="about-process__route">
+                    <article class="about-process__step">
+                        <span>
+                            <i data-lucide="file-pen-line" aria-hidden="true"></i>
+                        </span>
+                        <h3>You describe the roof issue</h3>
+                        <p>Tell us what happened and what type of help you may need.</p>
+                    </article>
+
+                    <article class="about-process__step">
+                        <span>
+                            <i data-lucide="list-checks" aria-hidden="true"></i>
+                        </span>
+                        <h3>We organize the project type</h3>
+                        <p>The request is grouped by service category, urgency, and location.</p>
+                    </article>
+
+                    <article class="about-process__step">
+                        <span>
+                            <i data-lucide="map-pin" aria-hidden="true"></i>
+                        </span>
+                        <h3>Local roofers can respond</h3>
+                        <p>Independent providers may connect based on your request details.</p>
+                    </article>
+
+                    <article class="about-process__step">
+                        <span>
+                            <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+                        </span>
+                        <h3>You compare and choose</h3>
+                        <p>Review available options and select the contractor that fits your project.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-confidence section section--milk" id="confidence"
+            aria-labelledby="about-confidence-title">
+            <div class="container grid-2">
+                <div class="about-confidence__photo photo-frame photo-frame--sliced">
+                    <img src="assets/images/about/homeowner-roof-confidence.jpg"
+                        alt="Homeowner reviewing roofing project details outside a modern home" />
+                    <span class="photo-label about-confidence__label">
+                        <i data-lucide="shield-check" aria-hidden="true"></i>
+                        Clear next steps
+                    </span>
+                </div>
+
+                <div class="about-confidence__content">
+                    <p class="section-kicker">Homeowner confidence</p>
+                    <h2 id="about-confidence-title">Designed for homeowners who want clear answers before roof work
+                        starts.</h2>
+                    <p>
+                        Roof work can feel stressful, especially after a leak or storm. Roofen helps homeowners begin
+                        with
+                        a clean request flow and compare available options without pressure.
+                    </p>
+
+                    <div class="about-confidence__blocks">
+                        <article>
+                            <i data-lucide="scan-search" aria-hidden="true"></i>
+                            <div>
+                                <h3>Know what service you need</h3>
+                                <p>Start with repair, replacement, inspection, storm damage, emergency support, or
+                                    gutters.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <i data-lucide="sliders-horizontal" aria-hidden="true"></i>
+                            <div>
+                                <h3>Compare more than one option</h3>
+                                <p>Use the request flow to review available local provider options.</p>
+                            </div>
+                        </article>
+
+                        <article>
+                            <i data-lucide="circle-dollar-sign" aria-hidden="true"></i>
+                            <div>
+                                <h3>Move forward without pressure</h3>
+                                <p>The request is free and does not create an obligation to hire.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-network section section--dark" id="network" aria-labelledby="about-network-title">
+            <div class="container grid-2">
+                <div class="about-network__content">
+                    <p class="section-kicker section-kicker--light">Roofing-focused network</p>
+                    <h2 id="about-network-title">A roofing-focused network, not random home service noise.</h2>
+                    <p>
+                        Roofen keeps the experience focused on roofing-related projects so homeowners can start with
+                        the right service category and compare relevant local professionals.
+                    </p>
+
+                    <ul class="about-network__list">
+                        <li>
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            Roof repair and replacement focused
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            Storm and leak request support
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            Inspection and gutter-related categories
+                        </li>
+                        <li>
+                            <i data-lucide="check-circle" aria-hidden="true"></i>
+                            Local project matching
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="about-network__card">
+                    <p>Roofing Network</p>
+
+                    <div>
+                        <span>Repair</span>
+                        <span>Replacement</span>
+                        <span>Storm Damage</span>
+                        <span>Inspection</span>
+                        <span>Gutters</span>
+                    </div>
+
+                    <a class="btn btn-primary" href="contact.html#contact-form">
+                        Compare Roofers
+                        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </aside>
+            </div>
+        </section>
+
+        <section class="about-cta section section--white" id="quote" aria-labelledby="about-cta-title">
+            <div class="container">
+                <div class="cta-band">
+                    <div class="cta-band__content">
+                        <div>
+                            <p class="section-kicker section-kicker--light">Start a free request</p>
+                            <h2 id="about-cta-title">Ready to compare roofing contractors?</h2>
+                            <p>
+                                Tell us what kind of roofing help you need and get connected with local roofing
+                                professionals
+                                for repair, replacement, inspection, storm damage, emergency roof repair, or gutter
+                                work.
+                            </p>
+                        </div>
+
+                        <a class="btn btn-primary" href="contact.html#contact-form">
+                            Get Free Roofing Quote
+                            <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container-wide footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a class="site-brand" href="index.html" aria-label="Roofen home">
+                        <span class="site-brand__mark" aria-hidden="true">
+                            <img src="assets/icons/logo.svg" alt="" />
+                        </span>
+                        <span class="site-brand__text" data-config-brand>Roof<span class="brand-accent">en</span></span>
+                    </a>
+
+                    <p class="footer-text" data-config="footerShortText">
+                        Roofen helps homeowners compare local roofing contractors and get connected with independent
+                        roofing professionals.
+                    </p>
+
+                    <p class="footer-note" data-config="shortNote">
+                        Independent platform. We do not perform roofing work.
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Services</h2>
+                    <ul class="footer-links" data-service-list="footer"></ul>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Company</h2>
+                    <ul class="footer-links">
+                        <li><a class="footer-link" href="index.html">Home</a></li>
+                        <li><a class="footer-link" href="about.html">About</a></li>
+                        <li><a class="footer-link" href="services.html">Services</a></li>
+                        <li><a class="footer-link" href="index.html#how-it-works">How It Works</a></li>
+                        <li><a class="footer-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Contact</h2>
+                    <div class="footer-contact">
+                        <a href="tel:+17375550198" data-config-href="phone" data-config-phone-text>
+                            (737) 555-0198
+                        </a>
+                        <a href="mailto:support@roofenquotes.com" data-config-href="email" data-config-email-text>
+                            support@roofenquotes.com
+                        </a>
+                        <span data-config="address">11801 Domain Blvd, Austin, TX 78758, USA</span>
+                        <span data-config="serviceArea">United States roofing contractor matching network</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="footer-title">Legal</h2>
+                    <ul class="footer-links">
+                        <li><a class="footer-link" href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a class="footer-link" href="cookie-policy.html">Cookie Policy</a></li>
+                        <li><a class="footer-link" href="terms-of-service.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="footer-disclaimer" data-config="disclaimer">
+                Disclaimer: This site is a free service to assist homeowners in connecting with local service providers.
+                All contractors/providers are independent and this site does not warrant or guarantee any work
+                performed. It is the responsibility of the homeowner to verify that the hired contractor furnishes the
+                necessary license and insurance required for the work being performed. All persons depicted in a photo
+                or video are actors or models and not contractors listed on this site.
+            </p>
+
+            <div class="footer-bottom">
+                <p>
+                    © <span data-current-year></span>
+                    <span data-config="companyName">Roofen</span>. All rights reserved.
+                </p>
+
+                <p>
+                    Company ID:
+                    <span data-config="companyId">RFN-US-48291</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <a class="mobile-sticky-cta" href="contact.html#contact-form" data-mobile-sticky-cta>
+        Compare roofers
+        <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+    </a>
+
+    <div class="cookie-banner" data-cookie-banner hidden>
+        <div class="cookie-banner__inner">
+            <p>
+                We use cookies to improve your experience and understand how visitors use this website.
+                Review our
+                <a href="privacy-policy.html">Privacy Policy</a>,
+                <a href="cookie-policy.html">Cookie Policy</a>, and
+                <a href="terms-of-service.html">Terms of Service</a>.
+            </p>
+
+            <div class="cookie-banner__actions">
+                <button class="cookie-banner__btn" type="button" data-cookie-cancel>
+                    Cancel
+                </button>
+                <button class="cookie-banner__btn cookie-banner__btn--accept" type="button" data-cookie-accept>
+                    Accept
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/about.js"></script>
+</body>
+
+</html>
