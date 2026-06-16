@@ -1374,11 +1374,14 @@
 .contact-form .checkbox-field input:checked+.checkbox-box::after {
     content: "" !important;
     position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
     width: 9px !important;
     height: 5px !important;
     border-left: 2px solid #ffffff !important;
     border-bottom: 2px solid #ffffff !important;
-    transform: translate(5px, 5px) rotate(-45deg) !important;
+    transform: translate(-50%, -58%) rotate(-45deg) !important;
+    transform-origin: center !important;
 }
 
 .contact-form .checkbox-text {

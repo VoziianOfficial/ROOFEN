@@ -1480,14 +1480,15 @@ p {
 .checkbox-box::after {
     content: "";
     position: absolute;
-    left: 7px;
-    top: 4px;
+    left: 50%;
+    top: 50%;
     width: 7px;
     height: 12px;
     border-right: 2px solid var(--white);
     border-bottom: 2px solid var(--white);
     opacity: 0;
-    transform: rotate(45deg) scale(0.6);
+    transform: translate(-50%, -58%) rotate(45deg) scale(0.6);
+    transform-origin: center;
     transition:
         opacity var(--transition-base),
         transform var(--transition-base);
@@ -1501,7 +1502,7 @@ p {
 
 .checkbox-field input:checked+.checkbox-box::after {
     opacity: 1;
-    transform: rotate(45deg) scale(1);
+    transform: translate(-50%, -58%) rotate(45deg) scale(1);
 }
 
 .checkbox-text {
