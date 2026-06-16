@@ -505,6 +505,10 @@
    About Preview
 ================================ */
 
+.home-about.section {
+    padding-top: 48px;
+}
+
 .home-about__watermark {
     right: -100px;
     bottom: 40px;
@@ -1296,6 +1300,10 @@
         align-items: start;
     }
 
+    .home-about.section {
+        padding-top: 36px;
+    }
+
     .home-network__mini-grid {
         grid-template-columns: 1fr;
     }
@@ -1322,6 +1330,10 @@
 
     .home-hero__actions .btn {
         width: 100%;
+    }
+
+    .home-about.section {
+        padding-top: 28px;
     }
 
     .home-search {
