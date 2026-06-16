@@ -2690,3 +2690,895 @@
         height: 44px !important;
     }
 }
+
+/* =========================
+   Contact CTA — 3D Hover + Shine
+========================= */
+
+.contact-cta {
+    position: relative !important;
+    overflow: hidden !important;
+    padding-top: clamp(58px, 6vw, 92px) !important;
+    padding-bottom: clamp(58px, 6vw, 92px) !important;
+    background:
+        radial-gradient(circle at 12% 24%, rgba(37, 99, 235, 0.08), transparent 32%),
+        radial-gradient(circle at 88% 76%, rgba(197, 106, 46, 0.11), transparent 34%),
+        #ffffff !important;
+}
+
+.contact-cta .container {
+    perspective: 1200px !important;
+}
+
+/* главная карточка */
+.contact-cta .cta-band {
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(15, 23, 42, 0.1) !important;
+    border-radius: 34px !important;
+    background:
+        radial-gradient(circle at 12% 18%, rgba(37, 99, 235, 0.18), transparent 34%),
+        radial-gradient(circle at 92% 82%, rgba(197, 106, 46, 0.2), transparent 34%),
+        linear-gradient(145deg, #101722 0%, #070A0F 62%, #05070b 100%) !important;
+    box-shadow:
+        0 28px 76px rgba(15, 23, 42, 0.24),
+        0 16px 34px rgba(197, 106, 46, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+    transform: translateZ(0) rotateX(0deg) rotateY(0deg) !important;
+    transition:
+        transform 0.38s ease,
+        box-shadow 0.38s ease,
+        border-color 0.38s ease,
+        filter 0.38s ease !important;
+}
+
+/* блестящий проход */
+.contact-cta .cta-band::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -110% !important;
+    left: -70% !important;
+    z-index: 1 !important;
+    width: 36% !important;
+    height: 320% !important;
+    background: linear-gradient(115deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.08) 35%,
+            rgba(255, 255, 255, 0.28) 50%,
+            rgba(255, 255, 255, 0.08) 65%,
+            transparent 100%) !important;
+    transform: rotate(16deg) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        left 0.85s ease,
+        opacity 0.24s ease !important;
+}
+
+/* нижняя яркая линия */
+.contact-cta .cta-band::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 34px !important;
+    right: 34px !important;
+    bottom: 0 !important;
+    z-index: 2 !important;
+    height: 5px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: linear-gradient(90deg, #C56A2E, var(--blue-bright), transparent) !important;
+    opacity: 0.75 !important;
+    transform: scaleX(0.45) !important;
+    transform-origin: left !important;
+    transition:
+        opacity 0.34s ease,
+        transform 0.34s ease !important;
+}
+
+/* hover 3D */
+.contact-cta .cta-band:hover {
+    border-color: rgba(197, 106, 46, 0.36) !important;
+    box-shadow:
+        0 42px 100px rgba(15, 23, 42, 0.34),
+        0 20px 46px rgba(197, 106, 46, 0.14),
+        0 0 34px rgba(59, 130, 246, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+    transform: translateY(-9px) rotateX(3deg) rotateY(-2deg) scale(1.012) !important;
+    filter: saturate(1.08) contrast(1.03) !important;
+}
+
+.contact-cta .cta-band:hover::before {
+    left: 135% !important;
+    opacity: 1 !important;
+}
+
+.contact-cta .cta-band:hover::after {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+/* контент внутри */
+.contact-cta .cta-band__content {
+    position: relative !important;
+    z-index: 3 !important;
+    padding: clamp(30px, 5vw, 56px) !important;
+}
+
+.contact-cta .section-kicker,
+.contact-cta .section-kicker--light {
+    color: #C56A2E !important;
+}
+
+.contact-cta .cta-band h2 {
+    color: #ffffff !important;
+}
+
+.contact-cta .cta-band p:not(.section-kicker) {
+    color: rgba(216, 222, 232, 0.82) !important;
+}
+
+/* кнопка тоже чуть живая */
+.contact-cta .cta-band .btn {
+    box-shadow:
+        0 16px 32px rgba(197, 106, 46, 0.2),
+        0 0 22px rgba(197, 106, 46, 0.16) !important;
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        filter 0.28s ease !important;
+}
+
+.contact-cta .cta-band .btn:hover {
+    transform: translateY(-4px) scale(1.03) !important;
+    box-shadow:
+        0 22px 44px rgba(197, 106, 46, 0.28),
+        0 0 30px rgba(59, 130, 246, 0.18) !important;
+    filter: brightness(1.05) !important;
+}
+
+.contact-cta .cta-band .btn svg {
+    transition: transform 0.28s ease !important;
+}
+
+.contact-cta .cta-band .btn:hover svg {
+    transform: translate(3px, -3px) rotate(-6deg) !important;
+}
+
+/* disclaimer аккуратнее */
+.contact-cta__note {
+    margin-top: 20px !important;
+    border-radius: 20px !important;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(245, 247, 250, 0.88)) !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, 0.045) !important;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .contact-cta .cta-band {
+        border-radius: 24px !important;
+    }
+
+    .contact-cta .cta-band:hover {
+        transform: translateY(-4px) scale(1.005) !important;
+    }
+
+    .contact-cta .cta-band__content {
+        padding: 26px 18px !important;
+    }
+
+    .contact-cta .cta-band::after {
+        left: 18px !important;
+        right: 18px !important;
+    }
+}
+
+/* =========================
+   Roofen Accordion — Full Width Horizontal Block
+   Фото слева + аккордеон справа, без пространства
+========================= */
+
+.roofen-contact-accordion {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: var(--black) !important;
+}
+
+/* убираем container-ограничения, делаем секцию на всю ширину */
+.roofen-contact-accordion>.container,
+.roofen-contact-accordion__grid {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr) !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+}
+
+/* левая часть — фото во всю высоту */
+.roofen-contact-accordion__photo {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(520px, 52vw, 720px) !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: var(--black) !important;
+    box-shadow: none !important;
+}
+
+.roofen-contact-accordion__photo img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: clamp(520px, 52vw, 720px) !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: saturate(1.05) contrast(1.05) !important;
+}
+
+/* затемнение поверх фото */
+.roofen-contact-accordion__photo::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 2 !important;
+    background:
+        linear-gradient(90deg, rgba(7, 10, 15, 0.12), rgba(7, 10, 15, 0.46)),
+        radial-gradient(circle at 18% 20%, rgba(37, 99, 235, 0.18), transparent 34%),
+        radial-gradient(circle at 84% 82%, rgba(197, 106, 46, 0.22), transparent 36%) !important;
+    pointer-events: none !important;
+}
+
+/* убираем старую нижнюю линию, чтобы блок был цельный */
+.roofen-contact-accordion__photo::after {
+    content: none !important;
+    display: none !important;
+}
+
+/* подпись на фото */
+.roofen-contact-accordion__photo figcaption {
+    position: absolute !important;
+    left: clamp(22px, 4vw, 56px) !important;
+    right: clamp(22px, 4vw, 56px) !important;
+    bottom: clamp(22px, 4vw, 56px) !important;
+    z-index: 5 !important;
+
+    max-width: 420px !important;
+    padding: 20px 22px !important;
+    border: 1px solid rgba(255, 255, 255, 0.16) !important;
+    border-radius: 24px !important;
+    color: #ffffff !important;
+    background: rgba(7, 10, 15, 0.62) !important;
+    backdrop-filter: blur(16px) !important;
+    box-shadow: 0 22px 52px rgba(0, 0, 0, 0.26) !important;
+
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem) !important;
+    font-weight: 900 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.045em !important;
+}
+
+.roofen-contact-accordion__photo figcaption span {
+    display: block !important;
+    margin-bottom: 7px !important;
+    color: #C56A2E !important;
+    font-size: 0.72rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.1em !important;
+    text-transform: uppercase !important;
+}
+
+/* правая часть — один цельный блок */
+.roofen-contact-accordion__panel {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    min-height: clamp(520px, 52vw, 720px) !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 0 !important;
+
+    margin: 0 !important;
+    padding: clamp(38px, 5vw, 72px) clamp(34px, 5vw, 76px) !important;
+
+    border: 0 !important;
+    border-radius: 0 !important;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(37, 99, 235, 0.16), transparent 34%),
+        radial-gradient(circle at 8% 86%, rgba(197, 106, 46, 0.16), transparent 34%),
+        linear-gradient(145deg, #ffffff 0%, #f5f7fa 100%) !important;
+    box-shadow: none !important;
+}
+
+/* яркая вертикальная линия между фото и аккордеоном */
+.roofen-contact-accordion__panel::before {
+    content: "" !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: clamp(36px, 5vw, 70px) !important;
+    bottom: clamp(36px, 5vw, 70px) !important;
+    width: 5px !important;
+    border-radius: 0 999px 999px 0 !important;
+    background: linear-gradient(180deg, #C56A2E, var(--blue-bright), #C56A2E) !important;
+    box-shadow:
+        0 0 22px rgba(197, 106, 46, 0.34),
+        0 0 28px rgba(59, 130, 246, 0.22) !important;
+}
+
+/* аккордеон как один блок, без отдельных карточек */
+.roofen-contact-accordion__item {
+    position: relative !important;
+    overflow: hidden !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.roofen-contact-accordion__item:not(:last-child) {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1) !important;
+}
+
+.roofen-contact-accordion__item.is-open {
+    background:
+        radial-gradient(circle at 96% 16%, rgba(197, 106, 46, 0.12), transparent 34%),
+        linear-gradient(90deg, rgba(234, 242, 255, 0.5), rgba(255, 255, 255, 0)) !important;
+}
+
+/* кнопки */
+.roofen-contact-accordion__button {
+    width: 100% !important;
+    min-height: 92px !important;
+    display: grid !important;
+    grid-template-columns: 56px minmax(0, 1fr) 42px !important;
+    gap: 16px !important;
+    align-items: center !important;
+
+    padding: 22px 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    cursor: pointer !important;
+    text-align: left !important;
+}
+
+/* иконки */
+.roofen-contact-accordion__icon {
+    width: 56px !important;
+    height: 56px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 18px !important;
+    color: #C56A2E !important;
+    background: rgba(197, 106, 46, 0.11) !important;
+    box-shadow: 0 12px 24px rgba(197, 106, 46, 0.12) !important;
+    transition:
+        color 0.28s ease,
+        background 0.28s ease,
+        transform 0.28s ease,
+        box-shadow 0.28s ease !important;
+}
+
+.roofen-contact-accordion__icon svg {
+    width: 27px !important;
+    height: 27px !important;
+    stroke-width: 1.55 !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__icon,
+.roofen-contact-accordion__button:hover .roofen-contact-accordion__icon {
+    color: #ffffff !important;
+    background: linear-gradient(145deg, #C56A2E, var(--blue-bright)) !important;
+    transform: translateY(-3px) rotate(-4deg) !important;
+    box-shadow:
+        0 16px 30px rgba(197, 106, 46, 0.2),
+        0 0 20px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* текст */
+.roofen-contact-accordion__text small {
+    display: block !important;
+    margin-bottom: 6px !important;
+    color: #C56A2E !important;
+    font-size: 0.68rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.09em !important;
+    text-transform: uppercase !important;
+}
+
+.roofen-contact-accordion__text strong {
+    display: block !important;
+    max-width: 620px !important;
+    color: var(--text-dark) !important;
+    font-size: clamp(1.08rem, 1.45vw, 1.35rem) !important;
+    line-height: 1.06 !important;
+    letter-spacing: -0.045em !important;
+}
+
+/* плюс */
+.roofen-contact-accordion__plus {
+    position: relative !important;
+    width: 42px !important;
+    height: 42px !important;
+    border-radius: 999px !important;
+    background: var(--graphite) !important;
+    box-shadow:
+        0 12px 24px rgba(15, 23, 42, 0.16),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+    transition:
+        transform 0.28s ease,
+        background 0.28s ease !important;
+}
+
+.roofen-contact-accordion__plus::before,
+.roofen-contact-accordion__plus::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 14px !important;
+    height: 2px !important;
+    border-radius: 999px !important;
+    background: #ffffff !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+.roofen-contact-accordion__plus::after {
+    transform: translate(-50%, -50%) rotate(90deg) !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__plus {
+    background: #C56A2E !important;
+    transform: rotate(180deg) !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__plus::after {
+    opacity: 0 !important;
+}
+
+/* body */
+.roofen-contact-accordion__body {
+    display: grid !important;
+    grid-template-rows: 0fr !important;
+    opacity: 0 !important;
+    transition:
+        grid-template-rows 0.34s ease,
+        opacity 0.24s ease !important;
+}
+
+.roofen-contact-accordion__body>div {
+    overflow: hidden !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__body {
+    grid-template-rows: 1fr !important;
+    opacity: 1 !important;
+}
+
+.roofen-contact-accordion__body p {
+    max-width: 680px !important;
+    margin: 0 !important;
+    padding: 0 0 26px 72px !important;
+    color: var(--text-gray) !important;
+    font-size: 0.92rem !important;
+    line-height: 1.58 !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+
+    .roofen-contact-accordion>.container,
+    .roofen-contact-accordion__grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .roofen-contact-accordion__photo,
+    .roofen-contact-accordion__panel {
+        min-height: auto !important;
+    }
+
+    .roofen-contact-accordion__photo img {
+        min-height: 360px !important;
+    }
+
+    .roofen-contact-accordion__panel {
+        padding: 36px 28px !important;
+    }
+
+    .roofen-contact-accordion__panel::before {
+        top: 0 !important;
+        left: 28px !important;
+        right: 28px !important;
+        bottom: auto !important;
+        width: auto !important;
+        height: 5px !important;
+        border-radius: 0 0 999px 999px !important;
+        background: linear-gradient(90deg, #C56A2E, var(--blue-bright), #C56A2E) !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .roofen-contact-accordion__photo img {
+        min-height: 280px !important;
+    }
+
+    .roofen-contact-accordion__photo figcaption {
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 16px !important;
+        padding: 14px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    .roofen-contact-accordion__panel {
+        padding: 28px 18px !important;
+    }
+
+    .roofen-contact-accordion__button {
+        min-height: 76px !important;
+        grid-template-columns: 42px minmax(0, 1fr) 34px !important;
+        gap: 11px !important;
+        padding: 15px 0 !important;
+    }
+
+    .roofen-contact-accordion__icon {
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 14px !important;
+    }
+
+    .roofen-contact-accordion__icon svg {
+        width: 22px !important;
+        height: 22px !important;
+    }
+
+    .roofen-contact-accordion__text small {
+        margin-bottom: 4px !important;
+        font-size: 0.62rem !important;
+    }
+
+    .roofen-contact-accordion__text strong {
+        font-size: 0.96rem !important;
+        line-height: 1.08 !important;
+    }
+
+    .roofen-contact-accordion__plus {
+        width: 34px !important;
+        height: 34px !important;
+    }
+
+    .roofen-contact-accordion__body p {
+        padding: 0 0 18px 53px !important;
+        font-size: 0.8rem !important;
+        line-height: 1.45 !important;
+    }
+}
+
+/* =========================
+   Roofen Accordion — Compact Equal Height Fix
+   Меньше высота + одинаковые стороны + без вылезания при hover
+========================= */
+
+.roofen-contact-accordion {
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    background: var(--black) !important;
+}
+
+.roofen-contact-accordion *,
+.roofen-contact-accordion *::before,
+.roofen-contact-accordion *::after {
+    box-sizing: border-box !important;
+}
+
+.roofen-contact-accordion>.container,
+.roofen-contact-accordion__grid {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+    overflow: hidden !important;
+}
+
+/* обе стороны одинаковой компактной высоты */
+.roofen-contact-accordion__photo,
+.roofen-contact-accordion__panel {
+    min-height: 460px !important;
+    height: 460px !important;
+    max-height: 460px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+}
+
+/* фото */
+.roofen-contact-accordion__photo {
+    background: var(--black) !important;
+    box-shadow: none !important;
+}
+
+.roofen-contact-accordion__photo img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    transform: none !important;
+}
+
+.roofen-contact-accordion__photo:hover img {
+    transform: scale(1.035) !important;
+}
+
+/* подпись фото компактнее */
+.roofen-contact-accordion__photo figcaption {
+    left: 34px !important;
+    right: 34px !important;
+    bottom: 30px !important;
+    max-width: 390px !important;
+    padding: 16px 18px !important;
+    border-radius: 20px !important;
+    font-size: 1.08rem !important;
+}
+
+/* правая часть */
+.roofen-contact-accordion__panel {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 34px 54px !important;
+    background:
+        radial-gradient(circle at 92% 12%, rgba(37, 99, 235, 0.13), transparent 32%),
+        radial-gradient(circle at 8% 86%, rgba(197, 106, 46, 0.14), transparent 34%),
+        linear-gradient(145deg, #ffffff 0%, #f5f7fa 100%) !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+/* чтобы ничего не вылезало справа */
+.roofen-contact-accordion__item,
+.roofen-contact-accordion__button,
+.roofen-contact-accordion__text,
+.roofen-contact-accordion__body,
+.roofen-contact-accordion__body>div {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
+
+/* один цельный список */
+.roofen-contact-accordion__item {
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.roofen-contact-accordion__item:not(:last-child) {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.09) !important;
+}
+
+.roofen-contact-accordion__item.is-open {
+    background:
+        radial-gradient(circle at 96% 16%, rgba(197, 106, 46, 0.1), transparent 32%),
+        linear-gradient(90deg, rgba(234, 242, 255, 0.42), rgba(255, 255, 255, 0)) !important;
+}
+
+/* компактнее кнопки */
+.roofen-contact-accordion__button {
+    min-height: 78px !important;
+    grid-template-columns: 48px minmax(0, 1fr) 36px !important;
+    gap: 14px !important;
+    padding: 15px 0 !important;
+    transform: none !important;
+}
+
+/* убираем hover-сдвиги наружу */
+.roofen-contact-accordion__button:hover,
+.roofen-contact-accordion__item:hover,
+.roofen-contact-accordion__item.is-open {
+    transform: none !important;
+}
+
+/* иконка компактнее, без вылета */
+.roofen-contact-accordion__icon {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 16px !important;
+    transform: none !important;
+}
+
+.roofen-contact-accordion__icon svg {
+    width: 23px !important;
+    height: 23px !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__icon,
+.roofen-contact-accordion__button:hover .roofen-contact-accordion__icon {
+    transform: scale(1.04) !important;
+}
+
+/* текст */
+.roofen-contact-accordion__text small {
+    margin-bottom: 5px !important;
+    font-size: 0.63rem !important;
+}
+
+.roofen-contact-accordion__text strong {
+    max-width: 100% !important;
+    font-size: clamp(1rem, 1.25vw, 1.18rem) !important;
+    line-height: 1.08 !important;
+}
+
+/* плюс компактнее */
+.roofen-contact-accordion__plus {
+    width: 36px !important;
+    height: 36px !important;
+    transform: none !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__plus {
+    transform: rotate(180deg) !important;
+}
+
+/* ответ компактнее */
+.roofen-contact-accordion__body p {
+    max-width: 100% !important;
+    padding: 0 0 18px 62px !important;
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+}
+
+/* tablet */
+@media (max-width: 980px) {
+
+    .roofen-contact-accordion>.container,
+    .roofen-contact-accordion__grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .roofen-contact-accordion__photo,
+    .roofen-contact-accordion__panel {
+        height: auto !important;
+        max-height: none !important;
+        min-height: 0 !important;
+    }
+
+    .roofen-contact-accordion__photo img {
+        height: 340px !important;
+        min-height: 340px !important;
+    }
+
+    .roofen-contact-accordion__panel {
+        padding: 34px 28px !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .roofen-contact-accordion__photo img {
+        height: 260px !important;
+        min-height: 260px !important;
+    }
+
+    .roofen-contact-accordion__photo figcaption {
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 16px !important;
+        padding: 13px 15px !important;
+        font-size: 0.96rem !important;
+    }
+
+    .roofen-contact-accordion__panel {
+        padding: 24px 18px !important;
+    }
+
+    .roofen-contact-accordion__button {
+        min-height: 70px !important;
+        grid-template-columns: 40px minmax(0, 1fr) 32px !important;
+        gap: 10px !important;
+        padding: 13px 0 !important;
+    }
+
+    .roofen-contact-accordion__icon {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 13px !important;
+    }
+
+    .roofen-contact-accordion__icon svg {
+        width: 20px !important;
+        height: 20px !important;
+    }
+
+    .roofen-contact-accordion__plus {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .roofen-contact-accordion__text strong {
+        font-size: 0.92rem !important;
+    }
+
+    .roofen-contact-accordion__body p {
+        padding: 0 0 16px 50px !important;
+        font-size: 0.78rem !important;
+        line-height: 1.42 !important;
+    }
+}
+
+/* =========================
+   Accordion active item side padding fix
+   Чтобы открытая строка не вылазила справа/слева
+========================= */
+
+.roofen-contact-accordion__item.is-open {
+    width: calc(100% - 24px) !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    border-radius: 18px !important;
+    overflow: hidden !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__button {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+.roofen-contact-accordion__item.is-open .roofen-contact-accordion__body p {
+    padding-right: 12px !important;
+}
+
+/* чтобы остальные пункты не прыгали по ширине */
+.roofen-contact-accordion__item:not(.is-open) {
+    width: calc(100% - 24px) !important;
+    margin-left: 12px !important;
+    margin-right: 12px !important;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+
+    .roofen-contact-accordion__item.is-open,
+    .roofen-contact-accordion__item:not(.is-open) {
+        width: calc(100% - 14px) !important;
+        margin-left: 7px !important;
+        margin-right: 7px !important;
+        border-radius: 14px !important;
+    }
+
+    .roofen-contact-accordion__item.is-open .roofen-contact-accordion__button {
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+    }
+
+    .roofen-contact-accordion__item.is-open .roofen-contact-accordion__body p {
+        padding-right: 8px !important;
+    }
+}
