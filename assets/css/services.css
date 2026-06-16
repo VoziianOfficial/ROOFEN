@@ -2816,3 +2816,245 @@
         margin-bottom: 10px !important;
     }
 }
+
+/* =========================
+   Services CTA — 3D Shine Hover Effects
+   HTML не трогаем
+========================= */
+
+.services-cta {
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.services-cta .container {
+    perspective: 1200px !important;
+}
+
+/* сам большой CTA-блок */
+.services-cta .cta-band {
+    position: relative !important;
+    overflow: hidden !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    border-radius: 38px !important;
+    background:
+        radial-gradient(circle at 12% 20%, rgba(37, 99, 235, 0.34), transparent 34%),
+        radial-gradient(circle at 88% 78%, rgba(197, 106, 46, 0.3), transparent 34%),
+        linear-gradient(145deg, #101722 0%, #070A0F 62%, #05070b 100%) !important;
+    box-shadow:
+        0 34px 86px rgba(0, 0, 0, 0.36),
+        0 18px 40px rgba(37, 99, 235, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
+    transform: translateZ(0) rotateX(0) rotateY(0) !important;
+    transition:
+        transform 0.36s ease,
+        box-shadow 0.36s ease,
+        border-color 0.36s ease !important;
+}
+
+/* большой блеск по CTA */
+.services-cta .cta-band::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -80% !important;
+    left: -70% !important;
+    z-index: 1 !important;
+    width: 38% !important;
+    height: 240% !important;
+    background: linear-gradient(115deg,
+            transparent,
+            rgba(255, 255, 255, 0.18),
+            transparent) !important;
+    transform: rotate(14deg) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        left 0.9s ease,
+        opacity 0.28s ease !important;
+}
+
+/* нижняя сочная линия */
+.services-cta .cta-band::after {
+    content: "" !important;
+    position: absolute !important;
+    left: clamp(24px, 4vw, 54px) !important;
+    right: clamp(24px, 4vw, 54px) !important;
+    bottom: 0 !important;
+    z-index: 2 !important;
+    height: 4px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: linear-gradient(90deg, #C56A2E, var(--blue-bright), transparent) !important;
+    opacity: 0.7 !important;
+    transform: scaleX(0.45) !important;
+    transform-origin: left !important;
+    transition:
+        opacity 0.32s ease,
+        transform 0.32s ease !important;
+}
+
+.services-cta .cta-band:hover {
+    border-color: rgba(197, 106, 46, 0.36) !important;
+    box-shadow:
+        0 46px 110px rgba(0, 0, 0, 0.42),
+        0 24px 58px rgba(197, 106, 46, 0.14),
+        0 18px 46px rgba(37, 99, 235, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+    transform: translateY(-8px) rotateX(2.5deg) rotateY(-1.5deg) !important;
+}
+
+.services-cta .cta-band:hover::before {
+    left: 132% !important;
+    opacity: 1 !important;
+}
+
+.services-cta .cta-band:hover::after {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+.services-cta .cta-band__content {
+    position: relative !important;
+    z-index: 3 !important;
+}
+
+/* бейджи */
+.services-cta__badges .badge,
+.services-cta .badge-row .badge {
+    position: relative !important;
+    overflow: hidden !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    backdrop-filter: blur(12px) !important;
+    transition:
+        transform 0.26s ease,
+        color 0.26s ease,
+        background 0.26s ease,
+        border-color 0.26s ease,
+        box-shadow 0.26s ease !important;
+}
+
+.services-cta__badges .badge::after,
+.services-cta .badge-row .badge::after {
+    content: "" !important;
+    position: absolute !important;
+    left: -70% !important;
+    top: 0 !important;
+    width: 42% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .22), transparent) !important;
+    transform: skewX(-18deg) !important;
+    opacity: 0 !important;
+    transition:
+        left 0.55s ease,
+        opacity 0.2s ease !important;
+}
+
+.services-cta__badges .badge:hover,
+.services-cta .badge-row .badge:hover {
+    color: var(--white) !important;
+    border-color: rgba(197, 106, 46, 0.48) !important;
+    background: rgba(197, 106, 46, 0.16) !important;
+    box-shadow:
+        0 18px 38px rgba(197, 106, 46, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.13) !important;
+    transform: translateY(-5px) scale(1.025) !important;
+}
+
+.services-cta__badges .badge:hover::after,
+.services-cta .badge-row .badge:hover::after {
+    left: 130% !important;
+    opacity: 1 !important;
+}
+
+.services-cta__badges .badge svg,
+.services-cta .badge-row .badge svg {
+    transition:
+        transform 0.26s ease,
+        color 0.26s ease,
+        filter 0.26s ease !important;
+}
+
+.services-cta__badges .badge:hover svg,
+.services-cta .badge-row .badge:hover svg {
+    color: var(--blue-bright) !important;
+    transform: translateY(-2px) rotate(-5deg) scale(1.08) !important;
+    filter: drop-shadow(0 0 14px rgba(59, 130, 246, 0.34)) !important;
+}
+
+/* кнопки */
+.services-cta__actions .btn {
+    position: relative !important;
+    overflow: hidden !important;
+    transform: skewX(-8deg) translateZ(0) !important;
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        border-color 0.28s ease !important;
+}
+
+.services-cta__actions .btn::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -60% !important;
+    left: -90% !important;
+    width: 48% !important;
+    height: 220% !important;
+    background: linear-gradient(115deg,
+            transparent,
+            rgba(255, 255, 255, 0.44),
+            transparent) !important;
+    transform: rotate(14deg) !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transition:
+        left 0.65s ease,
+        opacity 0.22s ease !important;
+}
+
+.services-cta__actions .btn:hover {
+    transform: skewX(-8deg) translateY(-5px) scale(1.035) !important;
+    box-shadow:
+        0 24px 50px rgba(197, 106, 46, 0.22),
+        0 16px 34px rgba(37, 99, 235, 0.16) !important;
+}
+
+.services-cta__actions .btn:hover::before {
+    left: 132% !important;
+    opacity: 1 !important;
+}
+
+.services-cta__actions .btn>*,
+.services-cta__actions .btn svg {
+    position: relative !important;
+    z-index: 2 !important;
+    transform: skewX(8deg) !important;
+}
+
+.services-cta__actions .btn:hover svg {
+    transform: skewX(8deg) translateY(-2px) rotate(-5deg) !important;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .services-cta {
+        padding-top: 52px !important;
+        padding-bottom: 52px !important;
+    }
+
+    .services-cta .cta-band {
+        border-radius: 26px !important;
+    }
+
+    .services-cta .cta-band:hover {
+        transform: translateY(-4px) !important;
+    }
+
+    .services-cta__badges .badge:hover,
+    .services-cta .badge-row .badge:hover {
+        transform: translateY(-3px) scale(1.01) !important;
+    }
+
+    .services-cta__actions .btn:hover {
+        transform: skewX(-8deg) translateY(-3px) scale(1.015) !important;
+    }
+}
