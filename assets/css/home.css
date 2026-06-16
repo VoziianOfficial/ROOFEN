@@ -27,7 +27,6 @@
     margin-right: calc(50% - 50vw);
     padding: 0;
     overflow: hidden;
-    background-color: #07111d !important;
     background-image:
         linear-gradient(90deg, rgba(7, 17, 29, 0.96) 0%, rgba(7, 17, 29, 0.94) 40%, rgba(7, 17, 29, 0.52) 68%, rgba(7, 17, 29, 0.14) 100%),
         url("../images/home/roof-issue-section.jpg") !important;
