@@ -1705,3 +1705,269 @@
         margin-top: 18px !important;
     }
 }
+
+
+/* =========================
+   Service Types — Reference Style
+   Фото слева + текст справа как на примере
+========================= */
+
+.service-types {
+    position: relative !important;
+    overflow: hidden !important;
+    padding-top: clamp(74px, 7vw, 112px) !important;
+    padding-bottom: clamp(74px, 7vw, 112px) !important;
+    background: #ffffff !important;
+}
+
+.service-types .container.grid-2 {
+    width: min(100% - 36px, 1120px) !important;
+    max-width: 1120px !important;
+    display: grid !important;
+    grid-template-columns: minmax(280px, 0.9fr) minmax(320px, 1.1fr) !important;
+    gap: clamp(54px, 7vw, 92px) !important;
+    align-items: center !important;
+}
+
+/* photo block */
+.service-types__photo {
+    position: relative !important;
+    justify-self: end !important;
+    width: min(100%, 360px) !important;
+    height: 360px !important;
+    min-height: 360px !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    clip-path: none !important;
+}
+
+/* orange square behind photo */
+.service-types__photo::before {
+    content: "" !important;
+    position: absolute !important;
+    left: -18px !important;
+    bottom: -18px !important;
+    z-index: 1 !important;
+    width: 86% !important;
+    height: 86% !important;
+    background: #F47A18 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    pointer-events: none !important;
+}
+
+/* remove old overlays */
+.service-types__photo::after {
+    content: none !important;
+    display: none !important;
+}
+
+.service-types__photo img {
+    position: relative !important;
+    z-index: 2 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    filter: saturate(0.95) contrast(1.02) !important;
+    transform: none !important;
+    transition: transform 0.45s ease, filter 0.45s ease !important;
+}
+
+.service-types__photo:hover img {
+    transform: translateY(-4px) scale(1.015) !important;
+    filter: saturate(1.05) contrast(1.04) !important;
+}
+
+/* hide label and pills because reference has no them */
+.service-types__label,
+.service-types__pills {
+    display: none !important;
+}
+
+/* text content */
+.service-types__content {
+    max-width: 470px !important;
+    margin: 0 !important;
+}
+
+.service-types__content .section-kicker {
+    position: relative !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 13px !important;
+    margin: 0 0 18px !important;
+    color: #111827 !important;
+    font-size: 0.68rem !important;
+    font-weight: 900 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+}
+
+.service-types__content .section-kicker::before {
+    content: "" !important;
+    width: 36px !important;
+    height: 2px !important;
+    display: inline-block !important;
+    background: #C56A2E !important;
+}
+
+.service-types__content h2 {
+    max-width: 430px !important;
+    margin: 0 !important;
+    color: #0F172A !important;
+    font-size: clamp(2rem, 3.55vw, 3.45rem) !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.075em !important;
+    font-weight: 950 !important;
+}
+
+.service-types__content>p:not(.section-kicker) {
+    max-width: 430px !important;
+    margin-top: 18px !important;
+    color: #6B7280 !important;
+    font-size: 0.86rem !important;
+    line-height: 1.55 !important;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .service-types .container.grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 42px !important;
+        max-width: 720px !important;
+    }
+
+    .service-types__photo {
+        justify-self: center !important;
+        width: min(100%, 420px) !important;
+        height: 360px !important;
+    }
+
+    .service-types__content {
+        max-width: 620px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+    }
+
+    .service-types__content .section-kicker {
+        justify-content: center !important;
+    }
+
+    .service-types__content h2,
+    .service-types__content>p:not(.section-kicker) {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .service-types {
+        padding-top: 52px !important;
+        padding-bottom: 56px !important;
+    }
+
+    .service-types .container.grid-2 {
+        width: min(100% - 28px, 720px) !important;
+        gap: 34px !important;
+    }
+
+    .service-types__photo {
+        width: min(100%, 320px) !important;
+        height: 300px !important;
+        min-height: 300px !important;
+    }
+
+    .service-types__photo::before {
+        left: -12px !important;
+        bottom: -12px !important;
+    }
+
+    .service-types__content h2 {
+        font-size: clamp(1.85rem, 9vw, 2.65rem) !important;
+        line-height: 0.95 !important;
+    }
+
+    .service-types__content>p:not(.section-kicker) {
+        font-size: 0.82rem !important;
+        line-height: 1.48 !important;
+    }
+}
+
+/* =========================
+   Service Types — Bigger Photo Block
+========================= */
+
+.service-types .container.grid-2 {
+    max-width: 1240px !important;
+    grid-template-columns: minmax(420px, 1fr) minmax(360px, 0.9fr) !important;
+    gap: clamp(60px, 7vw, 104px) !important;
+}
+
+.service-types__photo {
+    width: min(100%, 500px) !important;
+    height: 440px !important;
+    min-height: 440px !important;
+    justify-self: end !important;
+}
+
+/* оранжевая подложка тоже больше */
+.service-types__photo::before {
+    left: -22px !important;
+    bottom: -22px !important;
+    width: 88% !important;
+    height: 88% !important;
+}
+
+/* фото заполняет увеличенный блок */
+.service-types__photo img {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    object-fit: cover !important;
+}
+
+/* текст чуть ближе к референсу, чтобы баланс был красивый */
+.service-types__content {
+    max-width: 480px !important;
+}
+
+/* tablet */
+@media (max-width: 900px) {
+    .service-types .container.grid-2 {
+        grid-template-columns: 1fr !important;
+        max-width: 760px !important;
+        gap: 44px !important;
+    }
+
+    .service-types__photo {
+        width: min(100%, 540px) !important;
+        height: 420px !important;
+        min-height: 420px !important;
+        justify-self: center !important;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .service-types__photo {
+        width: min(100%, 360px) !important;
+        height: 330px !important;
+        min-height: 330px !important;
+    }
+
+    .service-types__photo::before {
+        left: -12px !important;
+        bottom: -12px !important;
+    }
+}
