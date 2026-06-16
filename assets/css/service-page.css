@@ -3460,3 +3460,317 @@
         margin-bottom: 12px !important;
     }
 }
+
+/* =========================
+   Dark Icon Marquee — Icons Only
+========================= */
+
+.service-icon-marquee {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    min-height: 150px !important;
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 26px 0 !important;
+    background:
+        radial-gradient(circle at 12% 50%, rgba(37, 99, 235, 0.24), transparent 32%),
+        radial-gradient(circle at 88% 50%, rgba(197, 106, 46, 0.28), transparent 34%),
+        linear-gradient(145deg, #101722 0%, #070A0F 62%, #05070b 100%) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    isolation: isolate !important;
+}
+
+/* затемнение по краям */
+.service-icon-marquee::before,
+.service-icon-marquee::after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    z-index: 5 !important;
+    width: clamp(80px, 12vw, 190px) !important;
+    height: 100% !important;
+    pointer-events: none !important;
+}
+
+.service-icon-marquee::before {
+    left: 0 !important;
+    background: linear-gradient(90deg, #070A0F 0%, rgba(7, 10, 15, 0) 100%) !important;
+}
+
+.service-icon-marquee::after {
+    right: 0 !important;
+    background: linear-gradient(270deg, #070A0F 0%, rgba(7, 10, 15, 0) 100%) !important;
+}
+
+/* блеск на секции */
+.service-icon-marquee .service-icon-marquee__track::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -120% !important;
+    left: -60% !important;
+    z-index: 2 !important;
+    width: 24% !important;
+    height: 340% !important;
+    background: linear-gradient(115deg,
+            transparent,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.22),
+            rgba(255, 255, 255, 0.08),
+            transparent) !important;
+    transform: rotate(15deg) !important;
+    animation: serviceIconMarqueeShine 5.8s ease-in-out infinite !important;
+    pointer-events: none !important;
+}
+
+.service-icon-marquee__track {
+    position: relative !important;
+    z-index: 1 !important;
+    display: flex !important;
+    width: max-content !important;
+    animation: serviceIconMarqueeMove 22s linear infinite !important;
+    will-change: transform !important;
+}
+
+.service-icon-marquee:hover .service-icon-marquee__track {
+    animation-play-state: paused !important;
+}
+
+.service-icon-marquee__group {
+    display: flex !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    gap: clamp(28px, 4vw, 58px) !important;
+    padding-right: clamp(28px, 4vw, 58px) !important;
+}
+
+/* сама иконка */
+.service-icon-marquee__group span {
+    position: relative !important;
+    flex: 0 0 auto !important;
+    width: clamp(74px, 8vw, 112px) !important;
+    height: clamp(74px, 8vw, 112px) !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 28px !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.12), transparent 36%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.045)) !important;
+    box-shadow:
+        0 20px 44px rgba(0, 0, 0, 0.24),
+        inset 0 1px 0 rgba(255, 255, 255, 0.13) !important;
+    backdrop-filter: blur(14px) !important;
+    transform: translateZ(0) rotateX(0) rotateY(0) !important;
+    transition:
+        transform 0.32s ease,
+        border-color 0.32s ease,
+        background 0.32s ease,
+        box-shadow 0.32s ease !important;
+}
+
+/* маленький нижний акцент */
+.service-icon-marquee__group span::after {
+    content: "" !important;
+    position: absolute !important;
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 0 !important;
+    height: 4px !important;
+    border-radius: 999px 999px 0 0 !important;
+    background: linear-gradient(90deg, #C56A2E, var(--blue-bright), transparent) !important;
+    opacity: 0.75 !important;
+    transform: scaleX(0.42) !important;
+    transform-origin: left !important;
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease !important;
+}
+
+.service-icon-marquee__group svg {
+    width: clamp(36px, 4.4vw, 58px) !important;
+    height: clamp(36px, 4.4vw, 58px) !important;
+    color: #C56A2E !important;
+    stroke-width: 1.35 !important;
+    filter:
+        drop-shadow(0 12px 18px rgba(197, 106, 46, 0.32)) drop-shadow(0 0 22px rgba(197, 106, 46, 0.28)) !important;
+    transition:
+        color 0.32s ease,
+        transform 0.32s ease,
+        filter 0.32s ease !important;
+}
+
+.service-icon-marquee__group span:nth-child(even) svg {
+    color: var(--blue-bright) !important;
+    filter:
+        drop-shadow(0 12px 18px rgba(59, 130, 246, 0.34)) drop-shadow(0 0 22px rgba(59, 130, 246, 0.3)) !important;
+}
+
+/* hover 3D */
+.service-icon-marquee__group span:hover {
+    border-color: rgba(197, 106, 46, 0.42) !important;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(197, 106, 46, 0.22), transparent 36%),
+        linear-gradient(145deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.07)) !important;
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.36),
+        0 14px 30px rgba(197, 106, 46, 0.14),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18) !important;
+    transform: translateY(-8px) rotateX(6deg) rotateY(-5deg) scale(1.06) !important;
+}
+
+.service-icon-marquee__group span:hover::after {
+    opacity: 1 !important;
+    transform: scaleX(1) !important;
+}
+
+.service-icon-marquee__group span:hover svg {
+    color: var(--blue-bright) !important;
+    transform: rotate(-7deg) scale(1.1) !important;
+    filter:
+        drop-shadow(0 16px 24px rgba(59, 130, 246, 0.42)) drop-shadow(0 0 30px rgba(59, 130, 246, 0.38)) !important;
+}
+
+/* infinite movement */
+@keyframes serviceIconMarqueeMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* section shine */
+@keyframes serviceIconMarqueeShine {
+    0% {
+        left: -60%;
+        opacity: 0;
+    }
+
+    18% {
+        opacity: 1;
+    }
+
+    46% {
+        left: 125%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 125%;
+        opacity: 0;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .service-icon-marquee {
+        min-height: 112px !important;
+        padding: 18px 0 !important;
+    }
+
+    .service-icon-marquee__group {
+        gap: 18px !important;
+        padding-right: 18px !important;
+    }
+
+    .service-icon-marquee__group span {
+        width: 68px !important;
+        height: 68px !important;
+        border-radius: 22px !important;
+    }
+
+    .service-icon-marquee__group svg {
+        width: 34px !important;
+        height: 34px !important;
+    }
+}
+
+/* =========================
+   Icon Marquee — Icons without background
+========================= */
+
+.service-icon-marquee__group span {
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    transform: none !important;
+}
+
+/* убираем нижнюю линию у иконок */
+.service-icon-marquee__group span::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* сами иконки крупные и яркие */
+.service-icon-marquee__group svg {
+    width: clamp(54px, 6vw, 88px) !important;
+    height: clamp(54px, 6vw, 88px) !important;
+    color: #C56A2E !important;
+    stroke-width: 1.25 !important;
+    filter:
+        drop-shadow(0 0 14px rgba(197, 106, 46, 0.75)) drop-shadow(0 0 34px rgba(197, 106, 46, 0.42)) drop-shadow(0 18px 28px rgba(0, 0, 0, 0.34)) !important;
+    transition:
+        color 0.28s ease,
+        transform 0.28s ease,
+        filter 0.28s ease !important;
+}
+
+.service-icon-marquee__group span:nth-child(even) svg {
+    color: var(--blue-bright) !important;
+    filter:
+        drop-shadow(0 0 14px rgba(59, 130, 246, 0.78)) drop-shadow(0 0 34px rgba(59, 130, 246, 0.44)) drop-shadow(0 18px 28px rgba(0, 0, 0, 0.34)) !important;
+}
+
+/* hover только на саму иконку, без фона */
+.service-icon-marquee__group span:hover {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.service-icon-marquee__group span:hover svg {
+    color: #ffffff !important;
+    transform: translateY(-8px) rotate(-7deg) scale(1.14) !important;
+    filter:
+        drop-shadow(0 0 18px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 36px rgba(59, 130, 246, 0.55)) drop-shadow(0 22px 34px rgba(0, 0, 0, 0.42)) !important;
+}
+
+/* spacing between clean icons */
+.service-icon-marquee__group {
+    gap: clamp(42px, 6vw, 86px) !important;
+    padding-right: clamp(42px, 6vw, 86px) !important;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .service-icon-marquee__group {
+        gap: 30px !important;
+        padding-right: 30px !important;
+    }
+
+    .service-icon-marquee__group svg {
+        width: 46px !important;
+        height: 46px !important;
+    }
+}
