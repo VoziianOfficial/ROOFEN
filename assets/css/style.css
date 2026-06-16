@@ -1525,18 +1525,6 @@ p {
         linear-gradient(135deg, var(--black), var(--graphite));
 }
 
-.site-footer::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.22;
-    background-image:
-        linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
-    background-size: 42px 42px;
-    mask-image: linear-gradient(180deg, transparent, #000 22%, #000 76%, transparent);
-    pointer-events: none;
-}
 
 .footer-inner {
     position: relative;
