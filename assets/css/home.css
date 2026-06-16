@@ -2605,3 +2605,284 @@
         width: 100%;
     }
 }
+
+
+/* =========================
+   Roofen Big Motion Marquee
+   No cards. Big typography. Clean icons.
+========================= */
+
+.roofen-motion-band {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    overflow: hidden;
+    padding: clamp(42px, 6vw, 86px) 0;
+    color: var(--white);
+    background:
+        radial-gradient(circle at 18% 26%, rgba(37, 99, 235, 0.28), transparent 32%),
+        radial-gradient(circle at 82% 74%, rgba(197, 106, 46, 0.22), transparent 34%),
+        linear-gradient(135deg, var(--black) 0%, var(--graphite) 48%, var(--black) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(197, 106, 46, 0.22);
+}
+
+
+.roofen-motion-band::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -115px;
+    width: min(720px, 76vw);
+    height: 240px;
+    border: 2px solid rgba(197, 106, 46, 0.18);
+    border-radius: 999px 999px 0 0;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.roofen-motion-band__label {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+    margin: 0 18px clamp(28px, 4vw, 46px);
+}
+
+.roofen-motion-band__label span {
+    position: relative;
+    color: rgba(216, 222, 232, 0.68);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.roofen-motion-band__label span:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -11px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--copper);
+    transform: translateY(-50%);
+}
+
+.roofen-motion-band__row {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    width: max-content;
+    min-width: 100%;
+    margin: 0 0 clamp(16px, 2vw, 24px);
+}
+
+.roofen-motion-band__row:last-child {
+    margin-bottom: 0;
+}
+
+.roofen-motion-band__track {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3vw, 42px);
+    width: max-content;
+    animation: roofenMotionMarquee 36s linear infinite;
+    will-change: transform;
+}
+
+.roofen-motion-band__row--reverse .roofen-motion-band__track {
+    animation-name: roofenMotionMarqueeReverse;
+    animation-duration: 42s;
+}
+
+.roofen-motion-band:hover .roofen-motion-band__track {
+    animation-play-state: paused;
+}
+
+.roofen-motion-word {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(12px, 1.6vw, 20px);
+    color: var(--white);
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: clamp(2.35rem, 6.2vw, 6.8rem);
+    line-height: 0.95;
+    font-weight: 900;
+    letter-spacing: -0.07em;
+    text-transform: uppercase;
+    text-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.35),
+        0 0 34px rgba(37, 99, 235, 0.14);
+    transition:
+        color 0.28s ease,
+        text-shadow 0.28s ease,
+        transform 0.28s ease;
+}
+
+.roofen-motion-word::after {
+    content: "";
+    position: absolute;
+    left: clamp(42px, 5vw, 78px);
+    right: 0;
+    bottom: -10px;
+    height: 5px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--blue), var(--copper));
+    opacity: 0;
+    transform: scaleX(0.2);
+    transform-origin: left;
+    transition:
+        opacity 0.28s ease,
+        transform 0.28s ease;
+}
+
+.roofen-motion-word:hover {
+    color: var(--blue-bright);
+    transform: translateY(-5px);
+    text-shadow:
+        0 26px 56px rgba(0, 0, 0, 0.42),
+        0 0 38px rgba(37, 99, 235, 0.32);
+}
+
+.roofen-motion-word:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.roofen-motion-word i,
+.roofen-motion-word svg {
+    flex: 0 0 auto;
+    width: clamp(32px, 5vw, 70px);
+    height: clamp(32px, 5vw, 70px);
+    color: var(--copper);
+    stroke-width: 1.25;
+    transition:
+        color 0.28s ease,
+        transform 0.28s ease,
+        filter 0.28s ease;
+}
+
+.roofen-motion-word:hover i,
+.roofen-motion-word:hover svg {
+    color: var(--white);
+    transform: translateY(-4px) rotate(-5deg);
+    filter: drop-shadow(0 14px 20px rgba(197, 106, 46, 0.32));
+}
+
+.roofen-motion-word--outline {
+    color: transparent;
+    -webkit-text-stroke: 1.4px rgba(216, 222, 232, 0.48);
+    text-shadow: none;
+}
+
+.roofen-motion-word--outline:hover {
+    color: var(--white);
+    -webkit-text-stroke-color: transparent;
+    text-shadow:
+        0 24px 48px rgba(0, 0, 0, 0.36),
+        0 0 30px rgba(197, 106, 46, 0.22);
+}
+
+.roofen-motion-star {
+    color: var(--copper);
+    font-size: clamp(2rem, 4.8vw, 5.8rem);
+    line-height: 1;
+    filter: drop-shadow(0 0 20px rgba(197, 106, 46, 0.28));
+}
+
+.roofen-motion-dot {
+    width: clamp(12px, 1.5vw, 20px);
+    height: clamp(12px, 1.5vw, 20px);
+    border-radius: 50%;
+    background: var(--blue);
+    box-shadow:
+        0 0 0 9px rgba(37, 99, 235, 0.1),
+        0 0 24px rgba(37, 99, 235, 0.36);
+}
+
+@keyframes roofenMotionMarquee {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+@keyframes roofenMotionMarqueeReverse {
+    from {
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 900px) {
+    .roofen-motion-band {
+        padding: 54px 0;
+    }
+
+    .roofen-motion-band__track {
+        animation-duration: 30s;
+    }
+
+    .roofen-motion-band__row--reverse .roofen-motion-band__track {
+        animation-duration: 36s;
+    }
+
+    .roofen-motion-word {
+        font-size: clamp(2.4rem, 9vw, 4.7rem);
+    }
+}
+
+@media (max-width: 560px) {
+    .roofen-motion-band {
+        padding: 42px 0;
+    }
+
+    .roofen-motion-band__label {
+        justify-content: flex-start;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
+
+    .roofen-motion-band__label span {
+        font-size: 0.66rem;
+    }
+
+    .roofen-motion-word {
+        font-size: clamp(2.05rem, 12vw, 3.7rem);
+        letter-spacing: -0.06em;
+    }
+
+    .roofen-motion-word i,
+    .roofen-motion-word svg {
+        width: 34px;
+        height: 34px;
+    }
+
+    .roofen-motion-word::after {
+        height: 3px;
+        bottom: -7px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .roofen-motion-band__track {
+        animation-play-state: paused;
+    }
+}
