@@ -2754,3 +2754,65 @@
         line-height: 1.4 !important;
     }
 }
+
+/* =========================
+   Services FAQ — Independent 2 Columns Fix
+   Убирает пустое место у соседнего вопроса
+========================= */
+
+.services-faq .faq-grid {
+    display: block !important;
+    column-count: 2 !important;
+    column-gap: 16px !important;
+    width: 100% !important;
+}
+
+.services-faq .faq-item {
+    display: inline-block !important;
+    width: 100% !important;
+    margin: 0 0 14px !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    vertical-align: top !important;
+}
+
+/* панель больше не ломает соседнюю колонку */
+.services-faq .faq-panel {
+    display: block !important;
+    max-height: 0 !important;
+    overflow: hidden !important;
+    opacity: 0 !important;
+    transition:
+        max-height 0.34s ease,
+        opacity 0.24s ease,
+        padding-top 0.24s ease !important;
+}
+
+.services-faq .faq-panel[hidden] {
+    display: block !important;
+}
+
+.services-faq .faq-item.is-open .faq-panel {
+    max-height: 260px !important;
+    opacity: 1 !important;
+    padding-top: 12px !important;
+}
+
+/* чтобы открытая карточка выглядела сочнее */
+.services-faq .faq-item.is-open {
+    border-color: rgba(197, 106, 46, 0.3) !important;
+    box-shadow:
+        0 22px 54px rgba(15, 23, 42, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.86) !important;
+}
+
+/* mobile — один столбик */
+@media (max-width: 740px) {
+    .services-faq .faq-grid {
+        column-count: 1 !important;
+    }
+
+    .services-faq .faq-item {
+        margin-bottom: 10px !important;
+    }
+}
