@@ -1,4 +1,3 @@
-// assets/js/contact.js
 
 (function () {
     "use strict";

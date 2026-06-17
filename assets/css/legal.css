@@ -1,8 +1,6 @@
-/* assets/css/legal.css */
 
-/* ================================
-   Legal Hero
-================================ */
+
+
 
 .legal-hero {
     position: relative;
@@ -167,9 +165,7 @@
     text-align: right;
 }
 
-/* ================================
-   Legal Overview
-================================ */
+
 
 .legal-overview__grid {
     display: grid;
@@ -199,9 +195,7 @@
     line-height: 1.55;
 }
 
-/* ================================
-   Legal Body Layout
-================================ */
+
 
 .legal-body {
     position: relative;
@@ -283,9 +277,7 @@
     transform: translateX(3px);
 }
 
-/* ================================
-   Legal Document
-================================ */
+
 
 .legal-document {
     position: relative;
@@ -403,9 +395,7 @@
     color: var(--copper);
 }
 
-/* ================================
-   Legal Contact Box
-================================ */
+
 
 .legal-contact-box {
     display: grid;
@@ -432,9 +422,7 @@
     color: var(--blue);
 }
 
-/* ================================
-   Disclaimer
-================================ */
+
 
 .legal-disclaimer {
     position: relative;
@@ -485,18 +473,14 @@
     line-height: 1.7;
 }
 
-/* ================================
-   Legal CTA
-================================ */
+
 
 .legal-cta {
     padding-top: 78px;
     padding-bottom: 78px;
 }
 
-/* ================================
-   Responsive
-================================ */
+
 
 @media (max-width: 1180px) {
     .legal-hero__grid {
@@ -672,7 +656,7 @@
     background: rgba(197, 106, 46, 0.12);
 }
 
-/* Overview cards */
+
 .legal-overview {
     position: relative;
     overflow: hidden;
@@ -719,7 +703,7 @@
     z-index: 1;
 }
 
-/* TOC */
+
 .legal-toc {
     background:
         radial-gradient(circle at 100% 0%, rgba(37, 99, 235, 0.13), transparent 34%),
@@ -771,7 +755,7 @@
     box-shadow: 0 12px 28px rgba(37, 99, 235, 0.18);
 }
 
-/* Legal document */
+
 .legal-document {
     background:
         linear-gradient(90deg, rgba(37, 99, 235, 0.045), transparent 14%),
@@ -838,7 +822,7 @@
     background: rgba(234, 242, 255, 0.66);
 }
 
-/* Contact box */
+
 .legal-contact-box {
     position: relative;
     overflow: hidden;
@@ -866,7 +850,7 @@
     z-index: 1;
 }
 
-/* Disclaimer */
+
 .legal-disclaimer {
     background:
         radial-gradient(circle at 20% 0%, rgba(37, 99, 235, 0.18), transparent 30%),
@@ -880,7 +864,7 @@
         linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.035));
 }
 
-/* CTA */
+
 .legal-cta .cta-band {
     position: relative;
     overflow: hidden;

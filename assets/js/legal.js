@@ -1,4 +1,3 @@
-// assets/js/legal.js
 
 (function () {
     "use strict";

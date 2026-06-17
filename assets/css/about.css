@@ -1,8 +1,6 @@
-/* assets/css/about.css */
 
-/* ================================
-   About Hero
-================================ */
+
+
 
 .about-hero {
     position: relative;
@@ -155,9 +153,7 @@
     letter-spacing: -0.025em;
 }
 
-/* ================================
-   Identity
-================================ */
+
 
 .about-identity__watermark {
     right: -140px;
@@ -199,9 +195,7 @@
     line-height: 1.5;
 }
 
-/* ================================
-   Clickable Services Marquee
-================================ */
+
 
 .about-marquee {
     position: relative;
@@ -279,9 +273,7 @@
     }
 }
 
-/* ================================
-   What We Help With
-================================ */
+
 
 .about-help__grid {
     display: grid;
@@ -312,9 +304,7 @@
     line-height: 1.55;
 }
 
-/* ================================
-   Trust Principles
-================================ */
+
 
 .about-principles {
     position: relative;
@@ -412,9 +402,7 @@
     line-height: 1.54;
 }
 
-/* ================================
-   Matching Process
-================================ */
+
 
 .about-process__route {
     position: relative;
@@ -506,9 +494,7 @@
     line-height: 1.52;
 }
 
-/* ================================
-   Homeowner Confidence
-================================ */
+
 
 .about-confidence__photo,
 .about-confidence__photo img {
@@ -581,9 +567,7 @@
     line-height: 1.5;
 }
 
-/* ================================
-   Roofing-Focused Network
-================================ */
+
 
 .about-network__content h2 {
     color: var(--white);
@@ -683,18 +667,14 @@
     background: rgba(197, 106, 46, 0.14);
 }
 
-/* ================================
-   About CTA
-================================ */
+
 
 .about-cta {
     padding-top: 78px;
     padding-bottom: 78px;
 }
 
-/* ================================
-   Responsive
-================================ */
+
 
 @media (max-width: 1180px) {
     .about-hero__grid {
@@ -843,9 +823,7 @@
     animation-play-state: paused;
 }
 
-/* =========================
-   About Identity — Premium Upgrade
-========================= */
+
 
 .about-identity-upgrade {
     position: relative;
@@ -911,7 +889,7 @@
     line-height: 1.65;
 }
 
-/* main layout */
+
 .about-identity-upgrade__grid {
     display: grid;
     grid-template-columns: minmax(300px, 0.72fr) minmax(0, 1fr);
@@ -919,7 +897,7 @@
     align-items: stretch;
 }
 
-/* left dark identity panel */
+
 .about-identity-upgrade__statement {
     position: relative;
     overflow: hidden;
@@ -1029,7 +1007,7 @@
     font-weight: 760;
 }
 
-/* right flow */
+
 .about-identity-upgrade__flow {
     position: relative;
     display: grid;
@@ -1135,7 +1113,7 @@
     line-height: 1.52;
 }
 
-/* bottom proof line */
+
 .about-identity-upgrade__bottom {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1173,7 +1151,7 @@
     background: linear-gradient(135deg, var(--blue-bright), var(--copper));
 }
 
-/* responsive */
+
 @media (max-width: 980px) {
 
     .about-identity-upgrade__top,
@@ -1249,17 +1227,15 @@
     }
 }
 
-/* =========================
-   About Identity — Bigger Photo Statement + Smaller Flow
-========================= */
 
-/* left block bigger, right flow smaller */
+
+
 .about-identity-upgrade__grid {
     grid-template-columns: minmax(0, 1.18fr) minmax(260px, 0.52fr) !important;
     gap: 22px !important;
 }
 
-/* left statement with photo */
+
 .about-identity-upgrade__statement {
     min-height: 470px !important;
     padding: clamp(30px, 4vw, 48px) !important;
@@ -1276,7 +1252,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.13) !important;
 }
 
-/* убираем старую roofline-форму и делаем фото более premium */
+
 .about-identity-upgrade__statement::before {
     content: "" !important;
     position: absolute !important;
@@ -1291,7 +1267,7 @@
     pointer-events: none !important;
 }
 
-/* аккуратная сетка поверх фото */
+
 .about-identity-upgrade__statement::after {
     content: "" !important;
     position: absolute !important;
@@ -1305,7 +1281,7 @@
     pointer-events: none !important;
 }
 
-/* чтобы текст не залезал на фото слишком сильно */
+
 .about-identity-upgrade__statement strong,
 .about-identity-upgrade__statement p,
 .about-identity-upgrade__chips {
@@ -1321,13 +1297,13 @@
     color: rgba(216, 222, 232, 0.82) !important;
 }
 
-/* small bright label */
+
 .about-identity-upgrade__eyebrow {
     background: rgba(7, 10, 15, 0.42) !important;
     backdrop-filter: blur(10px);
 }
 
-/* right flow smaller and cleaner */
+
 .about-identity-upgrade__flow {
     min-height: 470px !important;
     align-content: center !important;
@@ -1369,7 +1345,7 @@
     left: 66px !important;
 }
 
-/* bottom hover effects */
+
 .about-identity-upgrade__bottom {
     overflow: hidden !important;
 }
@@ -1420,7 +1396,7 @@
     transform: scaleX(1);
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-identity-upgrade__grid {
         grid-template-columns: 1fr !important;
@@ -1477,7 +1453,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-identity-upgrade__statement {
         min-height: 420px !important;
@@ -1515,12 +1491,9 @@
     }
 }
 
-/* =========================
-   About Identity — Clean Photo Card Fix
-   No square/grid pattern
-========================= */
 
-/* убрать тупые квадратики/сетку внутри фото-карточки */
+
+
 .about-identity-upgrade__statement::after {
     content: "" !important;
     position: absolute !important;
@@ -1535,7 +1508,7 @@
     pointer-events: none !important;
 }
 
-/* убрать любые декоративные квадраты/roofline в этой карточке */
+
 .about-identity-upgrade__statement::before {
     content: "" !important;
     position: absolute !important;
@@ -1550,7 +1523,7 @@
     pointer-events: none !important;
 }
 
-/* Not a contractor — меньше и в одну строку */
+
 .about-identity-upgrade__statement strong {
     max-width: 100% !important;
     margin-top: 96px !important;
@@ -1564,13 +1537,13 @@
     display: none !important;
 }
 
-/* чтобы текст под заголовком аккуратно не растягивался */
+
 .about-identity-upgrade__statement p,
 .about-identity-upgrade__chips {
     max-width: 460px !important;
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-identity-upgrade__statement strong {
         margin-top: 150px !important;
@@ -1579,9 +1552,7 @@
     }
 }
 
-/* =========================
-   About Help — Compact Cards
-========================= */
+
 
 .about-help-card {
     position: relative !important;
@@ -1614,7 +1585,7 @@
     margin-top: auto !important;
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-help-card {
         min-height: 19px !important;
@@ -1629,9 +1600,7 @@
     }
 }
 
-/* =========================
-   About Identity — Show Photo Fix
-========================= */
+
 
 .about-identity-upgrade__statement {
     background-image:
@@ -1646,7 +1615,7 @@
     background-repeat: no-repeat !important;
 }
 
-/* overlay делаем легче, чтобы фото было видно */
+
 .about-identity-upgrade__statement::before {
     background:
         radial-gradient(circle at 14% 18%, rgba(37, 99, 235, 0.12), transparent 32%),
@@ -1661,9 +1630,7 @@
             rgba(7, 10, 15, 0.08) 100%) !important;
 }
 
-/* =========================
-   About Identity Bottom — Hover Crop Fix
-========================= */
+
 
 .about-identity-upgrade__bottom {
     overflow: visible !important;
@@ -1678,7 +1645,7 @@
     box-shadow: 0 18px 42px rgba(15, 23, 42, 0.06);
 }
 
-/* скругления, чтобы визуально остался один общий блок */
+
 .about-identity-upgrade__bottom span:first-child {
     border-radius: 24px 0 0 24px;
 }
@@ -1687,12 +1654,12 @@
     border-radius: 0 24px 24px 0;
 }
 
-/* hover чуть мягче, чтобы не вылезал некрасиво */
+
 .about-identity-upgrade__bottom span:hover {
     transform: translateY(-3px) !important;
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-identity-upgrade__bottom span:first-child {
         border-radius: 20px 20px 0 0;
@@ -1703,9 +1670,7 @@
     }
 }
 
-/* =========================
-   About Confidence — Premium Upgrade
-========================= */
+
 
 .about-confidence-upgrade {
     position: relative;
@@ -1790,7 +1755,7 @@
     letter-spacing: -0.055em;
 }
 
-/* content */
+
 .about-confidence-upgrade__content {
     position: relative;
 }
@@ -1809,7 +1774,7 @@
     line-height: 1.65;
 }
 
-/* flow вместо обычных карточек */
+
 .about-confidence-upgrade__flow {
     position: relative;
     display: grid;
@@ -1913,7 +1878,7 @@
     line-height: 1.5;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-confidence-upgrade__layout {
         grid-template-columns: 1fr;
@@ -1941,7 +1906,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-confidence-upgrade__photo {
         min-height: 340px;
@@ -1981,10 +1946,7 @@
     }
 }
 
-/* =========================
-   About Process — Dark Juicy Route
-   No card-in-card
-========================= */
+
 
 .about-process-dark {
     position: relative;
@@ -2028,7 +1990,7 @@
     transform: rotate(45deg);
 }
 
-/* top */
+
 .about-process-dark__top {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 420px);
@@ -2056,7 +2018,7 @@
     line-height: 1.6;
 }
 
-/* route */
+
 .about-process-dark__route {
     position: relative;
     display: grid;
@@ -2066,7 +2028,7 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
-/* яркая диагональная линия через шаги */
+
 .about-process-dark__route::before {
     content: "";
     position: absolute;
@@ -2148,7 +2110,7 @@
     transform: scaleX(1);
 }
 
-/* icons */
+
 .about-process-dark__icon {
     position: absolute;
     top: 50px;
@@ -2189,7 +2151,7 @@
     transform: skewX(10deg) translateY(-3px) rotate(-5deg);
 }
 
-/* text */
+
 .about-process-dark__route article>div {
     position: relative;
     z-index: 2;
@@ -2226,7 +2188,7 @@
     line-height: 1.52;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-process-dark__top {
         grid-template-columns: 1fr;
@@ -2259,7 +2221,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-process-dark__top h2 {
         font-size: clamp(2rem, 11vw, 3.15rem);
@@ -2290,9 +2252,7 @@
     }
 }
 
-/* =========================
-   About Process Dark — Background Photo + Two-line Title
-========================= */
+
 
 .about-process-dark {
     background:
@@ -2326,7 +2286,7 @@
     display: block;
 }
 
-/* tablet/mobile — чтобы перенос не ломал ширину */
+
 @media (max-width: 980px) {
     .about-process-dark {
         background-position: center !important;
@@ -2343,10 +2303,7 @@
     }
 }
 
-/* =========================
-   About Process Dark — Tablet/Mobile Compact Cards
-   Icons top right
-========================= */
+
 
 @media (max-width: 980px) {
     .about-process-dark__route {
@@ -2435,10 +2392,7 @@
     }
 }
 
-/* =========================
-   About Confidence — Editorial Roofing Layout
-   Inspired by reference, Roofen colors
-========================= */
+
 
 .about-confidence-editorial {
     position: relative;
@@ -2456,7 +2410,7 @@
     align-items: center;
 }
 
-/* left collage */
+
 .about-confidence-editorial__media {
     position: relative;
     min-height: 620px;
@@ -2571,7 +2525,7 @@
     clip-path: polygon(28px 0, 100% 0, 100% 100%, 0 100%, 0 28px);
 }
 
-/* right content */
+
 .about-confidence-editorial__content {
     position: relative;
     z-index: 2;
@@ -2598,7 +2552,7 @@
     line-height: 1.65;
 }
 
-/* two service cards */
+
 .about-confidence-editorial__cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2729,7 +2683,7 @@
     clip-path: polygon(0 0, 100% 50%, 0 100%);
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-confidence-editorial__grid {
         grid-template-columns: 1fr;
@@ -2761,7 +2715,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-confidence-editorial__media {
         min-height: 470px;
@@ -2818,10 +2772,7 @@
 }
 
 
-/* =========================
-   About Principles — Exact Split Flow Style
-   White process top + dark benefits bottom
-========================= */
+
 
 .about-roof-repair-flow {
     position: relative;
@@ -2830,12 +2781,12 @@
     background: var(--black) !important;
 }
 
-/* убираем старую декорацию этой секции */
+
 .about-roof-repair-flow .about-principles__roofline {
     display: none !important;
 }
 
-/* TOP WHITE PART */
+
 .about-roof-repair-flow__top {
     position: relative;
     z-index: 2;
@@ -2916,7 +2867,7 @@
     transform: translateY(-4px);
 }
 
-/* arrows */
+
 .about-roof-repair-flow__arrow {
     position: relative;
     height: 1px;
@@ -2940,7 +2891,7 @@
     opacity: 0.75;
 }
 
-/* BOTTOM DARK PART */
+
 .about-roof-repair-flow__bottom {
     position: relative;
     z-index: 1;
@@ -3049,7 +3000,7 @@
     line-height: 1.35;
 }
 
-/* big copper roof outline on right */
+
 .about-roof-repair-flow__roofline {
     position: relative;
     min-height: 180px;
@@ -3109,7 +3060,7 @@
     opacity: 0.92;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-roof-repair-flow__top h2 {
         text-align: center;
@@ -3158,7 +3109,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-roof-repair-flow__top {
         padding: 34px 0 30px;
@@ -3197,9 +3148,7 @@
         transform: scale(0.82);
     }
 }
-/* =========================
-   Roof Repair Flow Top — Center + Animated Arrows
-========================= */
+
 
 .about-roof-repair-flow__top {
     text-align: center !important;
@@ -3227,7 +3176,7 @@
     justify-content: center !important;
 }
 
-/* стрелки — длиннее, ровнее, по центру */
+
 .about-roof-repair-flow__arrow {
     position: relative !important;
     overflow: hidden !important;
@@ -3236,7 +3185,7 @@
     background: rgba(17, 24, 39, 0.18) !important;
 }
 
-/* бегущий свет внутри стрелки */
+
 .about-roof-repair-flow__arrow::before {
     content: "" !important;
     position: absolute !important;
@@ -3253,12 +3202,12 @@
     animation: roofFlowArrow 1.65s ease-in-out infinite !important;
 }
 
-/* кончик стрелки тоже слегка двигается */
+
 .about-roof-repair-flow__arrow::after {
     animation: roofArrowHead 1.65s ease-in-out infinite !important;
 }
 
-/* чтобы стрелки шли не одновременно, а волной */
+
 .about-roof-repair-flow__arrow:nth-of-type(2)::before,
 .about-roof-repair-flow__arrow:nth-of-type(2)::after {
     animation-delay: 0.18s !important;
@@ -3309,7 +3258,7 @@
     }
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .about-roof-repair-flow__steps {
         max-width: 760px !important;
@@ -3317,7 +3266,7 @@
     }
 }
 
-/* mobile — стрелки скрыты, потому что 2 колонки, иначе будет каша */
+
 @media (max-width: 640px) {
     .about-roof-repair-flow__top h2 {
         max-width: 100% !important;
@@ -3328,10 +3277,7 @@
     }
 }
 
-/* =========================
-   Roof Flow — Moving Arrows
-   Работает и для последней стрелки
-========================= */
+
 
 .about-roof-repair-flow__arrow,
 .about-roof-repair-flow__arrow.about-roof-repair-flow__arrow--last {
@@ -3350,7 +3296,7 @@
     animation: roofArrowLineMove 1.35s linear infinite !important;
 }
 
-/* кончик стрелки двигается вместе с линией */
+
 .about-roof-repair-flow__arrow::after,
 .about-roof-repair-flow__arrow.about-roof-repair-flow__arrow--last::after {
     content: "" !important;
@@ -3366,7 +3312,7 @@
     box-shadow: 0 0 10px rgba(197, 106, 46, 0.35) !important;
 }
 
-/* маленькая бегущая точка по стрелке */
+
 .about-roof-repair-flow__arrow::before,
 .about-roof-repair-flow__arrow.about-roof-repair-flow__arrow--last::before {
     content: "" !important;
@@ -3382,7 +3328,7 @@
     animation: roofArrowDotMove 1.35s linear infinite !important;
 }
 
-/* последняя стрелка чуть заметнее */
+
 .about-roof-repair-flow__arrow.about-roof-repair-flow__arrow--last {
     opacity: 1 !important;
 }
@@ -3429,10 +3375,7 @@
     }
 }
 
-/* =========================================================
-   FINAL FIX — Roof Repair Flow Bottom
-   Wider title, bigger benefits, real roofline like reference
-========================================================= */
+
 
 .about-roof-repair-flow__bottom {
     position: relative !important;
@@ -3444,13 +3387,13 @@
         linear-gradient(135deg, #06111d 0%, #071827 48%, #05080d 100%) !important;
 }
 
-/* делаем блок шире */
+
 .about-roof-repair-flow__bottom .container {
     width: min(100% - 40px, 1540px) !important;
     max-width: 1540px !important;
 }
 
-/* главная сетка нижнего блока */
+
 .about-roof-repair-flow__bottom-grid {
     display: grid !important;
     grid-template-columns: minmax(340px, 0.8fr) minmax(720px, 1.5fr) minmax(420px, 0.95fr) !important;
@@ -3459,7 +3402,7 @@
     min-height: 300px !important;
 }
 
-/* заголовок шире и заметнее */
+
 .about-roof-repair-flow__heading h3 {
     max-width: 440px !important;
     margin: 0 !important;
@@ -3469,7 +3412,7 @@
     letter-spacing: -0.08em !important;
 }
 
-/* benefits делаем шире и крупнее */
+
 .about-roof-repair-flow__benefits {
     display: grid !important;
     grid-template-columns: repeat(4, minmax(150px, 1fr)) !important;
@@ -3504,9 +3447,7 @@
     font-weight: 760 !important;
 }
 
-/* =========================================================
-   НОРМАЛЬНАЯ КРЫША СПРАВА — через SVG background
-========================================================= */
+
 
 .about-roof-repair-flow__roofline {
     position: relative !important;
@@ -3527,7 +3468,7 @@
         drop-shadow(0 0 14px rgba(197, 106, 46, 0.34)) drop-shadow(0 0 2px rgba(197, 106, 46, 0.9)) !important;
 }
 
-/* полностью выключаем старые кривые линии, чтобы не мешали */
+
 .about-roof-repair-flow__roofline::before,
 .about-roof-repair-flow__roofline::after,
 .about-roof-repair-flow__roofline span,
@@ -3540,7 +3481,7 @@
     box-shadow: none !important;
 }
 
-/* tablet */
+
 @media (max-width: 1180px) {
     .about-roof-repair-flow__bottom-grid {
         grid-template-columns: 1fr !important;
@@ -3580,7 +3521,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .about-roof-repair-flow__bottom {
         padding: 40px 0 46px !important;

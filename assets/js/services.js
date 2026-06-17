@@ -1,4 +1,3 @@
-// assets/js/services.js
 
 (function () {
     "use strict";

@@ -1,4 +1,3 @@
-// assets/js/config.js
 
 window.ROOFEN_CONFIG = {
     companyName: "Roofen",

@@ -1,4 +1,3 @@
-// assets/js/home.js
 
 (function () {
     "use strict";

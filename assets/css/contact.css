@@ -1,8 +1,6 @@
-/* assets/css/contact.css */
 
-/* ================================
-   Contact Hero
-================================ */
+
+
 
 .contact-hero {
     position: relative;
@@ -143,9 +141,7 @@
     z-index: 1;
 }
 
-/* ================================
-   Contact Form Section
-================================ */
+
 
 .contact-form-section__grid {
     display: grid;
@@ -260,9 +256,7 @@
     color: var(--blue-dark);
 }
 
-/* ================================
-   Contact Info
-================================ */
+
 
 .contact-info__grid {
     display: grid;
@@ -311,9 +305,7 @@
     margin-top: 14px;
 }
 
-/* ================================
-   What Happens Next
-================================ */
+
 
 .contact-next {
     position: relative;
@@ -411,9 +403,7 @@
     line-height: 1.52;
 }
 
-/* ================================
-   FAQ
-================================ */
+
 
 .contact-faq__top {
     display: grid;
@@ -432,9 +422,7 @@
     opacity: 0.9;
 }
 
-/* ================================
-   CTA
-================================ */
+
 
 .contact-cta {
     padding-top: 78px;
@@ -452,9 +440,7 @@
     line-height: 1.58;
 }
 
-/* ================================
-   Responsive
-================================ */
+
 
 @media (max-width: 1180px) {
 
@@ -577,10 +563,7 @@
     border-color: rgba(37, 99, 235, 0.45);
 }
 
-/* =========================
-   Contact Info — Compact Juicy 3D Cards
-   HTML не трогаем
-========================= */
+
 
 .contact-info {
     position: relative !important;
@@ -602,7 +585,7 @@
     align-items: center !important;
 }
 
-/* левый текст */
+
 .contact-info .section-heading {
     max-width: 520px !important;
 }
@@ -621,7 +604,7 @@
     line-height: 1.58 !important;
 }
 
-/* карточки справа */
+
 .contact-info__cards {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -629,7 +612,7 @@
     perspective: 1200px !important;
 }
 
-/* сама карточка */
+
 .contact-info-card {
     position: relative !important;
     overflow: hidden !important;
@@ -658,7 +641,7 @@
         linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(234, 242, 255, 0.82)) !important;
 }
 
-/* блеск */
+
 .contact-info-card::before {
     content: "" !important;
     position: absolute !important;
@@ -679,7 +662,7 @@
         opacity 0.22s ease !important;
 }
 
-/* нижняя сочная линия */
+
 .contact-info-card::after {
     content: "" !important;
     position: absolute !important;
@@ -720,7 +703,7 @@
     transform: scaleX(1) !important;
 }
 
-/* иконка справа */
+
 .contact-info-card .icon-large,
 .contact-info-card i.icon-large,
 .contact-info-card svg.icon-large,
@@ -763,7 +746,7 @@
         drop-shadow(0 14px 22px rgba(59, 130, 246, 0.28)) drop-shadow(0 0 22px rgba(59, 130, 246, 0.34)) !important;
 }
 
-/* текст внутри */
+
 .contact-info-card h3,
 .contact-info-card a,
 .contact-info-card p,
@@ -826,7 +809,7 @@
     color: var(--white) !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-info__grid {
         grid-template-columns: 1fr !important;
@@ -864,7 +847,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-info {
         padding-top: 46px !important;
@@ -919,10 +902,7 @@
 }
 
 
-/* =========================
-   Contact Form Section — Compact Balanced Premium
-   Form меньше, левый блок сочнее
-========================= */
+
 
 .contact-form-section {
     position: relative !important;
@@ -944,7 +924,7 @@
     align-items: stretch !important;
 }
 
-/* левый блок — теперь полноценная карточка */
+
 .contact-form-section__content {
     position: relative !important;
     overflow: hidden !important;
@@ -965,7 +945,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
 }
 
-/* блеск слева */
+
 .contact-form-section__content::before {
     content: "" !important;
     position: absolute !important;
@@ -988,7 +968,7 @@
     opacity: 1 !important;
 }
 
-/* декоративная линия */
+
 .contact-form-section__content::after {
     content: "" !important;
     position: absolute !important;
@@ -1022,7 +1002,7 @@
     line-height: 1.58 !important;
 }
 
-/* список слева — сочнее */
+
 .contact-form-section__checks {
     display: grid !important;
     gap: 10px !important;
@@ -1072,7 +1052,7 @@
     filter: drop-shadow(0 8px 12px rgba(197, 106, 46, 0.2)) !important;
 }
 
-/* форма — меньше по ширине и высоте */
+
 .contact-form {
     position: relative !important;
     overflow: hidden !important;
@@ -1114,7 +1094,7 @@
     opacity: 1 !important;
 }
 
-/* верх формы компактнее */
+
 .contact-form__top {
     display: grid !important;
     grid-template-columns: 54px minmax(0, 1fr) !important;
@@ -1149,14 +1129,14 @@
     line-height: 1.35 !important;
 }
 
-/* компактная сетка формы */
+
 .contact-form .form-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 12px !important;
 }
 
-/* на всякий случай, если блоки form-field--full ещё остались */
+
 .contact-form .form-field--full {
     display: none !important;
 }
@@ -1191,7 +1171,7 @@
     font-size: 0.82rem !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-form-section__grid {
         grid-template-columns: 1fr !important;
@@ -1217,7 +1197,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-form-section {
         padding-top: 46px !important;
@@ -1282,17 +1262,14 @@
     }
 }
 
-/* =========================
-   Contact Form — Full Fields Returned Compact Fix
-   Message + Consent остаются, но форма компактная
-========================= */
+
 
 .contact-form .form-field--full {
     display: block !important;
     grid-column: 1 / -1 !important;
 }
 
-/* форма чуть шире, но не огромная */
+
 .contact-form {
     max-width: 590px !important;
     min-height: auto !important;
@@ -1300,12 +1277,12 @@
     padding: 24px !important;
 }
 
-/* сетка формы компактнее */
+
 .contact-form .form-grid {
     gap: 10px 12px !important;
 }
 
-/* поля ниже */
+
 .contact-form .form-input,
 .contact-form .form-select {
     min-height: 42px !important;
@@ -1320,7 +1297,7 @@
     font-size: 0.74rem !important;
 }
 
-/* message делаем маленьким по высоте */
+
 .contact-form .form-textarea {
     min-height: 76px !important;
     height: 76px !important;
@@ -1332,7 +1309,7 @@
     resize: vertical !important;
 }
 
-/* consent компактный, не растягивает форму */
+
 .contact-form .checkbox-field {
     display: grid !important;
     grid-template-columns: 22px minmax(0, 1fr) !important;
@@ -1390,14 +1367,14 @@
     line-height: 1.35 !important;
 }
 
-/* кнопка ближе к форме */
+
 .contact-form__submit {
     min-height: 48px !important;
     margin-top: 14px !important;
     border-radius: 15px !important;
 }
 
-/* левый блок подгоняем по высоте формы */
+
 .contact-form-section__content {
     min-height: auto !important;
     height: 100% !important;
@@ -1414,12 +1391,12 @@
     padding: 10px 13px !important;
 }
 
-/* desktop: обе стороны одинаково смотрятся */
+
 .contact-form-section__grid {
     align-items: stretch !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-form {
         max-width: 760px !important;
@@ -1431,7 +1408,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-form {
         padding: 18px !important;
@@ -1471,10 +1448,7 @@
 }
 
 
-/* =========================
-   Services Selector — Clean Infinite Icon Marquee
-   Без карточек, без фона у item, только большие иконки
-========================= */
+
 
 .services-selector {
     position: relative !important;
@@ -1483,7 +1457,7 @@
     background: #ffffff !important;
 }
 
-/* убираем "карточку внутри карточки" */
+
 .services-selector .container-wide {
     width: 100% !important;
     max-width: 100% !important;
@@ -1501,12 +1475,12 @@
     box-shadow: none !important;
 }
 
-/* скрываем заголовок, HTML не трогаем */
+
 .services-selector__inner>div:first-child {
     display: none !important;
 }
 
-/* мягкие белые края, чтобы строка красиво уходила */
+
 .services-selector__inner::before,
 .services-selector__inner::after {
     content: "" !important;
@@ -1528,7 +1502,7 @@
     background: linear-gradient(270deg, #ffffff 0%, rgba(255, 255, 255, .78) 48%, transparent 100%) !important;
 }
 
-/* сама бесконечная строка */
+
 .services-selector__chips {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -1541,12 +1515,12 @@
     animation: servicesCleanInfiniteMarquee 22s linear infinite !important;
 }
 
-/* hover — пауза */
+
 .services-selector__inner:hover .services-selector__chips {
     animation-play-state: paused !important;
 }
 
-/* элемент — НЕ карточка, без фона */
+
 .services-selector__chips .chip {
     position: relative !important;
     flex: 0 0 auto !important;
@@ -1572,14 +1546,14 @@
     transition: transform .28s ease, filter .28s ease !important;
 }
 
-/* отключаем любые старые блески/плашки от chip */
+
 .services-selector__chips .chip::before,
 .services-selector__chips .chip::after {
     content: none !important;
     display: none !important;
 }
 
-/* только большие иконки */
+
 .services-selector__chips .chip svg {
     width: clamp(62px, 7vw, 104px) !important;
     height: clamp(62px, 7vw, 104px) !important;
@@ -1599,14 +1573,14 @@
         opacity .28s ease !important;
 }
 
-/* чередование цвета, чтобы было сочнее */
+
 .services-selector__chips .chip:nth-child(even) svg {
     color: var(--blue-bright) !important;
     filter:
         drop-shadow(0 14px 18px rgba(37, 99, 235, 0.18)) drop-shadow(0 0 18px rgba(37, 99, 235, 0.16)) !important;
 }
 
-/* hover без фона — только движение и glow */
+
 .services-selector__chips .chip:hover,
 .services-selector__chips .chip.is-active {
     background: transparent !important;
@@ -1622,7 +1596,7 @@
         drop-shadow(0 18px 26px rgba(197, 106, 46, 0.28)) drop-shadow(0 0 28px rgba(197, 106, 46, 0.36)) !important;
 }
 
-/* бесконечность: расстояние задаёт JS */
+
 @keyframes servicesCleanInfiniteMarquee {
     from {
         transform: translateX(0);
@@ -1633,7 +1607,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .services-selector {
         padding: 22px 0 !important;
@@ -1661,10 +1635,7 @@
     }
 }
 
-/* =========================
-   Contact Quality — Full Replacement Section
-   Новая секция без конфликтов со старой contact-next
-========================= */
+
 
 .contact-quality {
     position: relative !important;
@@ -1697,7 +1668,7 @@
     align-items: center !important;
 }
 
-/* левая часть */
+
 .contact-quality__left {
     position: relative !important;
     min-height: 390px !important;
@@ -1722,7 +1693,7 @@
     letter-spacing: -0.085em !important;
 }
 
-/* фото как на референсе */
+
 .contact-quality__photos {
     position: relative !important;
     min-height: 245px !important;
@@ -1788,7 +1759,7 @@
     filter: saturate(1.12) contrast(1.05) !important;
 }
 
-/* правая панель */
+
 .contact-quality__panel {
     position: relative !important;
     overflow: hidden !important;
@@ -1835,7 +1806,7 @@
     letter-spacing: -0.03em !important;
 }
 
-/* строки справа */
+
 .contact-quality__item {
     position: relative !important;
     z-index: 2 !important;
@@ -1905,7 +1876,7 @@
         0 0 20px rgba(59, 130, 246, 0.22) !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
     .contact-quality__grid {
         grid-template-columns: 1fr !important;
@@ -1941,7 +1912,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-quality {
         padding-top: 46px !important;
@@ -2012,10 +1983,7 @@
     }
 }
 
-/* =========================
-   Roofen Contact Accordion — Full Premium Replacement
-   Полностью новая секция без старых faq-классов
-========================= */
+
 
 .roofen-contact-accordion {
     position: relative !important;
@@ -2038,7 +2006,7 @@
     align-items: stretch !important;
 }
 
-/* LEFT INTRO */
+
 .roofen-contact-accordion__intro {
     position: relative !important;
     overflow: hidden !important;
@@ -2059,7 +2027,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.14) !important;
 }
 
-/* shine */
+
 .roofen-contact-accordion__intro::before {
     content: "" !important;
     position: absolute !important;
@@ -2084,7 +2052,7 @@
     opacity: 1 !important;
 }
 
-/* roof line */
+
 .roofen-contact-accordion__intro::after {
     content: "" !important;
     position: absolute !important;
@@ -2184,7 +2152,7 @@
         drop-shadow(0 18px 28px rgba(59, 130, 246, 0.22)) drop-shadow(0 0 26px rgba(59, 130, 246, 0.22)) !important;
 }
 
-/* RIGHT PANEL */
+
 .roofen-contact-accordion__panel {
     position: relative !important;
     overflow: hidden !important;
@@ -2204,7 +2172,7 @@
         inset 0 1px 0 rgba(255, 255, 255, 0.96) !important;
 }
 
-/* ITEM */
+
 .roofen-contact-accordion__item {
     position: relative !important;
     overflow: hidden !important;
@@ -2221,7 +2189,7 @@
         box-shadow 0.28s ease !important;
 }
 
-/* bottom accent */
+
 .roofen-contact-accordion__item::after {
     content: "" !important;
     position: absolute !important;
@@ -2255,7 +2223,7 @@
     transform: scaleX(1) !important;
 }
 
-/* BUTTON */
+
 .roofen-contact-accordion__button {
     position: relative !important;
     z-index: 2 !important;
@@ -2324,7 +2292,7 @@
     letter-spacing: -0.045em !important;
 }
 
-/* PLUS */
+
 .roofen-contact-accordion__plus {
     position: relative !important;
     width: 42px !important;
@@ -2368,7 +2336,7 @@
     opacity: 0 !important;
 }
 
-/* BODY — smooth, no дерганье */
+
 .roofen-contact-accordion__body {
     display: grid !important;
     grid-template-rows: 0fr !important;
@@ -2396,7 +2364,7 @@
     line-height: 1.58 !important;
 }
 
-/* TABLET */
+
 @media (max-width: 980px) {
     .roofen-contact-accordion__grid {
         grid-template-columns: 1fr !important;
@@ -2429,7 +2397,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 640px) {
     .roofen-contact-accordion {
         padding-top: 44px !important;
@@ -2516,10 +2484,7 @@
     }
 }
 
-/* =========================
-   Simple Black Services Selector
-   Только черный фон + яркие иконки
-========================= */
+
 
 .services-selector {
     position: relative !important;
@@ -2544,12 +2509,12 @@
     box-shadow: none !important;
 }
 
-/* заголовок скрываем */
+
 .services-selector__inner>div:first-child {
     display: none !important;
 }
 
-/* затемнение по краям */
+
 .services-selector__inner::before,
 .services-selector__inner::after {
     content: "" !important;
@@ -2571,7 +2536,7 @@
     background: linear-gradient(270deg, #05070b, transparent) !important;
 }
 
-/* бесконечная линия */
+
 .services-selector__chips {
     display: flex !important;
     flex-wrap: nowrap !important;
@@ -2586,7 +2551,7 @@
     animation-play-state: paused !important;
 }
 
-/* сами элементы — без карточек */
+
 .services-selector__chips .chip {
     flex: 0 0 auto !important;
     display: inline-flex !important;
@@ -2619,7 +2584,7 @@
     content: none !important;
 }
 
-/* яркие иконки */
+
 .services-selector__chips .chip svg {
     width: 58px !important;
     height: 58px !important;
@@ -2638,14 +2603,14 @@
     transition: color 0.25s ease, filter 0.25s ease, transform 0.25s ease !important;
 }
 
-/* чередуем синие */
+
 .services-selector__chips .chip:nth-child(even) svg {
     color: #3B82F6 !important;
     filter:
         drop-shadow(0 0 12px rgba(59, 130, 246, 0.7)) drop-shadow(0 0 26px rgba(59, 130, 246, 0.45)) !important;
 }
 
-/* hover только чуть ярче */
+
 .services-selector__chips .chip:hover,
 .services-selector__chips .chip.is-active {
     color: #ffffff !important;
@@ -2693,9 +2658,7 @@
     }
 }
 
-/* =========================
-   Contact CTA — 3D Hover + Shine
-========================= */
+
 
 .contact-cta {
     position: relative !important;
@@ -2712,7 +2675,7 @@
     perspective: 1200px !important;
 }
 
-/* главная карточка */
+
 .contact-cta .cta-band {
     position: relative !important;
     overflow: hidden !important;
@@ -2734,7 +2697,7 @@
         filter 0.38s ease !important;
 }
 
-/* блестящий проход */
+
 .contact-cta .cta-band::before {
     content: "" !important;
     position: absolute !important;
@@ -2757,7 +2720,7 @@
         opacity 0.24s ease !important;
 }
 
-/* нижняя яркая линия */
+
 .contact-cta .cta-band::after {
     content: "" !important;
     position: absolute !important;
@@ -2776,7 +2739,7 @@
         transform 0.34s ease !important;
 }
 
-/* hover 3D */
+
 .contact-cta .cta-band:hover {
     border-color: rgba(197, 106, 46, 0.36) !important;
     box-shadow:
@@ -2798,7 +2761,7 @@
     transform: scaleX(1) !important;
 }
 
-/* контент внутри */
+
 .contact-cta .cta-band__content {
     position: relative !important;
     z-index: 3 !important;
@@ -2818,7 +2781,7 @@
     color: rgba(216, 222, 232, 0.82) !important;
 }
 
-/* кнопка тоже чуть живая */
+
 .contact-cta .cta-band .btn {
     box-shadow:
         0 16px 32px rgba(197, 106, 46, 0.2),
@@ -2845,7 +2808,7 @@
     transform: translate(3px, -3px) rotate(-6deg) !important;
 }
 
-/* disclaimer аккуратнее */
+
 .contact-cta__note {
     margin-top: 20px !important;
     border-radius: 20px !important;
@@ -2854,7 +2817,7 @@
     box-shadow: 0 14px 34px rgba(15, 23, 42, 0.045) !important;
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .contact-cta .cta-band {
         border-radius: 24px !important;
@@ -2874,10 +2837,7 @@
     }
 }
 
-/* =========================
-   Roofen Accordion — Full Width Horizontal Block
-   Фото слева + аккордеон справа, без пространства
-========================= */
+
 
 .roofen-contact-accordion {
     position: relative !important;
@@ -2888,7 +2848,7 @@
     background: var(--black) !important;
 }
 
-/* убираем container-ограничения, делаем секцию на всю ширину */
+
 .roofen-contact-accordion>.container,
 .roofen-contact-accordion__grid {
     width: 100% !important;
@@ -2902,7 +2862,7 @@
     align-items: stretch !important;
 }
 
-/* левая часть — фото во всю высоту */
+
 .roofen-contact-accordion__photo {
     position: relative !important;
     overflow: hidden !important;
@@ -2926,7 +2886,7 @@
     filter: saturate(1.05) contrast(1.05) !important;
 }
 
-/* затемнение поверх фото */
+
 .roofen-contact-accordion__photo::before {
     content: "" !important;
     position: absolute !important;
@@ -2939,13 +2899,13 @@
     pointer-events: none !important;
 }
 
-/* убираем старую нижнюю линию, чтобы блок был цельный */
+
 .roofen-contact-accordion__photo::after {
     content: none !important;
     display: none !important;
 }
 
-/* подпись на фото */
+
 .roofen-contact-accordion__photo figcaption {
     position: absolute !important;
     left: clamp(22px, 4vw, 56px) !important;
@@ -2978,7 +2938,7 @@
     text-transform: uppercase !important;
 }
 
-/* правая часть — один цельный блок */
+
 .roofen-contact-accordion__panel {
     position: relative !important;
     overflow: hidden !important;
@@ -3002,7 +2962,7 @@
     box-shadow: none !important;
 }
 
-/* яркая вертикальная линия между фото и аккордеоном */
+
 .roofen-contact-accordion__panel::before {
     content: "" !important;
     position: absolute !important;
@@ -3017,7 +2977,7 @@
         0 0 28px rgba(59, 130, 246, 0.22) !important;
 }
 
-/* аккордеон как один блок, без отдельных карточек */
+
 .roofen-contact-accordion__item {
     position: relative !important;
     overflow: hidden !important;
@@ -3037,7 +2997,7 @@
         linear-gradient(90deg, rgba(234, 242, 255, 0.5), rgba(255, 255, 255, 0)) !important;
 }
 
-/* кнопки */
+
 .roofen-contact-accordion__button {
     width: 100% !important;
     min-height: 92px !important;
@@ -3053,7 +3013,7 @@
     text-align: left !important;
 }
 
-/* иконки */
+
 .roofen-contact-accordion__icon {
     width: 56px !important;
     height: 56px !important;
@@ -3088,7 +3048,7 @@
         0 0 20px rgba(59, 130, 246, 0.2) !important;
 }
 
-/* текст */
+
 .roofen-contact-accordion__text small {
     display: block !important;
     margin-bottom: 6px !important;
@@ -3108,7 +3068,7 @@
     letter-spacing: -0.045em !important;
 }
 
-/* плюс */
+
 .roofen-contact-accordion__plus {
     position: relative !important;
     width: 42px !important;
@@ -3149,7 +3109,7 @@
     opacity: 0 !important;
 }
 
-/* body */
+
 .roofen-contact-accordion__body {
     display: grid !important;
     grid-template-rows: 0fr !important;
@@ -3177,7 +3137,7 @@
     line-height: 1.58 !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
 
     .roofen-contact-accordion>.container,
@@ -3210,7 +3170,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .roofen-contact-accordion__photo img {
         min-height: 280px !important;
@@ -3268,10 +3228,7 @@
     }
 }
 
-/* =========================
-   Roofen Accordion — Compact Equal Height Fix
-   Меньше высота + одинаковые стороны + без вылезания при hover
-========================= */
+
 
 .roofen-contact-accordion {
     width: 100% !important;
@@ -3300,7 +3257,7 @@
     overflow: hidden !important;
 }
 
-/* обе стороны одинаковой компактной высоты */
+
 .roofen-contact-accordion__photo,
 .roofen-contact-accordion__panel {
     min-height: 460px !important;
@@ -3313,7 +3270,7 @@
     overflow: hidden !important;
 }
 
-/* фото */
+
 .roofen-contact-accordion__photo {
     background: var(--black) !important;
     box-shadow: none !important;
@@ -3333,7 +3290,7 @@
     transform: scale(1.035) !important;
 }
 
-/* подпись фото компактнее */
+
 .roofen-contact-accordion__photo figcaption {
     left: 34px !important;
     right: 34px !important;
@@ -3344,7 +3301,7 @@
     font-size: 1.08rem !important;
 }
 
-/* правая часть */
+
 .roofen-contact-accordion__panel {
     position: relative !important;
     display: flex !important;
@@ -3360,7 +3317,7 @@
     overflow: hidden !important;
 }
 
-/* чтобы ничего не вылезало справа */
+
 .roofen-contact-accordion__item,
 .roofen-contact-accordion__button,
 .roofen-contact-accordion__text,
@@ -3371,7 +3328,7 @@
     overflow: hidden !important;
 }
 
-/* один цельный список */
+
 .roofen-contact-accordion__item {
     border: 0 !important;
     border-radius: 0 !important;
@@ -3390,7 +3347,7 @@
         linear-gradient(90deg, rgba(234, 242, 255, 0.42), rgba(255, 255, 255, 0)) !important;
 }
 
-/* компактнее кнопки */
+
 .roofen-contact-accordion__button {
     min-height: 78px !important;
     grid-template-columns: 48px minmax(0, 1fr) 36px !important;
@@ -3399,14 +3356,14 @@
     transform: none !important;
 }
 
-/* убираем hover-сдвиги наружу */
+
 .roofen-contact-accordion__button:hover,
 .roofen-contact-accordion__item:hover,
 .roofen-contact-accordion__item.is-open {
     transform: none !important;
 }
 
-/* иконка компактнее, без вылета */
+
 .roofen-contact-accordion__icon {
     width: 48px !important;
     height: 48px !important;
@@ -3424,7 +3381,7 @@
     transform: scale(1.04) !important;
 }
 
-/* текст */
+
 .roofen-contact-accordion__text small {
     margin-bottom: 5px !important;
     font-size: 0.63rem !important;
@@ -3436,7 +3393,7 @@
     line-height: 1.08 !important;
 }
 
-/* плюс компактнее */
+
 .roofen-contact-accordion__plus {
     width: 36px !important;
     height: 36px !important;
@@ -3447,7 +3404,7 @@
     transform: rotate(180deg) !important;
 }
 
-/* ответ компактнее */
+
 .roofen-contact-accordion__body p {
     max-width: 100% !important;
     padding: 0 0 18px 62px !important;
@@ -3455,7 +3412,7 @@
     line-height: 1.45 !important;
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
 
     .roofen-contact-accordion>.container,
@@ -3480,7 +3437,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .roofen-contact-accordion__photo img {
         height: 260px !important;
@@ -3533,10 +3490,7 @@
     }
 }
 
-/* =========================
-   Accordion active item side padding fix
-   Чтобы открытая строка не вылазила справа/слева
-========================= */
+
 
 .roofen-contact-accordion__item.is-open {
     width: calc(100% - 24px) !important;
@@ -3557,14 +3511,14 @@
     padding-right: 12px !important;
 }
 
-/* чтобы остальные пункты не прыгали по ширине */
+
 .roofen-contact-accordion__item:not(.is-open) {
     width: calc(100% - 24px) !important;
     margin-left: 12px !important;
     margin-right: 12px !important;
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
 
     .roofen-contact-accordion__item.is-open,

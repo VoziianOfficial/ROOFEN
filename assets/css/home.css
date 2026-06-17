@@ -1,8 +1,6 @@
-/* assets/css/home.css */
 
-/* ================================
-   Home Page Shared
-================================ */
+
+
 
 .visually-hidden {
     position: absolute !important;
@@ -16,9 +14,7 @@
     clip: rect(0 0 0 0);
 }
 
-/* =========================
-   Roof Issue Strip Override
-========================= */
+
 
 .roof-issue-section {
     position: relative;
@@ -215,9 +211,7 @@
     }
 }
 
-/* ================================
-   Home Hero
-================================ */
+
 
 .home-hero {
     position: relative;
@@ -302,9 +296,7 @@
 }
 
 
-/* ================================
-   Home Search
-================================ */
+
 
 .home-search {
     width: min(100%, 640px);
@@ -425,9 +417,7 @@
     font-weight: 660;
 }
 
-/* ================================
-   Trust Strip
-================================ */
+
 
 .home-trust {
     position: relative;
@@ -501,9 +491,7 @@
     line-height: 1.48;
 }
 
-/* ================================
-   About Preview
-================================ */
+
 
 .home-about.section {
     padding-top: 48px;
@@ -612,9 +600,7 @@
     line-height: 1.46;
 }
 
-/* ================================
-   Services Preview
-================================ */
+
 
 .home-services__top {
     display: grid;
@@ -880,9 +866,7 @@
         radial-gradient(circle at 82% 18%, rgba(14, 165, 233, 0.1), transparent 34%);
 }
 
-/* ================================
-   Process Roofline Route
-================================ */
+
 
 .home-process__route {
     position: relative;
@@ -973,9 +957,7 @@
     line-height: 1.52;
 }
 
-/* ================================
-   Network / Why Choose
-================================ */
+
 
 .home-network__roofline {
     position: absolute;
@@ -1129,9 +1111,7 @@
     font-weight: 760;
 }
 
-/* ================================
-   Reviews
-================================ */
+
 
 .home-reviews__watermark {
     left: -120px;
@@ -1205,9 +1185,7 @@
     font-size: 0.92rem;
 }
 
-/* ================================
-   CTA
-================================ */
+
 
 .home-cta {
     padding-top: 78px;
@@ -1218,9 +1196,7 @@
     margin-top: 22px;
 }
 
-/* ================================
-   FAQ
-================================ */
+
 
 .home-faq__top {
     display: grid;
@@ -1239,9 +1215,7 @@
     opacity: 0.9;
 }
 
-/* ================================
-   Responsive
-================================ */
+
 
 @media (max-width: 1180px) {
     .home-hero__grid {
@@ -1425,9 +1399,7 @@
 }
 
 
-/* =========================
-   Full-width Roof Issue Strip
-========================= */
+
 
 .roof-issue-section {
     width: 100vw;
@@ -1568,9 +1540,7 @@
     object-position: center right;
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 900px) {
     .roof-issue-box {
@@ -1618,9 +1588,7 @@
         width: 100%;
     }
 }
-/* =========================
-   Roof Issue Strip — Bigger Juicy Version
-========================= */
+
 
 .roof-issue-box {
     min-height: 315px;
@@ -1731,7 +1699,7 @@
     filter: contrast(1.06) saturate(1.08);
 }
 
-/* Responsive */
+
 @media (max-width: 900px) {
 
     .roof-issue-box,
@@ -1772,10 +1740,7 @@
     }
 }
 
-/* =========================
-   Roof Network Strip — Roofen Style
-   Clean icons, big premium section
-========================= */
+
 
 .roof-network-strip {
     position: relative;
@@ -1802,9 +1767,7 @@
     pointer-events: none;
 }
 
-/* =========================
-   Top row
-========================= */
+
 
 .roof-network-strip__top {
     position: relative;
@@ -1894,7 +1857,7 @@
     color: var(--blue-bright);
 }
 
-/* top icons: clean, no cards */
+
 .roof-network-strip__types {
     position: relative;
     z-index: 1;
@@ -1955,9 +1918,7 @@
     font-weight: 680;
 }
 
-/* =========================
-   Bottom row
-========================= */
+
 
 .roof-network-strip__bottom {
     position: relative;
@@ -1990,7 +1951,7 @@
     text-shadow: 0 18px 38px rgba(0, 0, 0, 0.34);
 }
 
-/* bottom icons: clean, no background */
+
 .roof-network-strip__features {
     position: relative;
     display: grid;
@@ -2072,7 +2033,7 @@
     font-weight: 680;
 }
 
-/* right card stays as real card */
+
 .roof-network-strip__card {
     position: relative;
     overflow: hidden;
@@ -2175,9 +2136,7 @@
     pointer-events: none;
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 1180px) {
     .roof-network-strip__top {
@@ -2291,7 +2250,7 @@
     }
 }
 
-/* Make trust heading wider */
+
 
 .roof-network-strip__bottom {
     grid-template-columns: 31% 43% 26%;
@@ -2306,12 +2265,9 @@
     max-width: 460px;
 }
 
-/* =========================
-   Roof Network Strip
-   Tablet + Mobile Custom Layout
-========================= */
 
-/* TABLET */
+
+
 @media (max-width: 1180px) {
     .roof-network-strip {
         background:
@@ -2464,7 +2420,7 @@
     }
 }
 
-/* MOBILE */
+
 @media (max-width: 640px) {
     .roof-network-strip {
         width: 100vw;
@@ -2611,10 +2567,7 @@
 }
 
 
-/* =========================
-   Roofen Big Motion Marquee
-   No cards. Big typography. Clean icons.
-========================= */
+
 
 .roofen-motion-band {
     position: relative;
@@ -2831,9 +2784,7 @@
     }
 }
 
-/* =========================
-   Responsive
-========================= */
+
 
 @media (max-width: 900px) {
     .roofen-motion-band {
@@ -2891,9 +2842,7 @@
     }
 }
 
-/* =========================
-   Home About Text Switcher
-========================= */
+
 
 .home-about__content {
     transition:
@@ -2916,9 +2865,7 @@
 }
 
 
-/* =========================
-   Roof Issue Section — Big Background Version
-========================= */
+
 
 .roof-issue-section {
     position: relative !important;
@@ -3173,7 +3120,7 @@
     letter-spacing: -0.035em;
 }
 
-/* bottom icon line */
+
 .roof-issue-line {
     position: relative;
     z-index: 3;
@@ -3262,7 +3209,7 @@
     font-weight: 760;
 }
 
-/* responsive */
+
 @media (max-width: 1100px) {
     .roof-issue-box {
         grid-template-columns: 1fr !important;
@@ -3402,9 +3349,7 @@
 }
 
 
-/* =========================
-   Home Trust — Bright Full Width Cards
-========================= */
+
 
 .home-trust {
     position: relative;
@@ -3480,7 +3425,7 @@
         linear-gradient(145deg, #ffffff, #f8fafc) !important;
 }
 
-/* shine */
+
 .home-trust__item::before {
     content: "";
     position: absolute;
@@ -3593,7 +3538,7 @@
     transform: translateX(4px);
 }
 
-/* Tablet */
+
 @media (max-width: 1180px) {
     .home-trust__grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -3614,7 +3559,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-trust {
         padding-bottom: 42px;
@@ -3660,9 +3605,7 @@
     }
 }
 
-/* =========================
-   Home Trust Cards Padding Balance
-========================= */
+
 
 .home-trust__item,
 .home-trust__item.icon-hover-card {
@@ -3674,7 +3617,7 @@
     bottom: 16px !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1180px) {
 
     .home-trust__item,
@@ -3688,7 +3631,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
 
     .home-trust__item,
@@ -3708,9 +3651,7 @@
     padding-bottom: 22px !important;
 }
 
-/* =========================
-   Home Trust — Remove Card Backgrounds & Borders
-========================= */
+
 
 .home-trust__item,
 .home-trust__item.icon-hover-card {
@@ -3721,7 +3662,7 @@
     box-shadow: none !important;
 }
 
-/* убираем разные фоны у отдельных карточек */
+
 .home-trust__item:nth-child(1),
 .home-trust__item:nth-child(2),
 .home-trust__item:nth-child(3),
@@ -3731,7 +3672,7 @@
     box-shadow: none !important;
 }
 
-/* hover тоже без фона */
+
 .home-trust__item:hover,
 .home-trust__item.icon-hover-card:hover {
     background: transparent !important;
@@ -3740,7 +3681,7 @@
     transform: translateY(-7px) !important;
 }
 
-/* блеск оставляем, но делаем мягче и дороже */
+
 .home-trust__item::before {
     background: linear-gradient(115deg,
             transparent 0%,
@@ -3750,13 +3691,13 @@
             transparent 100%) !important;
 }
 
-/* нижняя линия остается как hover-акцент */
+
 .home-trust__item::after {
     height: 3px !important;
     background: linear-gradient(90deg, var(--blue), var(--copper)) !important;
 }
 
-/* иконки делаем чуть выразительнее, раз фона больше нет */
+
 .home-trust__item .icon-large,
 .home-trust__item svg.icon-large {
     color: var(--blue) !important;
@@ -3770,7 +3711,7 @@
     filter: drop-shadow(0 18px 24px rgba(197, 106, 46, 0.34)) !important;
 }
 
-/* убираем разделители на планшете/мобилке тоже */
+
 @media (max-width: 1180px) {
 
     .home-trust__item,
@@ -3796,9 +3737,7 @@
     }
 }
 
-/* =========================
-   Roof Network Strip — Light Premium Redesign
-========================= */
+
 
 .roof-network-strip {
     position: relative;
@@ -3891,7 +3830,7 @@
     line-height: 1.65;
 }
 
-/* clean material icons */
+
 .roof-network-strip__types {
     display: grid;
     grid-template-columns: repeat(5, minmax(90px, 1fr));
@@ -3954,7 +3893,7 @@
     font-weight: 760;
 }
 
-/* photo */
+
 .roof-network-strip__image {
     position: relative;
     min-height: 520px;
@@ -4044,7 +3983,7 @@
     letter-spacing: -0.04em;
 }
 
-/* bottom trust strip */
+
 .roof-network-strip__trust {
     position: relative;
     z-index: 3;
@@ -4179,7 +4118,7 @@
     height: 17px;
 }
 
-/* hide old elements if old HTML remains somewhere */
+
 .roof-network-strip__top,
 .roof-network-strip__bottom,
 .roof-network-strip__card,
@@ -4187,7 +4126,7 @@
     all: unset;
 }
 
-/* Responsive */
+
 @media (max-width: 1180px) {
     .roof-network-strip__inner {
         grid-template-columns: 1fr;
@@ -4309,9 +4248,7 @@
     }
 }
 
-/* =========================
-   Roof Network Trust — Compact Juicy Version
-========================= */
+
 
 .roof-network-strip__trust {
     position: relative !important;
@@ -4360,7 +4297,7 @@
     pointer-events: none;
 }
 
-/* heading */
+
 .roof-network-strip__trust .roof-network-strip__heading {
     position: relative !important;
     z-index: 2 !important;
@@ -4384,7 +4321,7 @@
     color: rgba(216, 222, 232, 0.62);
 }
 
-/* compact icon line */
+
 .roof-network-strip__trust .roof-network-strip__features {
     position: relative !important;
     z-index: 2 !important;
@@ -4442,7 +4379,7 @@
     transform: scaleX(1);
 }
 
-/* icons: no background */
+
 .roof-network-strip__trust .roof-network-strip__features i,
 .roof-network-strip__trust .roof-network-strip__features svg {
     width: 31px !important;
@@ -4473,7 +4410,7 @@
     font-weight: 720 !important;
 }
 
-/* smaller CTA */
+
 .roof-network-strip__link {
     position: relative !important;
     z-index: 2 !important;
@@ -4499,7 +4436,7 @@
     height: 16px !important;
 }
 
-/* Tablet */
+
 @media (max-width: 1180px) {
     .roof-network-strip__trust {
         grid-template-columns: 1fr !important;
@@ -4522,7 +4459,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .roof-network-strip__trust {
         padding: 30px 18px !important;
@@ -4567,10 +4504,7 @@
     }
 }
 
-/* =========================
-   Fix Roof Network Image Hover
-   No deformation, radius always stays
-========================= */
+
 
 .roof-network-strip__image {
     position: relative !important;
@@ -4586,13 +4520,13 @@
     transform: none !important;
 }
 
-/* чтобы overlay тоже не вылезал за скругления */
+
 .roof-network-strip__image::before,
 .roof-network-strip__image::after {
     pointer-events: none !important;
 }
 
-/* картинка больше не растягивает блок и не ломает форму */
+
 .roof-network-strip__image img {
     position: absolute !important;
     inset: 0 !important;
@@ -4611,14 +4545,14 @@
         filter 0.65s ease !important;
 }
 
-/* перебиваем старый hover от всей секции */
+
 .roof-network-strip:hover .roof-network-strip__image img,
 .roof-network-strip__image:hover img {
     transform: scale(1.045) !important;
     filter: contrast(1.08) saturate(1.08) !important;
 }
 
-/* tablet */
+
 @media (max-width: 1180px) {
 
     .roof-network-strip__image,
@@ -4627,7 +4561,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 760px) {
 
     .roof-network-strip__image,
@@ -4636,10 +4570,7 @@
     }
 }
 
-/* =========================
-   Home Process — Split Flow Redesign
-   Steps left, text right, no numbers, no jumpy hover
-========================= */
+
 
 .home-process-flow {
     position: relative;
@@ -4690,7 +4621,7 @@
     align-items: center;
 }
 
-/* LEFT STEPS */
+
 .home-process-flow__steps {
     position: relative;
     display: grid;
@@ -4763,7 +4694,7 @@
     width: 100%;
 }
 
-/* clean icons */
+
 .home-process-flow__item i,
 .home-process-flow__item svg {
     position: relative;
@@ -4834,7 +4765,7 @@
     opacity: 1;
 }
 
-/* RIGHT TEXT */
+
 .home-process-flow__content {
     position: relative;
     padding-left: clamp(0px, 2vw, 34px);
@@ -4910,7 +4841,7 @@
     background: var(--blue);
 }
 
-/* Tablet */
+
 @media (max-width: 980px) {
     .home-process-flow__grid {
         grid-template-columns: 1fr;
@@ -4930,7 +4861,7 @@
     }
 }
 
-/* Mobile */
+
 @media (max-width: 640px) {
     .home-process-flow {
         padding-top: 58px;
@@ -4981,16 +4912,13 @@
     }
 }
 
-/* Smaller gap between process steps and text */
+
 
 .home-process-flow__grid {
     gap: clamp(22px, 3.4vw, 52px) !important;
 }
 
-/* =========================
-   FAQ Accordion Fix
-   No side item stretching / no empty grid space
-========================= */
+
 
 .home-faq .faq-grid {
     display: block !important;
@@ -5007,12 +4935,12 @@
     vertical-align: top;
 }
 
-/* чтобы закрытые панели точно не занимали место */
+
 .home-faq .faq-panel[hidden] {
     display: none !important;
 }
 
-/* на мобилке обычная одна колонка */
+
 @media (max-width: 760px) {
     .home-faq .faq-grid {
         column-count: 1;
@@ -5024,12 +4952,9 @@
     }
 }
 
-/* =========================
-   Home Network — No Cards Version
-   Open right side, no card-in-card
-========================= */
 
-/* left list underline hover */
+
+
 .home-network__list li {
     position: relative;
     transition:
@@ -5079,7 +5004,7 @@
     filter: drop-shadow(0 10px 14px rgba(59, 130, 246, 0.28));
 }
 
-/* remove old card feeling if old classes remain somewhere */
+
 .home-network__card,
 .home-network__mini-grid,
 .home-network__mini-grid article {
@@ -5088,7 +5013,7 @@
     box-shadow: none !important;
 }
 
-/* open right composition */
+
 .home-network__open {
     position: relative;
     align-self: center;
@@ -5242,7 +5167,7 @@
     line-height: 1.62;
 }
 
-/* mobile */
+
 @media (max-width: 980px) {
     .home-network__open {
         padding-left: 0;
@@ -5279,9 +5204,7 @@
     }
 }
 
-/* =========================
-   Home Network — Equal Cards + Full Background Photo
-========================= */
+
 
 .home-network {
     position: relative;
@@ -5305,7 +5228,7 @@
     pointer-events: none;
 }
 
-/* две стороны одинаковые */
+
 .home-network .container.grid-2 {
     align-items: stretch !important;
 }
@@ -5315,7 +5238,7 @@
     min-height: 440px !important;
 }
 
-/* левая сторона тоже становится полноценной карточкой */
+
 .home-network__content {
     position: relative;
     display: flex;
@@ -5351,7 +5274,7 @@
     z-index: 2;
 }
 
-/* правая карточка такого же размера и выравнивания */
+
 .home-network__card {
     position: relative;
     display: flex !important;
@@ -5391,12 +5314,12 @@
     z-index: 2;
 }
 
-/* чтобы верх правой карточки был ровнее */
+
 .home-network__card-top {
     margin-bottom: 28px !important;
 }
 
-/* сетка внутри правой карточки ровная */
+
 .home-network__mini-grid {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -5411,7 +5334,7 @@
     justify-content: space-between !important;
 }
 
-/* подчёркивание у списка слева */
+
 .home-network__list li {
     position: relative;
     transition:
@@ -5446,7 +5369,7 @@
     transform: scaleX(1);
 }
 
-/* tablet */
+
 @media (max-width: 980px) {
 
     .home-network__content,
@@ -5455,7 +5378,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
 
     .home-network__content,
@@ -5473,7 +5396,7 @@
     }
 }
 
-/* Smaller title in right open network block */
+
 
 .home-network__open-head strong {
     font-size: clamp(1.65rem, 3.2vw, 2.2rem) !important;
@@ -5481,10 +5404,7 @@
     letter-spacing: -0.07em !important;
 }
 
-/* =========================
-   Home CTA — Clean Angled Premium
-   Button style preserved
-========================= */
+
 
 .home-cta {
     position: relative !important;
@@ -5498,7 +5418,7 @@
         linear-gradient(180deg, var(--black), var(--graphite)) !important;
 }
 
-/* убираем прошлые странные формы */
+
 .home-cta::before,
 .home-cta::after {
     display: none !important;
@@ -5512,7 +5432,7 @@
     box-shadow: none !important;
 }
 
-/* аккуратный скошенный фон за карточкой */
+
 .home-cta .cta-band::before {
     content: "";
     position: absolute;
@@ -5525,7 +5445,7 @@
     filter: blur(0.2px);
 }
 
-/* основная CTA-панель */
+
 .home-cta .cta-band__content {
     position: relative !important;
     z-index: 2 !important;
@@ -5556,7 +5476,7 @@
 }
 
 
-/* нижняя тонкая акцентная линия */
+
 .home-cta .cta-band__content::after {
     content: "" !important;
     position: absolute !important;
@@ -5575,7 +5495,7 @@
     z-index: 2 !important;
 }
 
-/* текст нормального размера */
+
 .home-cta h2 {
     max-width: 680px !important;
     color: var(--white) !important;
@@ -5593,7 +5513,7 @@
     line-height: 1.56 !important;
 }
 
-/* badges */
+
 .home-cta__badges {
     margin-top: 18px !important;
 }
@@ -5640,7 +5560,7 @@
     transform: translateY(-2px) rotate(-4deg) !important;
 }
 
-/* кнопка — оставляем удачную скошенную */
+
 .home-cta .btn-primary {
     position: relative !important;
     overflow: hidden !important;
@@ -5681,7 +5601,7 @@
     left: 130% !important;
 }
 
-/* responsive */
+
 @media (max-width: 900px) {
     .home-cta .cta-band::before {
         inset: 14px -10px -12px 18px;
@@ -5718,7 +5638,7 @@
     }
 }
 
-/* CTA — replace grid wedge with photo */
+
 
 .home-cta .cta-band__content::before {
     content: "" !important;
@@ -5745,7 +5665,7 @@
     pointer-events: none !important;
 }
 
-/* мягкое затемнение, чтобы фото не спорило с текстом */
+
 .home-cta .cta-band__content::after {
     content: "" !important;
     position: absolute !important;
@@ -5759,12 +5679,12 @@
     pointer-events: none !important;
 }
 
-/* чтобы фото не залезало слишком сильно на текст */
+
 .home-cta .cta-band__content>div:first-child {
     max-width: 720px;
 }
 
-/* tablet */
+
 @media (max-width: 900px) {
     .home-cta .cta-band__content::before {
         right: -70px !important;
@@ -5774,7 +5694,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 560px) {
     .home-cta .cta-band__content::before {
         top: auto !important;
@@ -5789,9 +5709,7 @@
     }
 }
 
-/* =========================
-   Home Hero — Tablet/Mobile Overflow Fix
-========================= */
+
 
 .home-hero {
     width: 100%;
@@ -5825,14 +5743,14 @@
     object-fit: cover;
 }
 
-/* чтобы косая белая подложка не создавала горизонтальный вылет */
+
 .home-hero::after {
     right: 0 !important;
     left: 0 !important;
     width: 100% !important;
 }
 
-/* search не должен шире контейнера */
+
 .home-search {
     width: 100% !important;
     max-width: 640px !important;
@@ -5847,7 +5765,7 @@
     min-width: 0 !important;
 }
 
-/* badges не должны растягивать страницу */
+
 .home-hero__badges,
 .home-hero .badge-row {
     max-width: 100%;
@@ -5858,7 +5776,7 @@
     max-width: 100%;
 }
 
-/* tablet */
+
 @media (max-width: 900px) {
     .home-hero {
         padding-top: 88px !important;
@@ -5894,7 +5812,7 @@
     }
 }
 
-/* mobile */
+
 @media (max-width: 640px) {
     .home-hero {
         padding-top: 74px !important;
@@ -5944,7 +5862,7 @@
     }
 }
 
-/* very small phones */
+
 @media (max-width: 420px) {
     .home-hero__badges .badge {
         flex-basis: 100%;
