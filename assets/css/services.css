@@ -2378,6 +2378,10 @@
         min-height: 300px !important;
     }
 
+    .services-emergency__chips {
+        display: none !important;
+    }
+
     .services-emergency__content {
         padding: 46px 20px 52px !important;
     }
@@ -2392,24 +2396,6 @@
         font-size: 0.92rem !important;
     }
 
-    .services-emergency__chips {
-        left: 16px !important;
-        right: 16px !important;
-        bottom: 16px !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        justify-content: flex-start !important;
-        scrollbar-width: none !important;
-    }
-
-    .services-emergency__chips::-webkit-scrollbar {
-        display: none !important;
-    }
-
-    .services-emergency__chips span {
-        flex: 0 0 auto !important;
-        font-size: 0.78rem !important;
-    }
 }
 
 
@@ -3203,4 +3189,3 @@
         transform: translateY(-2px) rotate(-5deg) !important;
     }
 }
-
