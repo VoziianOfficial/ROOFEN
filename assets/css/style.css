@@ -2175,4 +2175,24 @@ p {
         line-height: 1.02 !important;
         letter-spacing: -0.055em !important;
     }
+
+    .site-footer .footer-grid,
+    .site-footer .footer-brand,
+    .site-footer .footer-links,
+    .site-footer .footer-contact,
+    .site-footer .footer-bottom {
+        text-align: left !important;
+        justify-items: start !important;
+        align-items: start !important;
+    }
+
+    .site-footer .footer-title {
+        width: auto !important;
+        max-width: none !important;
+        margin: 0 0 12px !important;
+        font-size: 0.88rem !important;
+        line-height: 1.15 !important;
+        letter-spacing: -0.015em !important;
+        text-align: left !important;
+    }
 }
