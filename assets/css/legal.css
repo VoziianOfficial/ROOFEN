@@ -10,7 +10,6 @@
     padding: 112px 0 86px;
     overflow: hidden;
     color: var(--white);
-    background: var(--graphite);
 }
 
 .legal-hero::after {
@@ -624,17 +623,7 @@
     }
 }
 
-/* ================================
-   Legal Pages Stable Visual Upgrade
-   Add to the end of assets/css/legal.css
-================================ */
 
-.legal-hero {
-    background:
-        radial-gradient(circle at 18% 18%, rgba(37, 99, 235, 0.26), transparent 34%),
-        radial-gradient(circle at 82% 24%, rgba(197, 106, 46, 0.22), transparent 34%),
-        linear-gradient(135deg, var(--black), var(--graphite) 52%, var(--black));
-}
 
 .legal-hero__content {
     position: relative;
