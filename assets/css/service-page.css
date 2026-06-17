@@ -3731,3 +3731,86 @@
         height: 46px !important;
     }
 }
+
+
+.service-cta {
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+.service-cta__card {
+    height: clamp(330px, 34vw, 430px) !important;
+    min-height: 0 !important;
+    max-height: 430px !important;
+    grid-template-columns: minmax(260px, 0.34fr) minmax(0, 0.66fr) !important;
+    align-items: stretch !important;
+}
+
+.service-cta__photo {
+    position: relative !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: hidden !important;
+}
+
+.service-cta__photo img {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: block !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.service-cta__content {
+    min-height: 0 !important;
+    height: 100% !important;
+    align-self: stretch !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    overflow: hidden !important;
+}
+
+.service-cta__badges {
+    max-width: 100% !important;
+}
+
+.service-cta__actions {
+    flex-shrink: 0 !important;
+}
+
+
+@media (max-width: 980px) {
+    .service-cta__card {
+        height: auto !important;
+        max-height: none !important;
+    }
+
+    .service-cta__photo {
+        height: 280px !important;
+        min-height: 280px !important;
+    }
+
+    .service-cta__photo img {
+        position: absolute !important;
+        height: 100% !important;
+    }
+
+    .service-cta__content {
+        height: auto !important;
+        overflow: visible !important;
+    }
+}
+
+
+@media (max-width: 640px) {
+    .service-cta__photo {
+        height: 220px !important;
+        min-height: 220px !important;
+    }
+}
