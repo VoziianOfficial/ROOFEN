@@ -632,6 +632,32 @@
             return;
         }
 
+        const setActiveLink = function (activeLink) {
+            links.forEach(function (link) {
+                const isActive = link === activeLink;
+
+                link.classList.toggle("is-active", isActive);
+
+                if (isActive) {
+                    link.setAttribute("aria-current", "page");
+                } else {
+                    link.removeAttribute("aria-current");
+                }
+            });
+        };
+
+        const activeFromHash = window.location.hash
+            ? sections.find(function (item) {
+                return "#" + item.section.id === window.location.hash;
+            })
+            : null;
+
+        if (activeFromHash) {
+            setActiveLink(activeFromHash.link);
+        } else {
+            setActiveLink(sections[0].link);
+        }
+
         const observer = new IntersectionObserver(
             function (entries) {
                 entries.forEach(function (entry) {
@@ -647,13 +673,7 @@
                         return;
                     }
 
-                    links.forEach(function (link) {
-                        link.classList.remove("is-active");
-                        link.removeAttribute("aria-current");
-                    });
-
-                    activeItem.link.classList.add("is-active");
-                    activeItem.link.setAttribute("aria-current", "true");
+                    setActiveLink(activeItem.link);
                 });
             },
             {
