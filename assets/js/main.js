@@ -29,6 +29,8 @@
     };
 
     document.addEventListener("DOMContentLoaded", function () {
+        applyConfigEverywhere(); 
+
         injectConfigValues();
         injectServiceLists();
         setActiveNavigation();
@@ -754,5 +756,227 @@
             event.preventDefault();
             firstElement.focus();
         }
+    }
+
+    function applyConfigEverywhere() {
+        const config = window.ROOFEN_CONFIG || {};
+
+        const original = {
+            companyName: "Roofen",
+            phoneNumber: "+1 737 555 0198",
+            phoneCompact: "+17375550198",
+            phoneDisplayText: "(737) 555-0198",
+            email: "support@roofenquotes.com",
+            address: "11801 Domain Blvd, Austin, TX 78758, USA",
+            mapUrl: "https://www.google.com/maps/search/?api=1&query=11801+Domain+Blvd,+Austin,+TX+78758,+USA",
+            serviceArea: "United States roofing contractor matching network",
+            companyId: "RFN-US-48291"
+        };
+
+        const next = {
+            companyName: config.companyName || original.companyName,
+            phoneNumber: config.phoneNumber || original.phoneNumber,
+            phoneCompact: sanitizePhone(config.phoneNumber || original.phoneNumber),
+            phoneDisplayText: config.phoneDisplayText || config.phoneNumber || original.phoneDisplayText,
+            email: config.email || original.email,
+            address: config.address || original.address,
+            mapUrl: config.mapUrl || original.mapUrl,
+            serviceArea: config.serviceArea || original.serviceArea,
+            companyId: config.companyId || original.companyId
+        };
+
+        replaceTextEverywhere(original.companyName, next.companyName);
+        replaceTextEverywhere(original.phoneNumber, next.phoneNumber);
+        replaceTextEverywhere(original.phoneDisplayText, next.phoneDisplayText);
+        replaceTextEverywhere(original.email, next.email);
+        replaceTextEverywhere(original.address, next.address);
+        replaceTextEverywhere(original.serviceArea, next.serviceArea);
+        replaceTextEverywhere(original.companyId, next.companyId);
+
+        replaceAttributesEverywhere(original.companyName, next.companyName);
+        replaceAttributesEverywhere(original.phoneNumber, next.phoneNumber);
+        replaceAttributesEverywhere(original.phoneCompact, next.phoneCompact);
+        replaceAttributesEverywhere(original.phoneDisplayText, next.phoneDisplayText);
+        replaceAttributesEverywhere(original.email, next.email);
+        replaceAttributesEverywhere(original.address, next.address);
+        replaceAttributesEverywhere(original.mapUrl, next.mapUrl);
+        replaceAttributesEverywhere(original.serviceArea, next.serviceArea);
+        replaceAttributesEverywhere(original.companyId, next.companyId);
+
+        updateAllPhones(next);
+        updateAllEmails(next);
+        updateAllMaps(next);
+        updateAllBrands(next);
+
+        if (Array.isArray(config.services)) {
+            updateServiceNamesEverywhere(config.services);
+        }
+
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    }
+
+    function replaceTextEverywhere(from, to) {
+        if (!from || !to || from === to) return;
+
+        const ignoredTags = ["SCRIPT", "STYLE", "NOSCRIPT", "TEXTAREA", "SELECT"];
+
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function (node) {
+                    const parent = node.parentElement;
+
+                    if (!parent || ignoredTags.includes(parent.tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    if (!node.nodeValue || !node.nodeValue.includes(from)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+
+        const nodes = [];
+
+        while (walker.nextNode()) {
+            nodes.push(walker.currentNode);
+        }
+
+        nodes.forEach(function (node) {
+            node.nodeValue = node.nodeValue.split(from).join(to);
+        });
+    }
+
+    function replaceAttributesEverywhere(from, to) {
+        if (!from || !to || from === to) return;
+
+        const elements = document.querySelectorAll("*");
+
+        elements.forEach(function (element) {
+            Array.from(element.attributes).forEach(function (attr) {
+                if (!attr.value || !attr.value.includes(from)) return;
+
+                element.setAttribute(attr.name, attr.value.split(from).join(to));
+            });
+        });
+    }
+
+    function updateAllPhones(data) {
+        const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+
+        phoneLinks.forEach(function (link) {
+            link.setAttribute("href", "tel:" + data.phoneCompact);
+
+            const text = link.textContent.trim();
+
+            if (
+                text.includes("737") ||
+                text.includes("555") ||
+                text.includes("+1") ||
+                /^\(?\d/.test(text)
+            ) {
+                link.textContent = data.phoneDisplayText;
+            }
+
+            if (link.getAttribute("aria-label")) {
+                link.setAttribute("aria-label", "Call " + data.companyName);
+            }
+        });
+    }
+
+    function updateAllEmails(data) {
+        const emailLinks = document.querySelectorAll('a[href^="mailto:"]');
+
+        emailLinks.forEach(function (link) {
+            link.setAttribute("href", "mailto:" + data.email);
+
+            if (link.textContent.includes("@")) {
+                link.textContent = data.email;
+            }
+
+            if (link.getAttribute("aria-label")) {
+                link.setAttribute("aria-label", "Email " + data.companyName);
+            }
+        });
+    }
+
+    function updateAllMaps(data) {
+        const mapLinks = document.querySelectorAll('a[href*="google.com/maps"], a[href="#"][data-config-href="map"]');
+
+        mapLinks.forEach(function (link) {
+            link.setAttribute("href", data.mapUrl);
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+        });
+    }
+
+    function updateAllBrands(data) {
+        const brandElements = document.querySelectorAll(".site-brand__text, [data-config-brand]");
+
+        brandElements.forEach(function (brand) {
+            brand.innerHTML = createBrandHTML(data.companyName, window.ROOFEN_CONFIG?.brandAccentPart);
+        });
+
+        const brandLinks = document.querySelectorAll(".site-brand");
+
+        brandLinks.forEach(function (link) {
+            link.setAttribute("aria-label", data.companyName + " home");
+        });
+    }
+
+    function updateServiceNamesEverywhere(services) {
+        const originalServices = [
+            "Roof Repair",
+            "Roof Replacement",
+            "Emergency Roof Repair",
+            "Storm Damage Roof Repair",
+            "Roof Inspection",
+            "Gutter Installation & Repair"
+        ];
+
+        services.forEach(function (service, index) {
+            const oldName = originalServices[index];
+
+            if (!oldName || !service.name) return;
+
+            replaceTextEverywhere(oldName, service.name);
+            replaceAttributesEverywhere(oldName, service.name);
+        });
+    }
+
+    function createBrandHTML(companyName, accentPart) {
+        if (!companyName) return "";
+
+        if (!accentPart || !companyName.endsWith(accentPart)) {
+            return escapeHTML(companyName);
+        }
+
+        const mainPart = companyName.slice(0, -accentPart.length);
+
+        return (
+            escapeHTML(mainPart) +
+            '<span class="brand-accent">' +
+            escapeHTML(accentPart) +
+            "</span>"
+        );
+    }
+
+    function sanitizePhone(phone) {
+        return String(phone || "").replace(/[^\d+]/g, "");
+    }
+
+    function escapeHTML(value) {
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
     }
 })();
